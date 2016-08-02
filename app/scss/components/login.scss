@@ -1,0 +1,26 @@
+#company-icon{
+  background-color:#5d9cec;
+  height:100px;
+  width:100px;
+  position: absolute;
+  left: 35px;
+  top: 35px;
+}
+
+#login{
+  position: relative;
+}
+
+.login_modal{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .panel-body{
+    padding: 60px;
+    color:#FFF;
+    background-color:rgba(0,0,0, 0.6) ;
+  }
+}

@@ -1,0 +1,50 @@
+#user{
+  margin-top:20px;
+  text-align: center;
+
+  #avatar{
+    width:70px;
+    height:70px;
+    background-color:#5d9cec;
+    margin: 0 auto;
+  }
+}
+
+.profile-picture-change{
+  overflow: hidden;
+  .profile-picture{
+    width:60px;
+    height:60px;
+    background-color:#5d9cec;
+    float: right;
+    border-radius: 50%;
+  }
+
+  a{
+    line-height: 60px;
+  }
+}
+
+
+#profile{
+
+  .form-group{
+    .custom-label{
+      padding-top:7px;
+      text-align: right;
+    }
+  }
+  
+  fieldset{
+    margin-bottom:0;
+
+    #null-float{
+      margin-left:15px;
+    }
+
+    #submit{
+      background-color:#5d9cec;
+      color:#FFF;
+    }
+  }
+}

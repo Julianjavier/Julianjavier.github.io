@@ -1,0 +1,85 @@
+#company-icon {
+  background-color: #5d9cec;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 35px;
+  top: 35px; }
+
+#login {
+  position: relative; }
+
+.login_modal {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .login_modal .panel-body {
+    padding: 60px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.6); }
+
+#user {
+  margin-top: 20px;
+  text-align: center; }
+  #user #avatar {
+    width: 70px;
+    height: 70px;
+    background-color: #5d9cec;
+    margin: 0 auto; }
+
+.profile-picture-change {
+  overflow: hidden; }
+  .profile-picture-change .profile-picture {
+    width: 60px;
+    height: 60px;
+    background-color: #5d9cec;
+    float: right;
+    border-radius: 50%; }
+  .profile-picture-change a {
+    line-height: 60px; }
+
+#profile .form-group .custom-label {
+  padding-top: 7px;
+  text-align: right; }
+
+#profile fieldset {
+  margin-bottom: 0; }
+  #profile fieldset #null-float {
+    margin-left: 15px; }
+  #profile fieldset #submit {
+    background-color: #5d9cec;
+    color: #FFF; }
+
+#teams #addLink {
+  padding: 0; }
+
+#teams fieldset .form-group label {
+  text-align: right; }
+
+#teams fieldset .form-group .edit {
+  background-color: #5d9cec;
+  color: #FFF; }
+
+#addMember fieldset {
+  padding: 0; }
+  #addMember fieldset .min-param {
+    min-width: 100%;
+    min-height: 100%; }
+  #addMember fieldset .divider {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  #addMember fieldset #submit {
+    background-color: #5d9cec;
+    color: #FFF;
+    margin-left: 15px; }
+
+.aside-inner {
+  padding-top: 0 !important; }
+
+.panel {
+  margin-top: 120px; }

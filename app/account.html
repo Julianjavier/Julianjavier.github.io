@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Angle - Bootstrap Admin Template</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="css/app.css" id="maincss">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
+    <!--endbuild-->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <aside class="aside">
+        <div id="user">
+          <div id="avatar">
+
+          </div>
+          <h4>User Name</h4>
+        </div>
+         <!-- START Sidebar (left)-->
+         <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="sidebar">
+               <!-- START sidebar nav-->
+               <ul class="nav">
+                 <li class=" ">
+                    <a href="account.html" title="Documentation">
+                       <em class="icon-user"></em>
+                       <span data-localize="sidebar.nav.USERSETTINGS">Personal Settings</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="team.html" title="Documentation">
+                       <em class="icon-people"></em>
+                       <span data-localize="sidebar.nav.TEAM">Team</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="property.html" title="Documentation">
+                       <em class="icon-location-pin"></em>
+                       <span data-localize="sidebar.nav.PROPERTIES">Properties</span>
+                    </a>
+                 </li>
+
+               </ul>
+               <!-- END sidebar nav-->
+            </nav>
+         </div>
+         <!-- END Sidebar (left)-->
+      </aside>
+      <section>
+        <div class="content-wrapper">
+          <div class="panel panel-default">
+            <div class="panel-heading"><h3>Personal Settings</h3></div>
+            <div id="profile" class="panel-body">
+
+              <form action="index.html" method="post">
+                <div class="profile-picture-change form-group">
+                    <div class="col-sm-2">
+                      <div class="profile-picture">
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <a href="#">Change Profile Picture</a>
+                    </div>
+                </div>
+
+                <fieldset class="last-child">
+                  <div class="form-group">
+                   <label class="custom-label col-sm-2 control-label">Select</label>
+                    <div class="col-sm-4">
+                      <select name="account" class="form-control m-b">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <div class="form-group col-sm-4">
+                     <label>First Name</label>
+                     <input type="text" placeholder="User" class="form-control">
+                  </div>
+
+                  <div class="form-group col-sm-4">
+                     <label>Last Name</label>
+                     <input type="text" placeholder="Name" class="form-control">
+                  </div>
+                </fieldset>
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <div class="form-group col-sm-4">
+                     <label>e-mail</label>
+                     <input type="text" placeholder="exampleuser@email.com" class="form-control">
+                  </div>
+
+                </fieldset>
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <a id="null-float" href="#">Change Password</a>
+                </fieldset>
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <button id="submit" type="submit" class="btn">Save Changes</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>
