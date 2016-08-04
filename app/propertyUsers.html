@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Angle - Bootstrap Admin Template</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="css/app.css" id="maincss">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
+    <!--endbuild-->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <aside class="aside">
+        <div id="user">
+          <div id="avatar">
+
+          </div>
+          <h4>User Name</h4>
+        </div>
+         <!-- START Sidebar (left)-->
+         <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="sidebar">
+               <!-- START sidebar nav-->
+               <ul class="nav">
+                 <li class=" ">
+                    <a href="account.html" title="Documentation">
+                       <em class="icon-user"></em>
+                       <span data-localize="sidebar.nav.USERSETTINGS">Personal Settings</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="team.html" title="Documentation">
+                       <em class="icon-people"></em>
+                       <span data-localize="sidebar.nav.TEAM">Team</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="property.html" title="Documentation">
+                       <em class="icon-location-pin"></em>
+                       <span data-localize="sidebar.nav.PROPERTIES">Properties</span>
+                    </a>
+                 </li>
+
+               </ul>
+               <!-- END sidebar nav-->
+            </nav>
+         </div>
+         <!-- END Sidebar (left)-->
+      </aside>
+      <section>
+        <div class="content-wrapper">
+          <div class="panel panel-default">
+            <div class="panel-heading"><h3>Vineyard A</h3></div>
+            <div id="addMember" class="panel-body">
+
+              <form action="/" method="POST">
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <div  class="form-group col-sm-4">
+                     <label>Associated Users</label>
+                     <div class="row">
+                        <div id=" equalizer" class="col-lg-4">
+                           <select multiple="" class="activeProperty min-param form-control">
+                              <option value="1">Option 1</option>
+                           </select>
+                        </div>
+                        <div id="target" class="divider col-lg-2">
+                          <span class="fa fa-arrow-left"></span>
+                          <br>
+                          <span class="fa fa-arrow-right"></span>
+                        </div>
+                        <div class="col-lg-4">
+                           <select multiple="" class="inactiveProperty min-param form-control">
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                              <option value="4">Option 4</option>
+                              <option value="5">Option 5</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                </fieldset>
+
+
+                <fieldset class="last-child">
+                  <label class="custom-label col-sm-2 control-label"></label>
+                  <button id="submit" type="submit" class="btn">Save Changes</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- MODERNIZR-->
+    <script src="../vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL-->
+    <script src="../vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY-->
+    <script src="../vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP-->
+    <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING-->
+    <script src="../vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO-->
+    <script src="../vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL-->
+    <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL-->
+    <script src="../vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE-->
+    <script src="../vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- RTL demo-->
+    <script src="js/demo/demo-rtl.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

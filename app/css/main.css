@@ -78,6 +78,23 @@
     color: #FFF;
     margin-left: 15px; }
 
+#properties .property {
+  margin-bottom: 15px; }
+  #properties .property label {
+    font-size: 16px;
+    text-align: right; }
+  #properties .property .param {
+    height: 100%; }
+    #properties .property .param a {
+      text-align: center;
+      font-size: 20px; }
+
+.state-body {
+  padding: 60px;
+  background-color: #FFF; }
+  .state-body p {
+    font-size: 20px; }
+
 .aside-inner {
   padding-top: 0 !important; }
 
