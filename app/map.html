@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Angle - Bootstrap Admin Template</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="css/app.css" id="maincss">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <aside class="aside">
+        <div id="user">
+          <div id="avatar">
+
+          </div>
+          <h4>User Name</h4>
+        </div>
+         <!-- START Sidebar (left)-->
+         <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="">
+               <!-- START sidebar nav-->
+               <!-- <ul class="nav">
+                 <li class=" ">
+                    <a href="account.html" title="Documentation">
+                       <em class="icon-user"></em>
+                       <span data-localize="sidebar.nav.USERSETTINGS">Personal Settings</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="team.html" title="Documentation">
+                       <em class="icon-people"></em>
+                       <span data-localize="sidebar.nav.TEAM">Team</span>
+                    </a>
+                 </li>
+
+                 <li class=" ">
+                    <a href="properties.html" title="Documentation">
+                       <em class="icon-location-pin"></em>
+                       <span data-localize="sidebar.nav.PROPERTIES">Properties</span>
+                    </a>
+                 </li>
+
+               </ul> -->
+
+               <form id="property" action="test.php" method="post">
+                 <div class=" panel-default">
+                    <div class="panel-heading">Stacked form</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                           <label>Property Name</label>
+                           <input type="text" name="propertyName" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group last">
+                           <label>Type of crop</label>
+                           <input type="text" name="cropType" placeholder="" class="form-control">
+                        </div>
+                        <legend>Plots</legend>
+                        <div id="plots">
+                          <!-- <div class="form-group" data-id=0>
+                            <input type="text" name="plot[0][plotName]" value="Plot1" class="form-control">
+                            <input type="hidden" name="plot[0][coordinates][0][lon]" value="-66.09027385728041" class="form-control">
+                            <input type="hidden" name="plot[0][coordinates][0][lat]" value="18.463205171984207" class="form-control">
+                            <input type="hidden" name="plot[0][coordinates][1][lon]" value="-66.09027385728041" class="form-control">
+                            <input type="hidden" name="plot[0][coordinates][1][lat]" value="18.463205171984207" class="form-control">
+                          </div> -->
+                        </div>
+                    </div>
+                 </div>
+                 <button type="submit" class="btn btn-sm btn-defaul">Submit</button>
+               </form>
+               <!-- END sidebar nav-->
+            </nav>
+         </div>
+         <!-- END Sidebar (left)-->
+      </aside>
+      <section id="map-container">
+          <div id='mapScript'>
+
+          </div>
+          <div id='menu'>
+            <input id='basic' type='radio' name='rtoggle' value='satellite-streets' checked='checked'>
+            <label for='streets-satellite'>Hybrid</label>
+            <input id='streets' type='radio' name='rtoggle' value='streets'>
+            <label for='streets'>streets</label>
+            <input id='satellite' type='radio' name='rtoggle' value='satellite'>
+            <label for='satellite'>satellite</label>
+          </div>
+      </section>
+    </div>
+
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- MODERNIZR-->
+    <script src="../vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL-->
+    <script src="../vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY-->
+    <script src="../vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP-->
+    <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING-->
+    <script src="../vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO-->
+    <script src="../vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL-->
+    <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL-->
+    <script src="../vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE-->
+    <script src="../vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-geodesy/v0.1.0/leaflet-geodesy.js'></script>
+    <script src="js/mapScript.js"></script>
+
+  </body>
+</html>

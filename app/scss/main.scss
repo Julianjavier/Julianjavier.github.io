@@ -4,8 +4,12 @@
 @import 'components/addMember';
 @import 'components/properties';
 @import 'components/registration-successful';
+@import 'components/map';
 
 
+html, body, .wrapper ,#map-container {
+    height: 100%;
+}
 
 .aside-inner{
   padding-top:0 !important;
