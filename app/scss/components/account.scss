@@ -7,6 +7,10 @@
     height:70px;
     background-color:#5d9cec;
     margin: 0 auto;
+
+    img{
+      width:100%;
+    }
   }
 }
 
@@ -18,6 +22,11 @@
     background-color:#5d9cec;
     float: right;
     border-radius: 50%;
+    
+    img{
+      width:100%;
+      border-radius: 50%;
+    }
   }
 
   a{
@@ -34,7 +43,7 @@
       text-align: right;
     }
   }
-  
+
   fieldset{
     margin-bottom:0;
 

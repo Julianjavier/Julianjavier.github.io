@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -23,13 +22,16 @@
     <!-- =============== APP STYLES ===============-->
     <link rel="stylesheet" href="css/app.css" id="maincss">
 
+    <!-- inject:css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
+    <!--endbuild-->
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
   </head>
   <body>
 
-    <div class="wrapper">
+    <div id="mapPage" class="wrapper">
       <aside class="aside">
         <div id="user">
           <div id="avatar">
@@ -70,6 +72,15 @@
                     <div class="panel-heading">Stacked form</div>
                     <div class="panel-body">
                         <div class="form-group">
+                          <label>Area measurements</label>
+                          <select id="areas" name="account" class="form-control m-b">
+                            <option value="km">Kilometers</option>
+                            <option value="ha">Hectares</option>
+                            <option value="m">Miles</option>
+                            <option value="acre">Acres</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
                            <label>Property Name</label>
                            <input type="text" name="propertyName" placeholder="" class="form-control">
                         </div>
@@ -80,9 +91,10 @@
                         <legend>Plots</legend>
                         <div id="plots">
                         </div>
+
+                        <button type="submit" class="btn btn-sm btn-defaul">Submit</button>
                     </div>
                  </div>
-                 <button type="submit" class="btn btn-sm btn-defaul">Submit</button>
                </form>
                <!-- END sidebar nav-->
             </nav>

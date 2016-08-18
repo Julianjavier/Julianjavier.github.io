@@ -7,14 +7,47 @@
 @import 'components/map';
 
 
-html, body, .wrapper ,#map-container {
+html, body, #mapPage ,#map-container {
     height: 100%;
 }
 
+.wrapper{
+  background-image: url("../img/cartographer.jpg");
+  background-repeat: repeat;
+  background-size: 450px;
+
+  .topnavbar-wrapper{
+    .topnavbar{
+      background-color:#6D815B;
+      background-image: none;
+    }
+  }
+}
+
 .aside-inner{
-  padding-top:0 !important;
+  .sidebar{
+    height: auto !important;
+  }
+}
+
+a{
+  color:#6D815B;
+}
+
+button{
+  background-color:#6D815B !important ;
+}
+
+section{
+  background-image: url("../img/cartographer.jpg");
+  background-repeat: repeat;
+  background-size: 450px;
 }
 
 .panel{
   margin-top: 120px;
+}
+
+.form-control:focus{
+  border-color: #6D815B !important;
 }

@@ -1,10 +1,15 @@
 #company-icon{
-  background-color:#5d9cec;
+  // background-color:#5d9cec;
   height:100px;
   width:100px;
   position: absolute;
-  left: 35px;
-  top: 35px;
+  left: 18px;
+  top: 18px;
+  z-index: 1;
+
+  img{
+    width:100%;
+  }
 }
 
 #login{

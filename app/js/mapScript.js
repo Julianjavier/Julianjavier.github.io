@@ -6,9 +6,42 @@ $(document).ready(function(){
   var initialZoomLevel = 17;
   var mapStyle = 'streets-satellite';
   var plots = document.getElementById('plots');
+  var measurements = {m: [0.38610, 'miles'], ha: [100, 'ha'], acre:[247.11, 'acres']};
+  var newMeasurement = 'km'
+  var input = document.getElementById('areas');
+  $(input).on('change', function() {
+    newMeasurement = this.value;
 
+    map.eachLayer(function(layer) {
+      if (layer._popup) {
+        currentPlots=0;
+        var km = (LGeo.area(layer) / 1000000).toFixed(2);
+        var area = km;
+        if (newMeasurement != 'km') {
+          if (newMeasurement == 'm') {
+            area = Math.pow(km, 2) * 0.38610;
+            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"m<sup>2</sup></p>");
+          }else if (newMeasurement == 'ha') {
+            area = km * 100
+            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+          }else if(newMeasurement == 'acre'){
+            area = Math.pow(km, 2) * 247.11;
+            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+          }
+        }else {
+          layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+        }
+        // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
+        // console.log(contentId);
+      }
+    });
+    currentPlots++
+  });
   //this creates the map view
-  var map = L.mapbox.map('mapScript', 'mapbox.'+ mapStyle).setView(initialLocation, initialZoomLevel);
+  var map = L.mapbox.map('mapScript', 'mapbox.'+ mapStyle).setView(initialLocation, initialZoomLevel).addControl(L.mapbox.geocoderControl('mapbox.places', {
+        autocomplete: true
+  }));
+
 
   //this will alter the map style for what the user wants
   var layerList = document.getElementById('menu');
@@ -113,7 +146,26 @@ $(document).ready(function(){
 
     //This will bind a pop up window for easy identification
     featureGroup.addLayer(e.layer);
-    e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>");
+    var km = (LGeo.area(e.layer) / 1000000).toFixed(2);
+    var area = km;
+    if (newMeasurement != 'km') {
+      if (newMeasurement == 'm') {
+        area = Math.pow(km, 2) * 0.38610;
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"m<sup>2</sup></p>");
+      }else if (newMeasurement == 'ha') {
+        area = km * 100
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+      }else if(newMeasurement == 'acre'){
+        area = Math.pow(km, 2) * 247.11;
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+      }
+    }else {
+      e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+    }
+
+    console.log(km * 100 + ' Hectares'); //Hectares
+    console.log(Math.pow(km, 2) * 0.38610 + ' Miles');//Miles
+    console.log(Math.pow(km, 2) * 247.11 + ' Acres');//Acres
     e.layer.openPopup();
     currentPlots++
   }
