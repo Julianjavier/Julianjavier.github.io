@@ -15,14 +15,18 @@
 }
 
 #drawContaner{
+  border:none;
   .leaflet-draw-section{
-    width:105px;
+    width:140px;
 
     .leaflet-draw-draw-polygon{
       font-size:17px;
-      padding-left:24px;
+      padding:0px 10px;
+      text-align: center;
       text-decoration: none;
       color: #6D815B;
+      background-image: none;
+      width: auto;
     }
 
     .leaflet-draw-actions-top{
@@ -34,6 +38,32 @@
           display: block;
         }
       }
+    }
+  }
+}
+
+#plots{
+  max-height: 200px;
+  overflow: auto;
+  .form-control{
+    border-radius:0 !important;
+    display: inline-block;
+  }
+  .cropContainer{
+    position: relative;
+    .crops{
+      background:none;
+    }
+    i{
+      position: absolute;
+      top:0px;
+      right:0px;
+      height: 35px;
+      width:20%;
+      text-align: center;
+      line-height: 35px;
+      font-size:20px;
+      z-index:-1;
     }
   }
 }
@@ -54,10 +84,5 @@
       background: #fff;
       padding: 10px;
       font-family: 'Open Sans', sans-serif;
-    }
-
-    #plots{
-      max-height: 150px;
-      overflow: auto;
     }
 }

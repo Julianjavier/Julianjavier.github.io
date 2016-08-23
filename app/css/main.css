@@ -113,20 +113,46 @@
   border-color: #6D815B;
   margin: 5px 0; }
 
-#drawContaner .leaflet-draw-section {
-  width: 105px; }
-  #drawContaner .leaflet-draw-section .leaflet-draw-draw-polygon {
-    font-size: 17px;
-    padding-left: 24px;
-    text-decoration: none;
-    color: #6D815B; }
-  #drawContaner .leaflet-draw-section .leaflet-draw-actions-top {
-    white-space: normal;
-    width: 155px; }
-    #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li {
-      float: left; }
-      #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li a {
-        display: block; }
+#drawContaner {
+  border: none; }
+  #drawContaner .leaflet-draw-section {
+    width: 140px; }
+    #drawContaner .leaflet-draw-section .leaflet-draw-draw-polygon {
+      font-size: 17px;
+      padding: 0px 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #6D815B;
+      background-image: none;
+      width: auto; }
+    #drawContaner .leaflet-draw-section .leaflet-draw-actions-top {
+      white-space: normal;
+      width: 155px; }
+      #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li {
+        float: left; }
+        #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li a {
+          display: block; }
+
+#plots {
+  max-height: 200px;
+  overflow: auto; }
+  #plots .form-control {
+    border-radius: 0 !important;
+    display: inline-block; }
+  #plots .cropContainer {
+    position: relative; }
+    #plots .cropContainer .crops {
+      background: none; }
+    #plots .cropContainer i {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 35px;
+      width: 20%;
+      text-align: center;
+      line-height: 35px;
+      font-size: 20px;
+      z-index: -1; }
 
 #map-container {
   margin-bottom: 0px !important; }
@@ -140,9 +166,6 @@
     background: #fff;
     padding: 10px;
     font-family: 'Open Sans', sans-serif; }
-  #map-container #plots {
-    max-height: 150px;
-    overflow: auto; }
 
 html, body, #mapPage, #map-container {
   height: 100%; }
@@ -160,9 +183,10 @@ html, body, #mapPage, #map-container {
     height: 100px;
     width: 100px;
     position: fixed;
-    left: 18px;
-    bottom: 18px;
-    z-index: 1100; }
+    right: 0px;
+    bottom: 20px;
+    z-index: 1100;
+    background-color: #FFF; }
     .wrapper #company-icon-lower img {
       width: 100%; }
 
@@ -183,10 +207,6 @@ section {
   background-repeat: repeat;
   background-size: 450px; }
 
-#plots {
-  max-height: 200px;
-  overflow: auto; }
-
 .panel {
   margin-top: 120px; }
 
@@ -194,4 +214,6 @@ section {
   border-color: #6D815B !important; }
 
 .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front {
-  z-index: 99999; }
+  z-index: 99999;
+  max-height: 100px;
+  overflow: scroll; }

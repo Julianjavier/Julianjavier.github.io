@@ -47,7 +47,7 @@ $(document).ready(function(){
 
   newParent.appendChild(controlerDraw);
   // document.getElementsByClassName("leaflet-draw-draw-polygon").text;
-  $('.leaflet-draw-draw-polygon').html('AddPlots+');
+  $('.leaflet-draw-draw-polygon').html('Add a new plot');
 
   map.on('draw:created', showPolygon);
   map.on('draw:edited', editedPolygon);
@@ -95,7 +95,7 @@ $(document).ready(function(){
 
     //this will loop thru the coordinates of the poligons and group them to json objects
     if(child) {
-      $(index).append('<input type="text" name="plots['+currentPlots+'][plotName]" data-id='+currentPlots+' value="Plot '+currentPlots+'" class="form-control focusOut">'+'<input type="text" name="plots['+currentPlots+'][cropType]" placeholder="Crop Type" class="form-control crops"><hr class="divider">');
+      $(index).append('<input type="text" name="plots['+currentPlots+'][plotName]" data-id='+currentPlots+' value="Plot '+currentPlots+'" class="form-control focusOut">'+'<div class="cropContainer"><input type="text" name="plots['+currentPlots+'][cropType]" placeholder="Crop Type" class="form-control crops"><i class="fa fa-angle-down"></i></div><hr class="divider">');
 
       //This will litsen for focus out in plot name inputs
       $('.focusOut').focusout(function(){
@@ -233,11 +233,29 @@ $(document).ready(function(){
     "Banana",
     "Plantain"
   ];
-  $(document).on('keydown.autocomplete', '.crops', function() {
+  $(document).on('keydown.autocomplete','.crops', function() {
     $(this).autocomplete({
-      source: availableTags
+      source: availableTags,
+      minLength: 0,
+      minChars: 0,
+      autoFill: true,
+      matchContains: false,
+    })
+  });
+
+  $(document).on('focus','.crops', function() {
+    $(this).autocomplete({
+      source: availableTags,
+      minLength: 0,
+      minChars: 0,
+      autoFill: true,
+      matchContains: false,
+    }).on('focus', function(event) {
+      var self = this;
+      $(self).autocomplete( "search", "");
     });
   });
+
 
   //Form validator that will prevent default events
   var form = {
