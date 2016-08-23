@@ -128,14 +128,20 @@
     #drawContaner .leaflet-draw-section .leaflet-draw-actions-top {
       white-space: normal;
       width: 155px; }
+      #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li:first-child {
+        display: none; }
       #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li {
-        float: left; }
+        float: left;
+        width: 140px;
+        margin-left: -25px; }
         #drawContaner .leaflet-draw-section .leaflet-draw-actions-top li a {
+          font-size: 15px;
+          text-align: center;
           display: block; }
 
 #plots {
   max-height: 200px;
-  overflow: auto; }
+  overflow-y: scroll; }
   #plots .form-control {
     border-radius: 0 !important;
     display: inline-block; }
