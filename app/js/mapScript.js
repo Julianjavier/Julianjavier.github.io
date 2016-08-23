@@ -9,39 +9,11 @@ $(document).ready(function(){
   var measurements = {m: [0.38610, 'miles'], ha: [100, 'ha'], acre:[247.11, 'acres']};
   var newMeasurement = 'km'
   var input = document.getElementById('areas');
-  $(input).on('change', function() {
-    newMeasurement = this.value;
 
-    map.eachLayer(function(layer) {
-      if (layer._popup) {
-        currentPlots=0;
-        var km = (LGeo.area(layer) / 1000000).toFixed(2);
-        var area = km;
-        if (newMeasurement != 'km') {
-          if (newMeasurement == 'm') {
-            area = Math.pow(km, 2) * 0.38610;
-            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"m<sup>2</sup></p>");
-          }else if (newMeasurement == 'ha') {
-            area = km * 100
-            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
-          }else if(newMeasurement == 'acre'){
-            area = Math.pow(km, 2) * 247.11;
-            layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
-          }
-        }else {
-          layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km<sup>2</sup></p>");
-        }
-        // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
-        // console.log(contentId);
-      }
-    });
-    currentPlots++
-  });
   //this creates the map view
   var map = L.mapbox.map('mapScript', 'mapbox.'+ mapStyle).setView(initialLocation, initialZoomLevel).addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true
   }));
-
 
   //this will alter the map style for what the user wants
   var layerList = document.getElementById('menu');
@@ -70,6 +42,13 @@ $(document).ready(function(){
     }
   }).addTo(map);
 
+  var controlerDraw = map.getContainer().getElementsByClassName('leaflet-draw-section')[0];
+  var newParent = document.getElementById('drawContaner');
+
+  newParent.appendChild(controlerDraw);
+  // document.getElementsByClassName("leaflet-draw-draw-polygon").text;
+  $('.leaflet-draw-draw-polygon').html('AddPlots+');
+
   map.on('draw:created', showPolygon);
   map.on('draw:edited', editedPolygon);
   map.on('draw:deleted', logEvent);
@@ -86,7 +65,7 @@ $(document).ready(function(){
   function editedPolygon(e) {
     e.layers.eachLayer(function(layer) {
       var container = layer._popup._contentNode;
-      var id = container.querySelectorAll('[data-id]')[currentPlots].getAttribute('data-id')
+      var id = container.querySelectorAll('[data-id]')[0].getAttribute('data-id')
       var shape = layer.toGeoJSON();
       var coordinates = shape.geometry.coordinates;
       var parent = document.getElementById(id);
@@ -95,7 +74,7 @@ $(document).ready(function(){
       if (parent){
         for (var i = 0; i < coordinates.length; i++) {
           for (var x = 0; x < coordinates[i].length; x++) {
-            $(parent).append('<input type="hidden" name="plots['+id+'][coordinates]['+x+'][lon]" value="'+coordinates[i][x][currentPlots]+'" class="form-control">');
+            $(parent).append('<input type="hidden" name="plots['+id+'][coordinates]['+x+'][lon]" value="'+coordinates[i][x][0]+'" class="form-control">');
             $(parent).append('<input type="hidden" name="plots['+id+'][coordinates]['+x+'][lat]" value="'+coordinates[i][x][1]+'" class="form-control">');
           }
         }
@@ -116,7 +95,7 @@ $(document).ready(function(){
 
     //this will loop thru the coordinates of the poligons and group them to json objects
     if(child) {
-      $(index).append('<input type="text" name="plots['+0+'][plotName]" data-id='+currentPlots+' value="Plot '+currentPlots+'" class="form-control focusOut">');
+      $(index).append('<input type="text" name="plots['+currentPlots+'][plotName]" data-id='+currentPlots+' value="Plot '+currentPlots+'" class="form-control focusOut">'+'<input type="text" name="plots['+currentPlots+'][cropType]" placeholder="Crop Type" class="form-control crops"><hr class="divider">');
 
       //This will litsen for focus out in plot name inputs
       $('.focusOut').focusout(function(){
@@ -128,7 +107,27 @@ $(document).ready(function(){
           map.eachLayer(function(layer) {
             if (layer._popup) {
               if (layer._popup._contentNode.querySelector('[data-id]').getAttribute('data-id') == contentId) {
-                layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>")
+                // layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>");
+
+                var km = (LGeo.area(layer) / 1000000).toFixed(2);
+                var area = km;
+                if (newMeasurement != 'km') {
+                  if (newMeasurement == 'm') {
+                    area = Math.pow(km, 2) * 0.38610;
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
+                  }else if (newMeasurement == 'ha') {
+                    area = km * 100
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
+                  }else if(newMeasurement == 'acre'){
+                    area = Math.pow(km, 2) * 247.11;
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
+                  }else if(newMeasurement == 'cuerda'){
+                    area = Math.pow(km, 2) * 254.45292620865;
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
+                  }
+                }else {
+                  layer.bindPopup("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+                }
               }
               // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
               // console.log(contentId);
@@ -151,24 +150,94 @@ $(document).ready(function(){
     if (newMeasurement != 'km') {
       if (newMeasurement == 'm') {
         area = Math.pow(km, 2) * 0.38610;
-        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"m<sup>2</sup></p>");
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
       }else if (newMeasurement == 'ha') {
         area = km * 100
-        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
       }else if(newMeasurement == 'acre'){
         area = Math.pow(km, 2) * 247.11;
-        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+newMeasurement+"</p>");
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
+      }else if(newMeasurement == 'cuerda'){
+        area = Math.pow(km, 2) * 254.45292620865;
+        layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
       }
     }else {
       e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km<sup>2</sup></p>");
     }
-
-    console.log(km * 100 + ' Hectares'); //Hectares
-    console.log(Math.pow(km, 2) * 0.38610 + ' Miles');//Miles
-    console.log(Math.pow(km, 2) * 247.11 + ' Acres');//Acres
     e.layer.openPopup();
     currentPlots++
   }
+
+  //this will change the unit for the area measurment
+  $(input).on('change', function() {
+    newMeasurement = this.value;
+    map.eachLayer(function(layer) {
+      if (layer._popup) {
+        var plotName = layer._popup._container.querySelectorAll('p[data-id]')[0].innerHTML;
+        var plotId = layer._popup._container.querySelectorAll('p[data-id]')[0].getAttribute('data-id');
+        currentPlots=0;
+        var km = (LGeo.area(layer) / 1000000).toFixed(2);
+        var area = km;
+        if (newMeasurement != 'km') {
+          if (newMeasurement == 'm') {
+            area = Math.pow(km, 2) * 0.38610;
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
+          }else if (newMeasurement == 'ha') {
+            area = km * 100
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
+          }else if(newMeasurement == 'acre'){
+            area = Math.pow(km, 2) * 247.11;
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
+          }else if(newMeasurement == 'cuerda'){
+            area = Math.pow(km, 2) * 254.45292620865;
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
+          }
+        }else {
+          layer.bindPopup("<p data-id="+currentPlots+">Plot "+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+        }
+        // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
+        // console.log(contentId);
+      }
+    });
+    currentPlots++
+  });
+
+  //Autocopleat for crops
+  var availableTags = [
+    "Almond",
+    "Apple",
+    "Apricot",
+    "Avocado",
+    "Blueberry",
+    "Raspberry",
+    "Strawberry",
+    "Cherrie",
+    "Date",
+    "Fig",
+    "Grapefruit",
+    "Table Grape",
+    "Wine Grape",
+    "Kiwi",
+    "Lemon",
+    "Nectarine",
+    "Olive",
+    "Orange",
+    "Peache",
+    "Pear",
+    "Pecan",
+    "Pistachio",
+    "Plum",
+    "Walnut",
+    "Melon",
+    "Mango",
+    "Banana",
+    "Plantain"
+  ];
+  $(document).on('keydown.autocomplete', '.crops', function() {
+    $(this).autocomplete({
+      source: availableTags
+    });
+  });
 
   //Form validator that will prevent default events
   var form = {

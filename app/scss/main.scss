@@ -20,11 +20,31 @@ html, body, #mapPage ,#map-container {
     .topnavbar{
       background-color:#6D815B;
       background-image: none;
+      .navbar-nav{
+        a{
+          color:#FFF;
+        }
+      }
+    }
+  }
+
+  #company-icon-lower{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    z-index: 1100;
+
+    img{
+      width: 100%;
     }
   }
 }
 
 .aside-inner{
+  padding-top: 30px;
+  height: auto !important ;
   .sidebar{
     height: auto !important;
   }
@@ -44,10 +64,19 @@ section{
   background-size: 450px;
 }
 
+#plots{
+  max-height: 200px;
+  overflow: auto;
+}
+
 .panel{
   margin-top: 120px;
 }
 
 .form-control:focus{
   border-color: #6D815B !important;
+}
+
+.ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front{
+    z-index:99999;
 }
