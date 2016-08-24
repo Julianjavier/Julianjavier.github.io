@@ -222,4 +222,4 @@ section {
 .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front {
   z-index: 99999;
   max-height: 100px;
-  overflow: scroll; }
+  overflow-y: scroll; }
