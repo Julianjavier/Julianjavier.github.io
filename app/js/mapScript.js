@@ -7,7 +7,7 @@ $(document).ready(function(){
   var mapStyle = 'streets-satellite';
   var plots = document.getElementById('plots');
   var measurements = {m: [0.38610, 'miles'], ha: [100, 'ha'], acre:[247.11, 'acres']};
-  var newMeasurement = 'km'
+  var newMeasurement = 'acre'
   var input = document.getElementById('areas');
 
   //this creates the map view
@@ -44,6 +44,24 @@ $(document).ready(function(){
 
   var controlerDraw = map.getContainer().getElementsByClassName('leaflet-draw-section')[0];
   var newParent = document.getElementById('drawContaner');
+  L.drawLocal.draw.handlers.polygon.tooltip.start = 'Click to start drawing a plot.';
+  L.drawLocal.draw.handlers.polygon.tooltip.cont = 'Click to continue drawing a plot.';
+  L.drawLocal.draw.handlers.polygon.tooltip.end = 'Click first point to close this plot.';
+  L.drawLocal.edit.handlers.remove.tooltip.text = 'Click on a plot to remove.';
+
+  // L.mapbox.drawLocal = {
+  //   draw:{
+  //     handlers: {
+  //       polygon: {
+  //         tooltip: {
+  //           start: 'Click to start drawing a plot.',
+  //           cont: 'Click to continue drawing a plot.',
+  //           end: 'Click first point to close this plot.'
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   newParent.appendChild(controlerDraw);
   // document.getElementsByClassName("leaflet-draw-draw-polygon").text;
@@ -109,24 +127,28 @@ $(document).ready(function(){
               if (layer._popup._contentNode.querySelector('[data-id]').getAttribute('data-id') == contentId) {
                 // layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>");
 
-                var km = (LGeo.area(layer) / 1000000).toFixed(2);
-                var area = km;
+                var km = (LGeo.area(layer) / 1000000).toFixed(4);
+                var area = Math.pow(km, 2);
                 if (newMeasurement != 'km') {
                   if (newMeasurement == 'm') {
-                    area = Math.pow(km, 2) * 0.38610;
-                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
+                    area = km * 0.38610;
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+"²</p>");
                   }else if (newMeasurement == 'ha') {
                     area = km * 100
                     layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
                   }else if(newMeasurement == 'acre'){
-                    area = Math.pow(km, 2) * 247.11;
+                    area = km * 247.11;
                     layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
                   }else if(newMeasurement == 'cuerda'){
-                    area = Math.pow(km, 2) * 254.45292620865;
+                    area = km * 254.45292620865;
                     layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
+                  }else if (newMeasurement == "me"){
+                    area = km * 1,000,000
+                    console.log(area);
+                    layer._popup.setContent("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area.toFixed(4)+"meters²</p>");
                   }
                 }else {
-                  layer.bindPopup("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+                  layer.bindPopup("<p data-id="+contentId+">"+content+"</p>"+"<input type='hidden' name='name' data-id='"+contentId+"' value='"+contentId+"'>"+"<p>"+area+"km²</p>");
                 }
               }
               // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
@@ -149,20 +171,23 @@ $(document).ready(function(){
     var area = km;
     if (newMeasurement != 'km') {
       if (newMeasurement == 'm') {
-        area = Math.pow(km, 2) * 0.38610;
-        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
+        area = km * 0.38610;
+        e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+"m²</p>");
       }else if (newMeasurement == 'ha') {
         area = km * 100
         e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
       }else if(newMeasurement == 'acre'){
-        area = Math.pow(km, 2) * 247.11;
+        area = km * 247.11;
         e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
       }else if(newMeasurement == 'cuerda'){
-        area = Math.pow(km, 2) * 254.45292620865;
+        area = km * 254.45292620865;
         layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
+      }else if (newMeasurement == "me"){
+        area = km * 1,000,000
+        layer._popup.setContent("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area.toFixed(4)+"meters²</p>");
       }
     }else {
-      e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+      e.layer.bindPopup("<p data-id="+currentPlots+">Plot "+currentPlots+"</p>"+"<input type='hidden' name='name' data-id='"+currentPlots+"' value='"+currentPlots+"'>"+"<p>"+area+"km²</p>");
     }
     e.layer.openPopup();
     currentPlots++
@@ -180,21 +205,25 @@ $(document).ready(function(){
         var area = km;
         if (newMeasurement != 'km') {
           if (newMeasurement == 'm') {
-            area = Math.pow(km, 2) * 0.38610;
-            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+"m<sup>2</sup></p>");
-          }else if (newMeasurement == 'ha') {
+            area = km * 0.38610;
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+"m²</p>");
+          }else if (newMeasurement == 'ha'){
             area = km * 100
             layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
           }else if(newMeasurement == 'acre'){
-            area = Math.pow(km, 2) * 247.11;
+            area = km * 247.11;
             layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"</p>");
           }else if(newMeasurement == 'cuerda'){
-            area = Math.pow(km, 2) * 254.45292620865;
-            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+" "+newMeasurement+"s</p>");
+            area = km * 254.45292620865;
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+newMeasurement+"s</p>");
+          }else if (newMeasurement == "me"){
+            area = km * 1,000,000
+            layer._popup.setContent("<p data-id="+plotId+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area.toFixed(4)+"meters²</p>");
           }
         }else {
-          layer.bindPopup("<p data-id="+currentPlots+">Plot "+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area+"km<sup>2</sup></p>");
+          layer.bindPopup("<p data-id="+currentPlots+">"+plotName+"</p>"+"<input type='hidden' name='name' data-id='"+plotId+"' value='"+plotId+"'>"+"<p>"+area+"km²</p>");
         }
+        console.log("this fired");
         // var contentId = layer._contentNode.querySelector('[data-id]')[0].getAttribute('data-id')
         // console.log(contentId);
       }
@@ -232,10 +261,17 @@ $(document).ready(function(){
     "Mango",
     "Banana",
     "Plantain"
-  ];
+  ].sort();
   $(document).on('keydown.autocomplete','.crops', function() {
     $(this).autocomplete({
-      source: availableTags,
+      source: function( request, response ) {
+            var matches = $.map( availableTags, function(availableTags) {
+              if ( availableTags.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+                return availableTags;
+              }
+            });
+            response(matches);
+          },
       minLength: 0,
       minChars: 0,
       autoFill: true,
@@ -257,18 +293,18 @@ $(document).ready(function(){
   });
 
 
-  //Form validator that will prevent default events
-  var form = {
-    init: function () {
-      this.page = document.querySelector('#property');
-      this.page.addEventListener('submit', this.handleFormSubmit.bind(this), false);
-    },
-
-    handleFormSubmit: function(event) {
-      // Always prevent the form from submitting for now.
-      event.preventDefault();
-      console.log(this);
-    }
-  }
-  form.init();
+  // //Form validator that will prevent default events
+  // var form = {
+  //   init: function () {
+  //     this.page = document.querySelector('#property');
+  //     this.page.addEventListener('submit', this.handleFormSubmit.bind(this), false);
+  //   },
+  //
+  //   handleFormSubmit: function(event) {
+  //     // Always prevent the form from submitting for now.
+  //     event.preventDefault();
+  //     console.log(this);
+  //   }
+  // }
+  // form.init();
 });

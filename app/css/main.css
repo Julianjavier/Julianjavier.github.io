@@ -113,6 +113,10 @@
   border-color: #6D815B;
   margin: 5px 0; }
 
+#property .btn {
+  margin-top: 10px;
+  width: 80px; }
+
 #drawContaner {
   border: none; }
   #drawContaner .leaflet-draw-section {
