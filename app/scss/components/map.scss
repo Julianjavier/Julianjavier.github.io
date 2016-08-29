@@ -13,6 +13,14 @@
     margin: 5px 0;
   }
 
+  .plotForm{
+
+    .btn{
+      margin-top: 5px;
+      width:100%;
+    }
+  }
+
   .btn{
     margin-top:10px;
     width: 80px;
@@ -97,4 +105,15 @@
       padding: 10px;
       font-family: 'Open Sans', sans-serif;
     }
+}
+
+.err{
+  border-color: red;
+}
+
+.inline{
+  display: inline;
+  &:nth-child(2){
+    margin: 0px 8px !important;
+  }
 }

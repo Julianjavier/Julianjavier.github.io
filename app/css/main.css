@@ -113,6 +113,10 @@
   border-color: #6D815B;
   margin: 5px 0; }
 
+#property .plotForm .btn {
+  margin-top: 5px;
+  width: 100%; }
+
 #property .btn {
   margin-top: 10px;
   width: 80px; }
@@ -176,6 +180,14 @@
     background: #fff;
     padding: 10px;
     font-family: 'Open Sans', sans-serif; }
+
+.err {
+  border-color: red; }
+
+.inline {
+  display: inline; }
+  .inline:nth-child(2) {
+    margin: 0px 8px !important; }
 
 html, body, #mapPage, #map-container {
   height: 100%; }
