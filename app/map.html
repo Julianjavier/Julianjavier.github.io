@@ -33,21 +33,72 @@
   <body>
 
     <div id="mapPage" class="wrapper">
-      <aside class="aside">
-        <div id="user">
-          <div id="avatar">
-
-          </div>
-          <h4>User Name</h4>
-        </div>
+      <header class="topnavbar-wrapper">
+         <!-- START Top Navbar-->
+         <nav role="navigation" class="navbar topnavbar">
+            <!-- START navbar header-->
+            <div class="navbar-header">
+               <a href="#/" class="navbar-brand">
+                  <div class="brand-logo">
+                     <img src="img/uav-iq-logo-horizontal.png" alt="App Logo" class="img-responsive">
+                  </div>
+                  <div class="brand-logo-collapsed">
+                     <img src="img/uav-iq-logo-horizontal.png" alt="App Logo" class="img-responsive">
+                  </div>
+               </a>
+            </div>
+            <!-- END navbar header-->
+            <!-- START Nav wrapper-->
+            <div class="nav-wrapper">
+               <!-- START Left navbar-->
+               <ul class="nav navbar-nav">
+                  <!-- START User avatar toggle-->
+                  <li>
+                     <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                     <a id="user-block-toggle" href="#user-block" data-toggle="collapse">
+                        <em class="fa fa-share-square-o"></em> Return to property list
+                     </a>
+                  </li>
+                  <!-- END User avatar toggle-->
+               </ul>
+               <!-- END Left navbar-->
+               <!-- START Right Navbar-->
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="visible-lg">
+                     <a target="_blank" id="mailto">
+                        <em class="fa fa-envelope"></em> Contact us
+                     </a>
+                  </li>
+               </ul>
+               <!-- END Right Navbar-->
+            </div>
+            <!-- END Nav wrapper-->
+            <!-- START Search form-->
+            <form role="search" action="search.html" class="navbar-form">
+               <div class="form-group has-feedback">
+                  <input type="text" placeholder="Type and hit enter ..." class="form-control">
+                  <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+               </div>
+               <button type="submit" class="hidden btn btn-default">Submit</button>
+            </form>
+            <!-- END Search form-->
+         </nav>
+         <!-- END Top Navbar-->
+      </header>
+      <aside id="aside" class="aside">
          <!-- START Sidebar (left)-->
          <div class="aside-inner">
             <nav data-sidebar-anyclick-close="" class="">
                <!-- START sidebar nav-->
+               <div id="user">
+                 <div id="avatar">
 
+                 </div>
+                 <h4>User Name</h4>
+               </div>
                <form id="property" action="test.php" method="post">
                  <div class=" panel-default">
-                    <div class="panel-heading">Stacked form</div>
+                    <div class="panel-heading">Plot Creation</div>
                     <div class="panel-body">
                         <div class="form-group">
                            <label>Property Name</label>
@@ -91,9 +142,6 @@
             <label for='satellite'>Satellite</label>
           </div>
       </section>
-      <div id="company-icon-lower">
-        <img src="img/uav-iq-logo.png" alt="" />
-      </div>
     </div>
 
     <!-- =============== VENDOR SCRIPTS ===============-->

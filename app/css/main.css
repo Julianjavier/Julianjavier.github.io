@@ -102,6 +102,10 @@
   .state-body p {
     font-size: 20px; }
 
+#mapPage #aside {
+  height: 100%;
+  overflow-y: scroll; }
+
 #property button {
   color: #FFF; }
 
@@ -147,39 +151,46 @@
           text-align: center;
           display: block; }
 
-#plots {
-  max-height: 200px;
-  overflow-y: scroll; }
-  #plots .form-control {
-    border-radius: 0 !important;
-    display: inline-block; }
-  #plots .cropContainer {
-    position: relative; }
-    #plots .cropContainer .crops {
-      background: none; }
-    #plots .cropContainer i {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      height: 35px;
-      width: 20%;
-      text-align: center;
-      line-height: 35px;
-      font-size: 20px;
-      z-index: -1; }
+#plots .form-control {
+  border-radius: 0 !important;
+  display: inline-block; }
+
+#plots .cropContainer {
+  position: relative; }
+  #plots .cropContainer .crops {
+    background: none; }
+  #plots .cropContainer i {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 35px;
+    width: 20%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    z-index: -1; }
 
 #map-container {
-  margin-bottom: 0px !important; }
+  margin: 0px !important;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 115; }
   #map-container #mapScript {
     width: 100%;
     height: 100%; }
   #map-container #menu {
     position: absolute;
     right: 15px;
-    top: 20px;
+    top: 64px;
     background: #fff;
     padding: 10px;
     font-family: 'Open Sans', sans-serif; }
+  #map-container .leaflet-left {
+    left: 220px; }
+  #map-container .leaflet-top {
+    top: 53px; }
 
 .err {
   border-color: red; }
@@ -196,6 +207,10 @@ html, body, #mapPage, #map-container {
   background-image: url("../img/cartographer.jpg");
   background-repeat: repeat;
   background-size: 450px; }
+  .wrapper .navbar-header {
+    background-color: #FFF; }
+    .wrapper .navbar-header .img-responsive {
+      max-width: 60%; }
   .wrapper .topnavbar-wrapper .topnavbar {
     background-color: #6D815B;
     background-image: none; }
@@ -228,9 +243,6 @@ section {
   background-image: url("../img/cartographer.jpg");
   background-repeat: repeat;
   background-size: 450px; }
-
-.panel {
-  margin-top: 120px; }
 
 .form-control:focus {
   border-color: #6D815B !important; }

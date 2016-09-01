@@ -1,3 +1,11 @@
+#mapPage{
+
+  #aside{
+    height:100%;
+    overflow-y: scroll;
+  }
+}
+
 #property{
   button{
     color:#FFF;
@@ -63,8 +71,6 @@
 }
 
 #plots{
-  max-height: 200px;
-  overflow-y: scroll;
   .form-control{
     border-radius:0 !important;
     display: inline-block;
@@ -89,8 +95,12 @@
 }
 
 #map-container{
-
-  margin-bottom: 0px !important;
+  margin: 0px !important;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 115;
 
   #mapScript{
       width:100%;
@@ -100,11 +110,18 @@
   #menu{
       position: absolute;
       right: 15px;
-      top: 20px;
+      top: 64px;
       background: #fff;
       padding: 10px;
       font-family: 'Open Sans', sans-serif;
     }
+  .leaflet-left{
+    left:220px;
+  }
+
+  .leaflet-top {
+    top: 53px;
+  }
 }
 
 .err{
