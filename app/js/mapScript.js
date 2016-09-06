@@ -53,7 +53,7 @@ $(document).ready(function(){
   // document.getElementsByClassName("leaflet-draw-draw-polygon").text;
   $('.leaflet-draw-draw-polygon').html('Add a new plot');
 
-  map.on('draw:created', showPolygon);
+  map.on('draw:created', createdPolygon);
   map.on('draw:edited', editedPolygon);
   map.on('draw:deleted', logEvent);
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
   }
 
-  function showPolygon(e) {
+  function createdPolygon(e) {
     //sets basic variable for map polygons
     var layer = e.layer;
     var shape = layer.toGeoJSON();
@@ -94,6 +94,8 @@ $(document).ready(function(){
               var cropId = event.target.querySelectorAll('.plotName')[0].dataset.id;
 
               if (event.target.querySelectorAll('.plotName')[0].value != "" && event.target.querySelectorAll('.crops')[0].value != "") {
+                $('[name="plots['+cropId+'][plotName]"]').val(name)
+                $('[name="plots['+cropId+'][cropType]"]').val(cropType)
                 console.log(name);
                 console.log(contentId);
                 console.log(cropType);
@@ -151,8 +153,12 @@ $(document).ready(function(){
 
       form2.init();
 
+      $(index).append('<input type="hidden" name="plots['+currentPlots+'][plotName]" value="Plot '+currentPlots+'" class="form-control">');
+      $(index).append('<input type="hidden" name="plots['+currentPlots+'][cropType]" value="" class="form-control">');
       for (var i = 0; i < shape.geometry.coordinates.length; i++) {
         for (var x = 0; x < coordinates[i].length; x++) {
+          if (x === coordinates[i].length - 1) { break; }
+          console.log(x);
           $(index).append('<input type="hidden" name="plots['+currentPlots+'][coordinates]['+x+'][lon]" value="'+coordinates[i][x][0]+'" class="form-control">');
           $(index).append('<input type="hidden" name="plots['+currentPlots+'][coordinates]['+x+'][lat]" value="'+coordinates[i][x][1]+'" class="form-control">');
         }
@@ -199,17 +205,24 @@ $(document).ready(function(){
 
 
   function editedPolygon(e) {
+
     e.layers.eachLayer(function(layer) {
       var container = layer._popup._contentNode;
       var id = container.querySelectorAll('[data-id]')[0].getAttribute('data-id')
       var shape = layer.toGeoJSON();
       var coordinates = shape.geometry.coordinates;
       var parent = document.getElementById(id);
+      var plotName = ""
+      var plotId = ""
+      var cropType = 'Plot not defined';
+      if (layer._popup._container.querySelectorAll('p[data-crop]')[0]) {
+        cropType = layer._popup._container.querySelectorAll('p[data-crop]')[0].getAttribute('data-crop');
+      }
       map.eachLayer(function(layer) {
         if (layer._popup) {
-          var plotName = layer._popup._container.querySelectorAll('p[data-id]')[0].innerHTML;
-          var plotId = layer._popup._container.querySelectorAll('p[data-id]')[0].getAttribute('data-id');
-          var cropType = 'Plot not defined';
+          plotName = layer._popup._container.querySelectorAll('p[data-id]')[0].innerHTML;
+          plotId = layer._popup._container.querySelectorAll('p[data-id]')[0].getAttribute('data-id');
+          cropType = 'Plot not defined';
           if (layer._popup._container.querySelectorAll('p[data-crop]')[0]) {
             cropType = layer._popup._container.querySelectorAll('p[data-crop]')[0].getAttribute('data-crop');
           }
@@ -243,10 +256,14 @@ $(document).ready(function(){
       if (parent){
         console.log(parent);
         $(parent).children('input[type="hidden"]').remove();
+        $(parent).append('<input type="hidden" name="plots['+id+'][plotName]" value="'+plotName+'" class="form-control">');
+        $(parent).append('<input type="hidden" name="plots['+id+'][cropType]" value="'+cropType+'" class="form-control">');
         for (var i = 0; i < coordinates.length; i++) {
           for (var x = 0; x < coordinates[i].length; x++) {
-            $(parent).append('<input type="hidden" name="plots['+id+'][coordinates]['+x+'][lon]" value="'+coordinates[i][x][0]+'" class="form-control">');
-            $(parent).append('<input type="hidden" name="plots['+id+'][coordinates]['+x+'][lat]" value="'+coordinates[i][x][1]+'" class="form-control">');
+            if (x === coordinates[i].length - 1) { break; }
+            console.log(x);
+            $(index).append('<input type="hidden" name="plots['+currentPlots+'][coordinates]['+x+'][lon]" value="'+coordinates[i][x][0]+'" class="form-control">');
+            $(index).append('<input type="hidden" name="plots['+currentPlots+'][coordinates]['+x+'][lat]" value="'+coordinates[i][x][1]+'" class="form-control">');
           }
         }
       }
@@ -352,23 +369,22 @@ $(document).ready(function(){
   });
 
 
-  //Form validator that will prevent default events
-  var form = {
-    init: function () {
-      this.page = document.querySelector('#property');
-      this.page.addEventListener('submit', this.handleFormSubmit.bind(this), false);
-    },
-
-    handleFormSubmit: function(event) {
-      // Always prevent the form from submitting for now.
-      event.preventDefault();
-      console.log(this);
-    }
-  }
-
   $('#mailto').on('click',function(){
     window.location = "mailto:julian.dev.rodriguez@gmail.com";
   });
 
-  form.init();
+  //Form validator that will prevent default events
+  // var form = {
+  //   init: function () {
+  //     this.page = document.querySelector('#property');
+  //     this.page.addEventListener('submit', this.handleFormSubmit.bind(this), false);
+  //   },
+  //
+  //   handleFormSubmit: function(event) {
+  //     // Always prevent the form from submitting for now.
+  //     event.preventDefault();
+  //     console.log(this);
+  //   }
+  // }
+  // form.init();
 });
