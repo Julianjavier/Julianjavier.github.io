@@ -1,0 +1,191 @@
+.wineflight{
+  font-family: 'Raleway', sans-serif;
+
+
+  nav{
+    background-color:none;
+    position: absolute !important;
+    width: 100%;
+    padding:0 20px;
+
+    .navbar-brand{
+      height: auto;
+      img{
+        height: 80px;
+      }
+    }
+    .nav{
+      .nav-item{
+        a{
+          color:#FFF;
+          padding-top: 45px;
+          padding-bottom: 45px;
+        }
+      }
+    }
+  }
+
+  .jumbotron{
+    padding-top: 130px !important;
+    background-color:#fff;
+    // background-image: url('../img/TV-Colchagua.png');
+    background-repeat: no-repeat;
+    background-color:#000;
+    max-height:700px;
+    overflow: hidden;
+
+    .container{
+      color:#FFF;
+
+      h1{
+        font-size: 50px;
+      }
+
+      p{
+        font-size: 25px;
+      }
+
+      .button{
+        .btn{
+          background-color:#A3CB00;
+          border: none;
+          border-radius:0;
+          padding: 10px 35px;
+        }
+
+        span{
+          display: block;
+          font-size:11px;
+        }
+      }
+
+      .banner{
+        width:100%;
+      }
+    }
+
+    .back-opacity{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6;
+    }
+  }
+
+
+
+  .container-fluid{
+      margin-top:20px;
+      margin-bottom:20px;
+
+      .section-header{
+        font-size: 35px !important;
+      }
+      .section-sub-header{
+        font-size: 30px !important;
+      }
+  }
+
+  #actionalble_data{
+    .section-header{
+      text-align: center;
+      font-size: 13px;
+      padding:0 20px;
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        text-align: center;
+      }
+
+      p{
+        text-align: center;
+      }
+
+      img{
+        width:100%;
+        padding: 0 100px;
+
+        @media only screen and (max-device-width: 1024px) {
+          padding:0px 400px;
+        }
+      }
+
+
+    }
+  }
+
+  #work{
+    background-image: url("../img/how-it-works.png");
+    background-size: 100% 100%;
+    color:#FFF;
+    padding: 70px;
+
+    .section-header{
+      text-align: center;
+      font-size: 13px;
+      padding:0 20px;
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        font-size:40px;
+        text-align: center;
+      }
+
+      p{
+        font-size:30px;
+        text-align: center;
+      }
+
+      img{
+        width:100%;
+        padding: 0 100px;
+
+        @media only screen and (max-device-width: 1024px) {
+          padding:0px 320px;
+        }
+      }
+
+
+    }
+  }
+
+  .footer{
+    margin-top:100px;
+    position: relative;
+
+    h4{
+      font-size:12px;
+      color:#ADADAD;
+      text-align: center;
+    }
+    ul{
+      margin-bottom: 20px;
+      font-size:10px;
+      .first{
+        font-weight:bold;
+      }
+      li{
+        margin-bottom:10px;
+        list-style: none;
+      }
+    }
+
+    .social{
+      position: absolute;
+      top: 70px;
+      left:50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+    }
+  }
+}

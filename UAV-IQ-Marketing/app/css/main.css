@@ -1,133 +1,147 @@
-body {
+.home {
   font-family: 'Raleway', sans-serif; }
-  body nav {
+  .home nav {
     background-color: none;
     position: absolute !important;
-    width: 100%; }
-    body nav .navbar-brand {
+    width: 100%;
+    padding: 0 20px; }
+    .home nav .navbar-brand {
       height: auto; }
-      body nav .navbar-brand img {
+      .home nav .navbar-brand img {
         height: 80px; }
-    body nav .nav .nav-item a {
+    .home nav .nav .nav-item a {
       color: #FFF;
       padding-top: 45px;
       padding-bottom: 45px; }
-  body .jumbotron {
-    padding-top: 158px !important;
+  .home .jumbotron {
+    padding-top: 130px !important;
     background-color: #fff;
     background-repeat: no-repeat;
-    background-size: 100% 100%; }
-    body .jumbotron .container {
+    max-height: 700px;
+    overflow: hidden; }
+    .home .jumbotron .container {
       color: #FFF; }
-      body .jumbotron .container h1 {
-        font-size: 35px; }
-      body .jumbotron .container p {
-        font-size: 12px; }
-      body .jumbotron .container .button .btn {
+      .home .jumbotron .container h1 {
+        font-size: 50px; }
+      .home .jumbotron .container p {
+        font-size: 25px; }
+      .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
         border-radius: 0;
         padding: 10px 35px; }
-      body .jumbotron .container .button span {
+      .home .jumbotron .container .button span {
         display: block;
-        font-size: 5.5px; }
-  body .container-fluid {
+        font-size: 11px; }
+      .home .jumbotron .container .banner {
+        width: 100%; }
+  .home .container-fluid {
     margin-top: 20px;
     margin-bottom: 20px; }
-  body #industries .section-header {
+    .home .container-fluid .section-header {
+      font-size: 35px !important; }
+    .home .container-fluid .section-sub-header {
+      font-size: 30px !important; }
+  .home #industries .section-header {
     text-align: center;
     font-size: 13px;
     padding: 0 20px; }
-  body #industries .section-sub-header {
+  .home #industries .section-sub-header {
     text-align: center;
     font-size: 13px; }
-  body #industries div {
+  .home #industries div {
     margin-top: 30px;
-    position: relative; }
-    body #industries div img {
+    position: relative;
+    padding: 0 200px; }
+    .home #industries div img {
       width: 100%; }
-    body #industries div h2 {
+    .home #industries div h2 {
       transform: translateX(-50%);
       text-align: center;
       position: absolute;
+      font-size: 40px;
       color: #FFF;
       margin: 0;
       left: 50%;
       top: 40%; }
-  body #industries .fa {
+  .home #industries .fa {
     text-align: center;
     margin-top: 25px;
     width: 100%;
-    color: #ADADAD; }
-  body #issue .section-header {
+    color: #ADADAD;
+    font-size: 30px; }
+  .home #issue .section-header {
     text-align: center;
     font-size: 13px; }
-  body #issue .section-sub-header {
+  .home #issue .section-sub-header {
     text-align: center;
     font-size: 13px;
     color: #A3CB00; }
-  body #issue div {
-    position: relative;
-    margin-top: -80px;
-    z-index: -1; }
-    body #issue div .background {
-      width: 100%; }
-    body #issue div .asset {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%; }
-    body #issue div h2 {
-      transform: translateX(-50%);
+  .home #issue div {
+    background-image: url("../img/BG_zoom_level.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 50px 0; }
+    .home #issue div .asset {
+      width: 100%;
+      display: block; }
+    .home #issue div .second-asset {
+      height: 645px;
+      display: none;
+      margin: 0 auto; }
+    .home #issue div h2 {
       text-align: center;
-      position: absolute;
-      color: #FFF;
-      margin: 0;
-      left: 50%;
-      top: 40%; }
-  body #observe .section-header {
+      color: #FFF; }
+  .home #observe .section-header {
     text-align: center;
     font-size: 13px; }
-  body #observe .section-sub-header {
+  .home #observe .section-sub-header {
     text-align: center;
     font-size: 13px;
     color: #A3CB00; }
-  body #observe .wrap {
+  .home #observe .wrap {
     position: relative;
-    margin-top: 20px;
-    z-index: -1; }
-    body #observe .wrap .left ul {
+    margin-top: 50px;
+    z-index: -1;
+    overflow: hidden; }
+    .home #observe .wrap .left ul {
       text-align: right;
       list-style: none;
       overflow: hidden;
       padding: 0; }
-      body #observe .wrap .left ul li {
+      .home #observe .wrap .left ul li {
         font-size: 20px;
-        float: right;
         padding-right: 40px;
         position: relative;
         margin-bottom: 10px; }
-        body #observe .wrap .left ul li img {
+        .home #observe .wrap .left ul li img {
           position: absolute;
           top: 7px;
           right: 0;
-          width: 25px; }
-    body #observe .wrap .right ul {
+          width: 30px; }
+    .home #observe .wrap .right ul {
       list-style: none;
       padding: 0; }
-      body #observe .wrap .right ul li {
+      .home #observe .wrap .right ul li {
         font-size: 20px;
         padding-left: 40px;
         position: relative;
         margin-bottom: 10px; }
-        body #observe .wrap .right ul li img {
+        .home #observe .wrap .right ul li img {
           position: absolute;
           top: 7px;
-          left: 0;
           width: 30px; }
-    body #observe .wrap .phone {
-      width: 100%; }
-    body #observe .wrap h2 {
+          @media only screen and (min-device-width: 1024px) {
+            .home #observe .wrap .right ul li img {
+              left: 0; } }
+    .home #observe .wrap .phone {
+      width: 100%;
+      display: block; }
+    .home #observe .wrap .tablet {
+      width: 100%;
+      padding: 40px;
+      display: none; }
+    .home #observe .wrap h2 {
       transform: translateX(-50%);
       text-align: center;
       position: absolute;
@@ -135,82 +149,243 @@ body {
       margin: 0;
       left: 50%;
       top: 40%; }
-  body #options {
+  .home #options {
     background-image: url("../img/BG_Homepage_Call to Action_Button.png");
     background-repeat: no-repeat;
     background-size: 100% 100%; }
-    body #options .option {
+    .home #options .option {
       padding: 40px; }
-      body #options .option div {
+      .home #options .option div {
         padding: 40px;
         background: rgba(0, 0, 0, 0.5);
         color: #fff;
         font-size: 23px;
         text-align: center; }
-        body #options .option div .image {
+        .home #options .option div .image {
           width: 100%;
           margin-bottom: 40px; }
-        body #options .option div p {
+        .home #options .option div p {
           margin-bottom: 40px; }
-        body #options .option div button {
+        .home #options .option div button {
           width: 100%;
           background: rgba(163, 203, 0, 0.5);
           border: 5px solid #a3cb00; }
-  body #advert {
+  .home #advert {
     margin: 40px 0;
     position: relative; }
-    body #advert h4 {
-      font-size: 6px;
+    .home #advert h4 {
+      font-size: 20px;
       text-align: center;
       margin: 20px 0; }
-    body #advert div {
+    .home #advert div {
       position: relative;
       height: 40px; }
-      body #advert div img {
+      .home #advert div img {
         margin: 0 auto;
         height: 100%;
         position: absolute;
         left: 50%;
         transform: translateX(-50%); }
-  body #contact-us h1 {
+  .home #contact-us h1 {
     text-align: center; }
-  body #contact-us form {
+  .home #contact-us form {
     width: 60%;
     margin: 0 auto; }
-    body #contact-us form div {
+    .home #contact-us form div {
       margin: 10px 0; }
-      body #contact-us form div label {
-        font-size: 30px; }
-      body #contact-us form div textarea {
+      .home #contact-us form div label {
+        font-size: 25px; }
+      .home #contact-us form div textarea {
         width: 100%;
         height: 200px;
         background-color: #ADADAD;
         border: none; }
-      body #contact-us form div input {
+      .home #contact-us form div input {
         width: 100%;
         color: #FFF;
         background-color: #ADADAD;
         height: 50px;
-        font-size: 25px;
-        border: none; }
-        body #contact-us form div input::-webkit-input-placeholder {
+        font-size: 20px;
+        border: none;
+        padding: 1px 20px; }
+        .home #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
-  body .footer {
+  .home .footer {
     margin-top: 100px;
     position: relative; }
-    body .footer h4 {
+    .home .footer h4 {
       font-size: 12px;
       color: #ADADAD;
       text-align: center; }
-    body .footer ul {
+    .home .footer ul {
       margin-bottom: 20px;
       font-size: 10px; }
-      body .footer ul .first {
+      .home .footer ul .first {
         font-weight: bold; }
-      body .footer ul li {
+      .home .footer ul li {
         margin-bottom: 10px;
         list-style: none; }
-    body .footer .social {
+    .home .footer .social {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto; }
+  @media only screen and (max-device-width: 1024px) {
+    .home .jumbotron .container h1 {
+      font-size: 55px;
+      text-align: center; }
+    .home .jumbotron .container p {
+      font-size: 25px;
+      text-align: center; }
+    .home .jumbotron .container .button .btn {
+      background-color: #A3CB00;
+      border: none;
+      border-radius: 0;
+      padding: 10px 35px; }
+    .home .jumbotron .container .button span {
+      font-size: 11px; }
+    .home .jumbotron .container .banner {
+      width: 100%; }
+    .home #industries .section-header {
+      font-size: 35px; }
+    .home #industries .section-sub-header {
+      font-size: 30px; }
+    .home #industries div h2 {
+      font-size: 55px; }
+    .home #issue .section-header {
+      font-size: 35px; }
+    .home #issue .section-sub-header {
+      font-size: 30px; }
+    .home #issue div .asset {
+      width: 100%;
+      display: none; }
+    .home #issue div .second-asset {
+      display: block; }
+    .home .wrap .left ul li img {
+      position: initial; }
+    .home .wrap .right ul {
+      text-align: right; }
+      .home .wrap .right ul li {
+        padding-right: 40px;
+        padding-left: 0px; }
+        .home .wrap .right ul li img {
+          position: initial;
+          right: 0; }
+    .home .wrap .phone {
+      display: none !important; }
+    .home .wrap .tablet {
+      display: block !important; } }
+
+.wineflight {
+  font-family: 'Raleway', sans-serif; }
+  .wineflight nav {
+    background-color: none;
+    position: absolute !important;
+    width: 100%;
+    padding: 0 20px; }
+    .wineflight nav .navbar-brand {
+      height: auto; }
+      .wineflight nav .navbar-brand img {
+        height: 80px; }
+    .wineflight nav .nav .nav-item a {
+      color: #FFF;
+      padding-top: 45px;
+      padding-bottom: 45px; }
+  .wineflight .jumbotron {
+    padding-top: 130px !important;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-color: #000;
+    max-height: 700px;
+    overflow: hidden; }
+    .wineflight .jumbotron .container {
+      color: #FFF; }
+      .wineflight .jumbotron .container h1 {
+        font-size: 50px; }
+      .wineflight .jumbotron .container p {
+        font-size: 25px; }
+      .wineflight .jumbotron .container .button .btn {
+        background-color: #A3CB00;
+        border: none;
+        border-radius: 0;
+        padding: 10px 35px; }
+      .wineflight .jumbotron .container .button span {
+        display: block;
+        font-size: 11px; }
+      .wineflight .jumbotron .container .banner {
+        width: 100%; }
+    .wineflight .jumbotron .back-opacity {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6; }
+  .wineflight .container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .wineflight .container-fluid .section-header {
+      font-size: 35px !important; }
+    .wineflight .container-fluid .section-sub-header {
+      font-size: 30px !important; }
+  .wineflight #actionalble_data .section-header {
+    text-align: center;
+    font-size: 13px;
+    padding: 0 20px; }
+  .wineflight #actionalble_data div {
+    margin-top: 30px;
+    position: relative; }
+    .wineflight #actionalble_data div h2 {
+      text-align: center; }
+    .wineflight #actionalble_data div p {
+      text-align: center; }
+    .wineflight #actionalble_data div img {
+      width: 100%;
+      padding: 0 100px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #actionalble_data div img {
+          padding: 0px 400px; } }
+  .wineflight #work {
+    background-image: url("../img/how-it-works.png");
+    background-size: 100% 100%;
+    color: #FFF;
+    padding: 70px; }
+    .wineflight #work .section-header {
+      text-align: center;
+      font-size: 13px;
+      padding: 0 20px; }
+    .wineflight #work div {
+      margin-top: 30px;
+      position: relative; }
+      .wineflight #work div h2 {
+        font-size: 40px;
+        text-align: center; }
+      .wineflight #work div p {
+        font-size: 30px;
+        text-align: center; }
+      .wineflight #work div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (max-device-width: 1024px) {
+          .wineflight #work div img {
+            padding: 0px 320px; } }
+  .wineflight .footer {
+    margin-top: 100px;
+    position: relative; }
+    .wineflight .footer h4 {
+      font-size: 12px;
+      color: #ADADAD;
+      text-align: center; }
+    .wineflight .footer ul {
+      margin-bottom: 20px;
+      font-size: 10px; }
+      .wineflight .footer ul .first {
+        font-weight: bold; }
+      .wineflight .footer ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+    .wineflight .footer .social {
       position: absolute;
       top: 70px;
       left: 50%;

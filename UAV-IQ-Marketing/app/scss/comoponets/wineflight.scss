@@ -1,0 +1,29 @@
+.wineflight{
+  font-family: 'Raleway', sans-serif;
+
+  nav{
+    background-color:none;
+    position: absolute !important;
+    width: 100%;
+    padding:0 20px;
+
+    .navbar-brand{
+      height: auto;
+      img{
+        height: 80px;
+      }
+    }
+    .nav{
+      .nav-item{
+        a{
+          color:#000;
+          padding-top: 45px;
+          padding-bottom: 45px;
+        }
+      }
+    }
+  }
+
+
+
+}
