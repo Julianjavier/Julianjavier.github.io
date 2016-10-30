@@ -1,29 +1,438 @@
 .wineflight{
   font-family: 'Raleway', sans-serif;
 
-  nav{
-    background-color:none;
-    position: absolute !important;
-    width: 100%;
-    padding:0 20px;
+    .jumbotron{
+      padding-top: 130px !important;
+      background-color:#fff;
+      // background-image: url('../img/TV-Colchagua.png');
+      background-repeat: no-repeat;
+      background-color:#000;
+      max-height:700px;
+      overflow: hidden;
 
-    .navbar-brand{
-      height: auto;
-      img{
-        height: 80px;
+      .container{
+        color:#FFF;
+
+        .image-container{
+          width: 100%;
+          img{
+            width: 30%;
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 40px;
+          }
+        }
+
+        h1{
+          font-size: 50px;
+          text-align: center;
+        }
+
+        p{
+          font-size: 25px;
+          text-align: center;
+        }
+
+        .button{
+          .btn{
+            background-color:#A3CB00;
+            border: none;
+            border-radius:0;
+            padding: 10px 35px;
+          }
+
+          span{
+            display: block;
+            font-size:11px;
+          }
+        }
+
+        .banner{
+          width:100%;
+        }
+      }
+
+      .back-opacity{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.6;
       }
     }
-    .nav{
-      .nav-item{
-        a{
-          color:#000;
-          padding-top: 45px;
-          padding-bottom: 45px;
+
+
+
+    .container-fluid{
+        margin-top:20px;
+        margin-bottom:20px;
+
+        .section-header{
+          font-size: 35px ;
+        }
+        .section-sub-header{
+          font-size: 30px;
+        }
+    }
+
+    #actionalble_data{
+      .section-header{
+        text-align: center;
+        padding:0 20px;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+      }
+
+      div{
+        margin-top:30px;
+        position: relative;
+
+        h2{
+          text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
+        }
+
+        p{
+          text-align: center;
+          @media only screen and (max-device-width: 768px) {
+            font-size: 30px;
+          }
+        }
+
+        img{
+          width:100%;
+          padding: 0 100px;
+
+          @media only screen and (min-device-width: 1024px) {
+            padding:0px 70px;
+          }
+
+          @media only screen and (max-device-width: 768px) {
+            padding:0px 350px;
+          }
+        }
+
+
+      }
+    }
+
+    #work{
+      background-image: url("../img/how-it-works.png");
+      background-size: 100% 100%;
+      color:#FFF;
+      padding: 70px;
+
+      .section-header{
+        text-align: center;
+        padding:0 20px;
+
+        @media only screen and (max-device-width: 1024px) {
+          font-size:45px;
+        }
+      }
+
+      div{
+        margin-top:30px;
+        position: relative;
+
+        h2{
+          font-size:30px;
+          text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
+        }
+
+        p{
+          font-size:20px;
+          text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 30px;
+          }
+        }
+
+        img{
+          width:100%;
+          padding: 0 100px;
+
+          @media only screen and (min-device-width: 1024px) {
+            padding:0px 70px;
+          }
+
+          @media only screen and (max-device-width: 768px) {
+            padding:0px 300px;
+          }
+        }
+      }
+    }
+
+    #best-wine{
+      padding: 0 70px;
+
+      .section-header{
+        text-align: center;
+        padding:0 20px;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+      }
+
+      .ipad{
+        margin-top:30px;
+        margin-bottom: 30px;
+        position: relative;
+
+        h2{
+          font-size:40px;
+          text-align: center;
+        }
+
+        p{
+          font-size:30px;
+          text-align: center;
+        }
+
+        img{
+          width:100%;
+          padding: 0 40px;
+        }
+      }
+
+      .left{
+        margin-top:30px;
+        margin-bottom: 30px;
+
+        ul{
+          text-align: left;
+          // list-style-position: inside;
+          // direction: rtl;
+          list-style: none;
+          overflow: hidden;
+          padding: 0;
+          li{
+            font-size: 30px;
+            // float: right;
+            padding-left:40px;
+            position: relative;
+            margin-bottom:10px;
+
+            @media only screen and (min-device-width: 1024px) {
+              font-size: 20px;
+            }
+            img{
+              position: absolute;
+              top:7px;
+              left: 0;
+              width:30px;
+            }
+          }
+        }
+      }
+    }
+
+    #best-practice{
+      padding: 0 70px;
+
+      .section-header{
+        text-align: center;
+        padding:0 20px;
+      }
+
+      .ipad{
+        margin-top:30px;
+        margin-bottom: 30px;
+        position: relative;
+
+        h2{
+          font-size:40px;
+          text-align: center;
+        }
+
+        p{
+          font-size:30px;
+          text-align: center;
+        }
+
+        img{
+          width:100%;
+          padding: 0 40px;
+        }
+      }
+
+      .left{
+        margin-top:30px;
+        margin-bottom: 30px;
+
+        ul{
+          text-align: left;
+          // list-style-position: inside;
+          // direction: rtl;
+          list-style: none;
+          overflow: hidden;
+          padding: 0;
+          li{
+            font-size: 30px;
+            // float: right;
+            padding-left:40px;
+            position: relative;
+            margin-bottom:10px;
+
+            @media only screen and (min-device-width: 1024px) {
+              font-size: 20px;
+            }
+            img{
+              position: absolute;
+              top:7px;
+              left: 0;
+              width:30px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer{
+      margin-top:100px;
+      position: relative;
+
+      h4{
+        font-size:12px;
+        color:#ADADAD;
+        text-align: center;
+      }
+      ul{
+        margin-bottom: 20px;
+        font-size:10px;
+        .first{
+          font-weight:bold;
+        }
+        li{
+          margin-bottom:10px;
+          list-style: none;
+        }
+      }
+
+      .social{
+        position: absolute;
+        top: 70px;
+        left:50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+      }
+    }
+
+  #advanteges{
+    background-image: url("../img/BG WineFlight_Advantages for.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color:#FFF;
+    padding: 70px;
+
+    @media only screen and (max-device-width: 768px) {
+      background-size: 280%;
+    }
+
+    .section-header{
+      text-align: center;
+      padding:0 20px;
+
+      @media only screen and (max-device-width: 1024px) {
+        font-size:45px;
+      }
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        font-size:30px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+      }
+
+      p{
+        font-size:20px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      img{
+        width:100%;
+        padding: 0 100px;
+
+        @media only screen and (min-device-width: 1024px) {
+          padding:0px 70px;
+        }
+
+        @media only screen and (max-device-width: 768px) {
+          padding:0px 300px;
         }
       }
     }
   }
 
+  #start-servises{
+    padding: 30px 70px;
 
+    .section-header{
+      text-align: center;
+      padding:0 20px;
 
+      @media only screen and (max-device-width: 1024px) {
+        font-size:45px;
+      }
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        font-size:30px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+
+        @media only screen and (min-device-width: 1024px) {
+          font-size:20px;
+        }
+      }
+
+      .button{
+        width: 100%;
+        background-color:#A3CB00;
+
+        .btn{
+          width: 100%;
+          font-size: 35px;
+          background-color:#A3CB00;
+          border: none;
+          border-radius:0;
+          padding: 10px 35px;
+
+          @media only screen and (min-device-width: 1024px) {
+            font-size:20px;
+          }
+        }
+      }
+    }
+  }
 }

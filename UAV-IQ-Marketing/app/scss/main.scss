@@ -1,36 +1,12 @@
 .home{
   font-family: 'Raleway', sans-serif;
 
-
-  nav{
-    background-color:none;
-    position: absolute !important;
-    width: 100%;
-    padding:0 20px;
-
-    .navbar-brand{
-      height: auto;
-      img{
-        height: 80px;
-      }
-    }
-    .nav{
-      .nav-item{
-        a{
-          color:#FFF;
-          padding-top: 45px;
-          padding-bottom: 45px;
-        }
-      }
-    }
-  }
-
   .jumbotron{
     padding-top: 130px !important;
     background-color:#fff;
     // background-image: url('../img/TV-Colchagua.png');
     background-repeat: no-repeat;
-    max-height:700px;
+    max-height:800px;
     overflow: hidden;
 
     .container{
@@ -92,6 +68,10 @@
       position: relative;
       padding: 0 200px;
 
+      @media only screen and (min-device-width: 1024px) {
+        padding: 0 50px;
+      }
+
       img{
         width:100%;
       }
@@ -135,19 +115,29 @@
 
       background-image: url("../img/BG_zoom_level.png");
       background-repeat: no-repeat;
+      background-position:left bottom;
       background-size:100%;
       margin: 50px 0;
 
 
       .asset{
         width: 100%;
-        display: block;
+
+        @media only screen and (min-device-width: 1024px) {
+          // left:0;
+          display: block !important;
+        }
       }
 
       .second-asset{
-        height: 645px;
-        display: none;
+        padding: 35px 0;
+        height: 1935px;
         margin: 0 auto;
+
+        @media only screen and (min-device-width: 1024px) {
+          // left:0;
+          display: none !important;
+        }
       }
 
       h2{
@@ -194,6 +184,7 @@
               top:7px;
               right:0;
               width:30px;
+
             }
           }
         }
@@ -301,44 +292,6 @@
     }
   }
 
-  #contact-us{
-    h1{
-      text-align: center;
-    }
-    form{
-      width: 60%;
-      margin: 0 auto;
-
-      div{
-        margin:10px 0;
-        label{
-          font-size:25px;
-        }
-
-        textarea{
-          width:100%;
-          height: 200px;
-          background-color:#ADADAD;
-          border:none;
-        }
-
-        input{
-          width:100%;
-          color:#FFF;
-          background-color:#ADADAD;
-          height:50px;
-          font-size:20px;
-          border:none;
-          padding: 1px 20px;
-
-          &::-webkit-input-placeholder {
-              color: #FFF;
-          }
-        }
-      }
-    }
-  }
-
   .footer{
     margin-top:100px;
     position: relative;
@@ -390,10 +343,11 @@
             border: none;
             border-radius:0;
             padding: 10px 35px;
+            font-size: 35px;
           }
 
           span{
-            font-size:11px;
+            font-size:17px;
           }
         }
 
@@ -490,4 +444,176 @@
     }
   }
 
-  @import "components/wineflight";
+  #contact-us{
+    h1{
+      text-align: center;
+    }
+    form{
+      width: 60%;
+      margin: 0 auto;
+
+      div{
+        margin:10px 0;
+        label{
+          font-size:25px;
+        }
+
+        textarea{
+          width:100%;
+          height: 200px;
+          background-color:#ADADAD;
+          border:none;
+        }
+
+        input{
+          width:100%;
+          color:#FFF;
+          background-color:#ADADAD;
+          height:50px;
+          font-size:20px;
+          border:none;
+          padding: 1px 20px;
+
+          &::-webkit-input-placeholder {
+              color: #FFF;
+          }
+        }
+      }
+
+      button{
+        background-color: #A3CB00;
+        font-size: 25px;
+        padding: 10px 90px;
+        border: none;
+        float: left;
+        color:#FFF;
+      }
+
+      .g-recaptcha{
+        float: right;
+        margin: 0;
+        div{
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  nav{
+
+    position: absolute !important;
+    width: 100%;
+    padding:0 20px;
+
+    .navbar-brand{
+      height: auto;
+      img{
+        height: 80px;
+      }
+    }
+    .nav{
+
+      .nav-item{
+        a{
+          color:#FFF;
+          padding-top: 45px;
+          padding-bottom: 45px;
+
+          &:hover{
+            color:#A3CB00;
+            background-color:#FFF;
+          }
+        }
+      }
+
+      @media only screen and (max-device-width: 1024px) {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 110px;
+        left: 0;
+
+        .nav-item{
+          clear: both;
+          width: 100%;
+          a{
+            color:#A3CB00;
+            padding:20px 20px;
+            font-size:17px;
+          }
+        }
+
+      }
+    }
+
+    .stack{
+      display: none;
+    }
+
+    @media screen and (max-device-width: 1024px) {
+      .stack{
+        display: block;
+        position: absolute;
+        top: 0;
+        right:0;
+        height: 100%;
+        width: 50px;
+        background-color:#FFF;
+        color:#A3CB00;
+
+        button{
+          height:100%;
+          width:100%;
+          font-size: 25px;
+        }
+      }
+
+      ul{
+        overflow: hidden;
+        float: none;
+        margin:0;
+        height:0;
+        width:100%;
+        position: absolute;
+        left:0;
+
+        li{
+          display: block;
+          position: static;
+          list-style:none;
+          margin: 0;
+          padding:10px;
+          height:auto;
+          width:100%;
+          clear: both;
+          background-color:#FFF;
+
+          -webkit-transition: all .3s;/* Safari */
+          -moz-transition: all .3s;/*Firefox*/
+          -ms-transition: all .3s;/*IE10+*/
+          -o-transition: all .3s;/*Opera*/
+          transition: all .3s;
+
+          &:active {
+            background-color:#FFF;
+
+            a{
+              color:#0d1237;
+            }
+          }
+
+          a{
+            color:#FFF;
+          }
+        }
+      }
+
+      .show{
+        height: auto;
+        overflow: auto;
+      }
+    }
+  }
+
+  @import "comoponets/wineflight";
+  @import "comoponets/datacollection";

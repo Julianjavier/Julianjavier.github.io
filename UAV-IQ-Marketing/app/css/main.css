@@ -1,23 +1,10 @@
 .home {
   font-family: 'Raleway', sans-serif; }
-  .home nav {
-    background-color: none;
-    position: absolute !important;
-    width: 100%;
-    padding: 0 20px; }
-    .home nav .navbar-brand {
-      height: auto; }
-      .home nav .navbar-brand img {
-        height: 80px; }
-    .home nav .nav .nav-item a {
-      color: #FFF;
-      padding-top: 45px;
-      padding-bottom: 45px; }
   .home .jumbotron {
     padding-top: 130px !important;
     background-color: #fff;
     background-repeat: no-repeat;
-    max-height: 700px;
+    max-height: 800px;
     overflow: hidden; }
     .home .jumbotron .container {
       color: #FFF; }
@@ -53,6 +40,9 @@
     margin-top: 30px;
     position: relative;
     padding: 0 200px; }
+    @media only screen and (min-device-width: 1024px) {
+      .home #industries div {
+        padding: 0 50px; } }
     .home #industries div img {
       width: 100%; }
     .home #industries div h2 {
@@ -80,15 +70,21 @@
   .home #issue div {
     background-image: url("../img/BG_zoom_level.png");
     background-repeat: no-repeat;
+    background-position: left bottom;
     background-size: 100%;
     margin: 50px 0; }
     .home #issue div .asset {
-      width: 100%;
-      display: block; }
+      width: 100%; }
+      @media only screen and (min-device-width: 1024px) {
+        .home #issue div .asset {
+          display: block !important; } }
     .home #issue div .second-asset {
-      height: 645px;
-      display: none;
+      padding: 35px 0;
+      height: 1935px;
       margin: 0 auto; }
+      @media only screen and (min-device-width: 1024px) {
+        .home #issue div .second-asset {
+          display: none !important; } }
     .home #issue div h2 {
       text-align: center;
       color: #FFF; }
@@ -186,30 +182,6 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%); }
-  .home #contact-us h1 {
-    text-align: center; }
-  .home #contact-us form {
-    width: 60%;
-    margin: 0 auto; }
-    .home #contact-us form div {
-      margin: 10px 0; }
-      .home #contact-us form div label {
-        font-size: 25px; }
-      .home #contact-us form div textarea {
-        width: 100%;
-        height: 200px;
-        background-color: #ADADAD;
-        border: none; }
-      .home #contact-us form div input {
-        width: 100%;
-        color: #FFF;
-        background-color: #ADADAD;
-        height: 50px;
-        font-size: 20px;
-        border: none;
-        padding: 1px 20px; }
-        .home #contact-us form div input::-webkit-input-placeholder {
-          color: #FFF; }
   .home .footer {
     margin-top: 100px;
     position: relative; }
@@ -242,9 +214,10 @@
       background-color: #A3CB00;
       border: none;
       border-radius: 0;
-      padding: 10px 35px; }
+      padding: 10px 35px;
+      font-size: 35px; }
     .home .jumbotron .container .button span {
-      font-size: 11px; }
+      font-size: 17px; }
     .home .jumbotron .container .banner {
       width: 100%; }
     .home #industries .section-header {
@@ -277,21 +250,128 @@
     .home .wrap .tablet {
       display: block !important; } }
 
+#contact-us h1 {
+  text-align: center; }
+
+#contact-us form {
+  width: 60%;
+  margin: 0 auto; }
+  #contact-us form div {
+    margin: 10px 0; }
+    #contact-us form div label {
+      font-size: 25px; }
+    #contact-us form div textarea {
+      width: 100%;
+      height: 200px;
+      background-color: #ADADAD;
+      border: none; }
+    #contact-us form div input {
+      width: 100%;
+      color: #FFF;
+      background-color: #ADADAD;
+      height: 50px;
+      font-size: 20px;
+      border: none;
+      padding: 1px 20px; }
+      #contact-us form div input::-webkit-input-placeholder {
+        color: #FFF; }
+  #contact-us form button {
+    background-color: #A3CB00;
+    font-size: 25px;
+    padding: 10px 90px;
+    border: none;
+    float: left;
+    color: #FFF; }
+  #contact-us form .g-recaptcha {
+    float: right;
+    margin: 0; }
+    #contact-us form .g-recaptcha div {
+      margin: 0; }
+
+nav {
+  position: absolute !important;
+  width: 100%;
+  padding: 0 20px; }
+  nav .navbar-brand {
+    height: auto; }
+    nav .navbar-brand img {
+      height: 80px; }
+  nav .nav .nav-item a {
+    color: #FFF;
+    padding-top: 45px;
+    padding-bottom: 45px; }
+    nav .nav .nav-item a:hover {
+      color: #A3CB00;
+      background-color: #FFF; }
+  @media only screen and (max-device-width: 1024px) {
+    nav .nav {
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      top: 110px;
+      left: 0; }
+      nav .nav .nav-item {
+        clear: both;
+        width: 100%; }
+        nav .nav .nav-item a {
+          color: #A3CB00;
+          padding: 20px 20px;
+          font-size: 17px; } }
+  nav .stack {
+    display: none; }
+  @media screen and (max-device-width: 1024px) {
+    nav .stack {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50px;
+      background-color: #FFF;
+      color: #A3CB00; }
+      nav .stack button {
+        height: 100%;
+        width: 100%;
+        font-size: 25px; }
+    nav ul {
+      overflow: hidden;
+      float: none;
+      margin: 0;
+      height: 0;
+      width: 100%;
+      position: absolute;
+      left: 0; }
+      nav ul li {
+        display: block;
+        position: static;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        height: auto;
+        width: 100%;
+        clear: both;
+        background-color: #FFF;
+        -webkit-transition: all .3s;
+        /* Safari */
+        -moz-transition: all .3s;
+        /*Firefox*/
+        -ms-transition: all .3s;
+        /*IE10+*/
+        -o-transition: all .3s;
+        /*Opera*/
+        transition: all .3s; }
+        nav ul li:active {
+          background-color: #FFF; }
+          nav ul li:active a {
+            color: #0d1237; }
+        nav ul li a {
+          color: #FFF; }
+    nav .show {
+      height: auto;
+      overflow: auto; } }
+
 .wineflight {
   font-family: 'Raleway', sans-serif; }
-  .wineflight nav {
-    background-color: none;
-    position: absolute !important;
-    width: 100%;
-    padding: 0 20px; }
-    .wineflight nav .navbar-brand {
-      height: auto; }
-      .wineflight nav .navbar-brand img {
-        height: 80px; }
-    .wineflight nav .nav .nav-item a {
-      color: #FFF;
-      padding-top: 45px;
-      padding-bottom: 45px; }
   .wineflight .jumbotron {
     padding-top: 130px !important;
     background-color: #fff;
@@ -301,10 +381,19 @@
     overflow: hidden; }
     .wineflight .jumbotron .container {
       color: #FFF; }
+      .wineflight .jumbotron .container .image-container {
+        width: 100%; }
+        .wineflight .jumbotron .container .image-container img {
+          width: 30%;
+          display: block;
+          margin: 0px auto;
+          margin-bottom: 40px; }
       .wineflight .jumbotron .container h1 {
-        font-size: 50px; }
+        font-size: 50px;
+        text-align: center; }
       .wineflight .jumbotron .container p {
-        font-size: 25px; }
+        font-size: 25px;
+        text-align: center; }
       .wineflight .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
@@ -326,26 +415,37 @@
     margin-top: 20px;
     margin-bottom: 20px; }
     .wineflight .container-fluid .section-header {
-      font-size: 35px !important; }
+      font-size: 35px; }
     .wineflight .container-fluid .section-sub-header {
-      font-size: 30px !important; }
+      font-size: 30px; }
   .wineflight #actionalble_data .section-header {
     text-align: center;
-    font-size: 13px;
     padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .wineflight #actionalble_data .section-header {
+        font-size: 45px; } }
   .wineflight #actionalble_data div {
     margin-top: 30px;
     position: relative; }
     .wineflight #actionalble_data div h2 {
       text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #actionalble_data div h2 {
+          font-size: 45px; } }
     .wineflight #actionalble_data div p {
       text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #actionalble_data div p {
+          font-size: 30px; } }
     .wineflight #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
-      @media only screen and (max-device-width: 1024px) {
+      @media only screen and (min-device-width: 1024px) {
         .wineflight #actionalble_data div img {
-          padding: 0px 400px; } }
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #actionalble_data div img {
+          padding: 0px 350px; } }
   .wineflight #work {
     background-image: url("../img/how-it-works.png");
     background-size: 100% 100%;
@@ -353,23 +453,115 @@
     padding: 70px; }
     .wineflight #work .section-header {
       text-align: center;
-      font-size: 13px;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #work .section-header {
+          font-size: 45px; } }
     .wineflight #work div {
       margin-top: 30px;
       position: relative; }
       .wineflight #work div h2 {
-        font-size: 40px;
-        text-align: center; }
-      .wineflight #work div p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #work div h2 {
+            font-size: 45px; } }
+      .wineflight #work div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #work div p {
+            font-size: 30px; } }
       .wineflight #work div img {
         width: 100%;
         padding: 0 100px; }
-        @media only screen and (max-device-width: 1024px) {
+        @media only screen and (min-device-width: 1024px) {
           .wineflight #work div img {
-            padding: 0px 320px; } }
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #work div img {
+            padding: 0px 300px; } }
+  .wineflight #best-wine {
+    padding: 0 70px; }
+    .wineflight #best-wine .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #best-wine .section-header {
+          font-size: 45px; } }
+    .wineflight #best-wine .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .wineflight #best-wine .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .wineflight #best-wine .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .wineflight #best-wine .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .wineflight #best-wine .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .wineflight #best-wine .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .wineflight #best-wine .left ul li {
+          font-size: 30px;
+          padding-left: 40px;
+          position: relative;
+          margin-bottom: 10px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight #best-wine .left ul li {
+              font-size: 20px; } }
+          .wineflight #best-wine .left ul li img {
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 30px; }
+  .wineflight #best-practice {
+    padding: 0 70px; }
+    .wineflight #best-practice .section-header {
+      text-align: center;
+      padding: 0 20px; }
+    .wineflight #best-practice .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .wineflight #best-practice .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .wineflight #best-practice .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .wineflight #best-practice .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .wineflight #best-practice .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .wineflight #best-practice .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .wineflight #best-practice .left ul li {
+          font-size: 30px;
+          padding-left: 40px;
+          position: relative;
+          margin-bottom: 10px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight #best-practice .left ul li {
+              font-size: 20px; } }
+          .wineflight #best-practice .left ul li img {
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 30px; }
   .wineflight .footer {
     margin-top: 100px;
     position: relative; }
@@ -391,3 +583,301 @@
       left: 50%;
       transform: translateX(-50%);
       margin: 0 auto; }
+  .wineflight #advanteges {
+    background-image: url("../img/BG WineFlight_Advantages for.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #FFF;
+    padding: 70px; }
+    @media only screen and (max-device-width: 768px) {
+      .wineflight #advanteges {
+        background-size: 280%; } }
+    .wineflight #advanteges .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #advanteges .section-header {
+          font-size: 45px; } }
+    .wineflight #advanteges div {
+      margin-top: 30px;
+      position: relative; }
+      .wineflight #advanteges div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #advanteges div h2 {
+            font-size: 45px; } }
+      .wineflight #advanteges div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #advanteges div p {
+            font-size: 30px; } }
+      .wineflight #advanteges div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .wineflight #advanteges div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #advanteges div img {
+            padding: 0px 300px; } }
+  .wineflight #start-servises {
+    padding: 30px 70px; }
+    .wineflight #start-servises .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #start-servises .section-header {
+          font-size: 45px; } }
+    .wineflight #start-servises div {
+      margin-top: 30px;
+      position: relative; }
+      .wineflight #start-servises div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .wineflight #start-servises div h2 {
+            font-size: 20px; } }
+      .wineflight #start-servises div .button {
+        width: 100%;
+        background-color: #A3CB00; }
+        .wineflight #start-servises div .button .btn {
+          width: 100%;
+          font-size: 35px;
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight #start-servises div .button .btn {
+              font-size: 20px; } }
+
+.datacollection {
+  font-family: 'Raleway', sans-serif; }
+  .datacollection .jumbotron {
+    padding-top: 130px !important;
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    max-height: 700px;
+    overflow: hidden; }
+    @media only screen and (min-device-width: 1024px) {
+      .datacollection .jumbotron {
+        min-height: 550px; } }
+    @media only screen and (max-device-width: 1024px) {
+      .datacollection .jumbotron {
+        background-size: 120%; } }
+    .datacollection .jumbotron .container {
+      color: #FFF; }
+      @media only screen and (min-device-width: 1024px) {
+        .datacollection .jumbotron .container {
+          margin-top: 60px; } }
+      .datacollection .jumbotron .container h1 {
+        font-size: 50px;
+        text-align: center; }
+      .datacollection .jumbotron .container p {
+        font-size: 25px;
+        text-align: center; }
+      .datacollection .jumbotron .container .button .btn {
+        background-color: #A3CB00;
+        border: none;
+        border-radius: 0;
+        padding: 10px 35px; }
+      .datacollection .jumbotron .container .button span {
+        display: block;
+        font-size: 11px; }
+      .datacollection .jumbotron .container .banner {
+        width: 100%; }
+    .datacollection .jumbotron .back-opacity {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6; }
+  .datacollection .container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .datacollection .container-fluid .section-header {
+      font-size: 35px; }
+    .datacollection .container-fluid .section-sub-header {
+      font-size: 30px; }
+  .datacollection #actionalble_data .section-header {
+    text-align: center;
+    padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .datacollection #actionalble_data .section-header {
+        font-size: 65px; } }
+  .datacollection #actionalble_data div {
+    margin-top: 30px;
+    position: relative; }
+    .datacollection #actionalble_data div h2 {
+      text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .datacollection #actionalble_data div h2 {
+          font-size: 45px; } }
+    .datacollection #actionalble_data div p {
+      text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .datacollection #actionalble_data div p {
+          font-size: 30px; } }
+    .datacollection #actionalble_data div img {
+      width: 100%;
+      padding: 0 100px; }
+      @media only screen and (min-device-width: 1024px) {
+        .datacollection #actionalble_data div img {
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .datacollection #actionalble_data div img {
+          padding: 0px 350px; } }
+    .datacollection #actionalble_data div .button .btn {
+      background-color: #A3CB00;
+      border: none;
+      border-radius: 0;
+      padding: 10px 35px; }
+  .datacollection .work {
+    padding: 20px 70px; }
+    .datacollection .work .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection .work .section-header {
+          font-size: 45px; } }
+    .datacollection .work div {
+      margin-top: 30px;
+      position: relative; }
+      .datacollection .work div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection .work div h2 {
+            font-size: 45px; } }
+        @media only screen and (max-device-width: 1024px) {
+          .datacollection .work div h2 {
+            font-size: 20px; } }
+      .datacollection .work div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection .work div p {
+            font-size: 30px; } }
+        @media only screen and (max-device-width: 1024px) {
+          .datacollection .work div p {
+            font-size: 12px; } }
+      .datacollection .work div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .datacollection .work div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection .work div img {
+            padding: 0px 300px; } }
+  .datacollection .footer {
+    margin-top: 100px;
+    position: relative; }
+    .datacollection .footer h4 {
+      font-size: 12px;
+      color: #ADADAD;
+      text-align: center; }
+    .datacollection .footer ul {
+      margin-bottom: 20px;
+      font-size: 10px; }
+      .datacollection .footer ul .first {
+        font-weight: bold; }
+      .datacollection .footer ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+    .datacollection .footer .social {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto; }
+  .datacollection #advanteges {
+    background-image: url("../img/BG dotted map.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 70px;
+    min-height: 688px; }
+    @media only screen and (max-device-width: 768px) {
+      .datacollection #advanteges {
+        background-size: 280%; } }
+    .datacollection #advanteges .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection #advanteges .section-header {
+          font-size: 45px; } }
+    .datacollection #advanteges div {
+      margin-top: 30px;
+      position: relative; }
+      .datacollection #advanteges div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection #advanteges div h2 {
+            font-size: 45px; } }
+      .datacollection #advanteges div a {
+        text-decoration: underline;
+        color: #000; }
+      .datacollection #advanteges div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection #advanteges div p {
+            font-size: 30px; } }
+      .datacollection #advanteges div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .datacollection #advanteges div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection #advanteges div img {
+            padding: 0px 300px; } }
+      .datacollection #advanteges div .button .btn {
+        background-color: #A3CB00;
+        border: none;
+        border-radius: 0;
+        padding: 10px 35px;
+        text-decoration: none;
+        color: #FFF; }
+  .datacollection #start-servises {
+    padding: 30px 70px; }
+    .datacollection #start-servises .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection #start-servises .section-header {
+          font-size: 45px; } }
+    .datacollection #start-servises div {
+      margin-top: 30px;
+      position: relative; }
+      .datacollection #start-servises div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .datacollection #start-servises div h2 {
+            font-size: 20px; } }
+      .datacollection #start-servises div .button {
+        width: 100%;
+        background-color: #A3CB00; }
+        .datacollection #start-servises div .button .btn {
+          width: 100%;
+          font-size: 35px;
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .datacollection #start-servises div .button .btn {
+              font-size: 20px; } }
