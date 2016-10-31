@@ -430,7 +430,8 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px; }
     .wineflight .container-fluid .section-header {
-      font-size: 35px; }
+      font-size: 35px;
+      margin-bottom: 20px; }
     .wineflight .container-fluid .section-sub-header {
       font-size: 30px; }
   .wineflight #actionalble_data .section-header {
@@ -686,7 +687,7 @@ nav {
         min-height: 550px; } }
     @media only screen and (max-device-width: 1024px) {
       .datacollection .jumbotron {
-        background-size: 120%; } }
+        background-size: 126%; } }
     .datacollection .jumbotron .container {
       color: #FFF; }
       @media only screen and (min-device-width: 1024px) {
@@ -699,13 +700,14 @@ nav {
           .datacollection .jumbotron .container h1 {
             font-size: 70px !important; } }
       .datacollection .jumbotron .container p {
-        font-size: 25px;
+        font-size: 35px;
         text-align: center; }
       .datacollection .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
         border-radius: 0;
-        padding: 10px 35px; }
+        padding: 10px 35px;
+        font-size: 45px; }
       .datacollection .jumbotron .container .button span {
         display: block;
         font-size: 11px; }
@@ -752,7 +754,7 @@ nav {
           padding: 0px 70px; } }
       @media only screen and (max-device-width: 768px) {
         .datacollection #actionalble_data div img {
-          padding: 0px 350px; } }
+          padding: 0px 351.5px; } }
     .datacollection #actionalble_data div .button .btn {
       background-color: #A3CB00;
       border: none;
@@ -765,7 +767,7 @@ nav {
       padding: 0 20px; }
       @media only screen and (max-device-width: 1024px) {
         .datacollection .work .section-header {
-          font-size: 45px; } }
+          font-size: 65px; } }
     .datacollection .work div {
       margin-top: 30px;
       position: relative; }
@@ -775,7 +777,7 @@ nav {
         @media only screen and (max-device-width: 768px) {
           .datacollection .work div h2 {
             font-size: 45px; } }
-        @media only screen and (max-device-width: 1024px) {
+        @media only screen and (min-device-width: 1024px) {
           .datacollection .work div h2 {
             font-size: 20px; } }
       .datacollection .work div p {
@@ -786,7 +788,7 @@ nav {
             font-size: 30px; } }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .work div p {
-            font-size: 12px; } }
+            font-size: 25px; } }
       .datacollection .work div img {
         width: 100%;
         padding: 0 100px; }
@@ -795,7 +797,7 @@ nav {
             padding: 0px 70px; } }
         @media only screen and (max-device-width: 768px) {
           .datacollection .work div img {
-            padding: 0px 300px; } }
+            padding: 0px 333px; } }
   .datacollection .footer {
     margin-top: 100px;
     position: relative; }
