@@ -389,7 +389,7 @@ nav {
     background-color: #fff;
     background-repeat: no-repeat;
     background-color: #000;
-    max-height: 700px;
+    max-height: 800px;
     overflow: hidden; }
     .wineflight .jumbotron .container {
       color: #FFF; }
@@ -409,14 +409,17 @@ nav {
       .wineflight .jumbotron .container p {
         font-size: 25px;
         text-align: center; }
-      .wineflight .jumbotron .container .button .btn {
-        background-color: #A3CB00;
-        border: none;
-        border-radius: 0;
-        padding: 10px 35px; }
-      .wineflight .jumbotron .container .button span {
-        display: block;
-        font-size: 11px; }
+      .wineflight .jumbotron .container .button {
+        margin-top: 48px; }
+        .wineflight .jumbotron .container .button .btn {
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 45px; }
+        .wineflight .jumbotron .container .button span {
+          display: block;
+          font-size: 11px; }
       .wineflight .jumbotron .container .banner {
         width: 100%; }
     .wineflight .jumbotron .back-opacity {
@@ -444,7 +447,8 @@ nav {
     margin-top: 30px;
     position: relative; }
     .wineflight #actionalble_data div h2 {
-      text-align: center; }
+      text-align: center;
+      font-weight: bold; }
       @media only screen and (max-device-width: 768px) {
         .wineflight #actionalble_data div h2 {
           font-size: 45px; } }
@@ -528,17 +532,33 @@ nav {
         padding: 0; }
         .wineflight #best-wine .left ul li {
           font-size: 30px;
-          padding-left: 40px;
+          padding-left: 50px;
           position: relative;
           margin-bottom: 10px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-wine .left ul li {
               font-size: 20px; } }
-          .wineflight #best-wine .left ul li img {
+          .wineflight #best-wine .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
             position: absolute;
-            top: 7px;
+            top: 0;
             left: 0;
-            width: 30px; }
+            width: 40px;
+            height: 40px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
+      .wineflight #best-wine .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
   .wineflight #best-practice {
     padding: 0 70px; }
     .wineflight #best-practice .section-header {
@@ -567,17 +587,21 @@ nav {
         padding: 0; }
         .wineflight #best-practice .left ul li {
           font-size: 30px;
-          padding-left: 40px;
+          padding-left: 50px;
           position: relative;
           margin-bottom: 10px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-practice .left ul li {
               font-size: 20px; } }
-          .wineflight #best-practice .left ul li img {
+          .wineflight #best-practice .left ul li .img {
             position: absolute;
-            top: 7px;
+            top: 0;
             left: 0;
-            width: 30px; }
+            width: 40px;
+            height: 40px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
   .wineflight .footer {
     margin-top: 100px;
     position: relative; }
@@ -687,7 +711,7 @@ nav {
         min-height: 550px; } }
     @media only screen and (max-device-width: 1024px) {
       .datacollection .jumbotron {
-        background-size: 126%; } }
+        background-size: 133%; } }
     .datacollection .jumbotron .container {
       color: #FFF; }
       @media only screen and (min-device-width: 1024px) {
@@ -702,15 +726,17 @@ nav {
       .datacollection .jumbotron .container p {
         font-size: 35px;
         text-align: center; }
-      .datacollection .jumbotron .container .button .btn {
-        background-color: #A3CB00;
-        border: none;
-        border-radius: 0;
-        padding: 10px 35px;
-        font-size: 45px; }
-      .datacollection .jumbotron .container .button span {
-        display: block;
-        font-size: 11px; }
+      .datacollection .jumbotron .container .button {
+        margin-top: 48px; }
+        .datacollection .jumbotron .container .button .btn {
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 45px; }
+        .datacollection .jumbotron .container .button span {
+          display: block;
+          font-size: 11px; }
       .datacollection .jumbotron .container .banner {
         width: 100%; }
     .datacollection .jumbotron .back-opacity {
@@ -745,7 +771,7 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .datacollection #actionalble_data div p {
-          font-size: 30px; } }
+          font-size: 25px; } }
     .datacollection #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -759,7 +785,8 @@ nav {
       background-color: #A3CB00;
       border: none;
       border-radius: 0;
-      padding: 10px 35px; }
+      padding: 10px 35px;
+      font-size: 45px; }
   .datacollection .work {
     padding: 20px 70px; }
     .datacollection .work .section-header {
@@ -867,7 +894,8 @@ nav {
         border-radius: 0;
         padding: 10px 35px;
         text-decoration: none;
-        color: #FFF; }
+        color: #FFF;
+        font-size: 45px; }
   .datacollection #start-servises {
     padding: 30px 70px; }
     .datacollection #start-servises .section-header {
@@ -897,7 +925,8 @@ nav {
           background-color: #A3CB00;
           border: none;
           border-radius: 0;
-          padding: 10px 35px; }
+          padding: 10px 35px;
+          font-size: 45px; }
           @media only screen and (min-device-width: 1024px) {
             .datacollection #start-servises div .button .btn {
               font-size: 20px; } }

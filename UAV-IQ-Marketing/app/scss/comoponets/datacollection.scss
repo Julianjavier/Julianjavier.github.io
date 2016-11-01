@@ -16,7 +16,7 @@
       }
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 126%;
+        background-size: 133%;
       }
 
       .container{
@@ -41,6 +41,7 @@
         }
 
         .button{
+          margin-top: 48px;
           .btn{
             background-color:#A3CB00;
             border: none;
@@ -109,7 +110,7 @@
         p{
           text-align: center;
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size: 25px;
           }
         }
 
@@ -132,6 +133,7 @@
             border: none;
             border-radius:0;
             padding: 10px 35px;
+            font-size: 45px;
           }
         }
       }
@@ -292,6 +294,7 @@
           padding: 10px 35px;
           text-decoration: none;
           color:#FFF;
+          font-size: 45px;
         }
       }
     }
@@ -329,7 +332,6 @@
       .button{
         width: 100%;
         background-color:#A3CB00;
-
         .btn{
           width: 100%;
           font-size: 35px;
@@ -337,6 +339,7 @@
           border: none;
           border-radius:0;
           padding: 10px 35px;
+          font-size: 45px;
 
           @media only screen and (min-device-width: 1024px) {
             font-size:20px;

@@ -28,7 +28,7 @@
       </div>
     </nav>
 
-    <div class="jumbotron" style="background-image: url('img/BG WineFlight banner.png');  background-size: 100%;">
+    <div class="jumbotron" style="background-image: url('img/BG WineFlight banner.png');  background-size: 120%;">
       <div class="container">
         <div class="image-container">
           <img src="img/WineFligth-logo.png" alt="" />
@@ -102,15 +102,15 @@
         <h1 class="section-header">Ensure Your Best Grapes Make Your Best Wine</h1>
 
         <div class="col-sm-12 col-md-6 col-lg-6 ipad">
-          <img src="img/Bitmap 2.png" alt=""/>
+          <img id="imageid" src="img/Bitmap 2.png" alt=""/>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 left">
           <ul>
-            <li>Take advantage of your terroir by determining quality zones <img src="img/Oval.png" alt=""></li>
-            <li>Ask for inspections and grape sampling <img src="img/Oval.png" alt=""></li>
-            <li>Detect and manage hydric stress <img src="img/Oval.png" alt=""></li>
-            <li>Design and implement a detailed harvest plan <img src="img/Oval.png" alt=""></li>
+            <li data-id='1'>Take advantage of your terroir by determining quality zones <span class="img"></span></li>
+            <li data-id='2'>Ask for inspections and grape sampling <span class="img"></span></li>
+            <li data-id='3'>Detect and manage hydric stress <span class="img"></span></li>
+            <li data-id='4'>Design and implement a detailed harvest plan <span class="img"></span></li>
           </ul>
         </div>
 
@@ -127,11 +127,11 @@
 
         <div class="col-sm-12 col-md-6 col-lg-6 left">
           <ul>
-            <li>Implement variable rate cultivation to optimize use of inputs <img src="img/Oval.png" alt=""></li>
-            <li>Optimize water ressources <img src="img/Oval.png" alt=""></li>
-            <li>Identify pests and disease, assess severity of damage <img src="img/Oval.png" alt=""></li>
-            <li>Detect problems before they are visible to the naked eyes <img src="img/Oval.png" alt=""></li>
-            <li>Qualitatively and quantitatively evaluate your vineyard's health over time <img src="img/Oval.png" alt=""></li>
+            <li data-id='5'>Implement variable rate cultivation to optimize use of inputs <span class="img"></span></li>
+            <li data-id='6'>Optimize water ressources <span class="img"></span></li>
+            <li data-id='7'>Identify pests and disease, assess severity of damage <span class="img"></span></li>
+            <li data-id='8'>Detect problems before they are visible to the naked eyes <span class="img"></span></li>
+            <li data-id='9'>Qualitatively and quantitatively evaluate your vineyard's health over time <span class="img"></span></li>
           </ul>
         </div>
 
@@ -216,5 +216,33 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        var $looped = $('#best-wine ul li');
+        var timeOut;
+        var index = 0;
+        function _loop(idx) {
+            $looped.removeClass('current').eq(idx).addClass('current');
+            document.getElementById("imageid").src="img/WineFlight Page/"+$looped.eq(idx)[0].dataset.id+".png";
+            console.log($looped.eq(idx)[0].dataset.id);
+            timeOut = setTimeout(function () {
+                index = (idx + 1) % $looped.length;
+                _loop(index);
+            }, 1000);
+        };
+        _loop(index);
+        $("#best-wine ul").hover(function () {
+            window.clearTimeout(timeOut);
+        }, function () {
+            _loop(index);
+        });
+        $("#best-wine ul li").hover(function () {
+            $("li").removeClass("current");
+            $(this).addClass("current");
+        }, function () {
+            $("li").removeClass("current");
+        });
+      });
+    </script>
   </body>
 </html>
