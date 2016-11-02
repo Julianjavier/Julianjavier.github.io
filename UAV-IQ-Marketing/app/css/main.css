@@ -532,9 +532,10 @@ nav {
         padding: 0; }
         .wineflight #best-wine .left ul li {
           font-size: 30px;
-          padding-left: 50px;
+          padding-left: 75px;
           position: relative;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-wine .left ul li {
               font-size: 20px; } }
@@ -551,14 +552,23 @@ nav {
             position: absolute;
             top: 0;
             left: 0;
-            width: 40px;
-            height: 40px;
+            width: 70px;
+            height: 70px;
             background: #FFF;
             border: solid 3px #A3CB00;
             border-radius: 50%; }
+            .wineflight #best-wine .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
       .wineflight #best-wine .left .current .img {
         background: #A3CB00;
         border: solid 3px #FFF; }
+        .wineflight #best-wine .left .current .img svg {
+          fill: #FFF; }
   .wineflight #best-practice {
     padding: 0 70px; }
     .wineflight #best-practice .section-header {
@@ -587,21 +597,43 @@ nav {
         padding: 0; }
         .wineflight #best-practice .left ul li {
           font-size: 30px;
-          padding-left: 50px;
+          padding-left: 75px;
           position: relative;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-practice .left ul li {
               font-size: 20px; } }
           .wineflight #best-practice .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
             position: absolute;
             top: 0;
             left: 0;
-            width: 40px;
-            height: 40px;
+            width: 70px;
+            height: 70px;
             background: #FFF;
             border: solid 3px #A3CB00;
             border-radius: 50%; }
+            .wineflight #best-practice .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
+      .wineflight #best-practice .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
+        .wineflight #best-practice .left .current .img svg {
+          fill: #FFF; }
   .wineflight .footer {
     margin-top: 100px;
     position: relative; }

@@ -229,9 +229,10 @@
           li{
             font-size: 30px;
             // float: right;
-            padding-left:50px;
+            padding-left:75px;
             position: relative;
             margin-bottom:10px;
+            min-height: 75px;
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
@@ -245,11 +246,20 @@
               position: absolute;
               top:0;
               left: 0;
-              width:40px;
-              height: 40px;
+              width: 70px;
+              height: 70px;
               background: #FFF;
               border: solid 3px #A3CB00;
               border-radius: 50%;
+
+              svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width:100%;
+                fill:#A3CB00;
+              }
             }
           }
         }
@@ -257,6 +267,10 @@
           .img{
             background: #A3CB00;
             border: solid 3px #FFF;
+
+            svg{
+              fill:#FFF;
+            }
           }
         }
       }
@@ -305,22 +319,47 @@
           li{
             font-size: 30px;
             // float: right;
-            padding-left:50px;
+            padding-left:75px;
             position: relative;
             margin-bottom:10px;
+            min-height: 75px;
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
             }
             .img{
+              -webkit-transition: all .3s;/* Safari */
+              -moz-transition: all .3s;/*Firefox*/
+              -ms-transition: all .3s;/*IE10+*/
+              -o-transition: all .3s;/*Opera*/
+              transition: all .3s;
               position: absolute;
               top:0;
               left: 0;
-              width:40px;
-              height: 40px;
+              width: 70px;
+              height: 70px;
               background: #FFF;
               border: solid 3px #A3CB00;
               border-radius: 50%;
+
+              svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width:100%;
+                fill:#A3CB00;
+              }
+            }
+          }
+        }
+        .current{
+          .img{
+            background: #A3CB00;
+            border: solid 3px #FFF;
+
+            svg{
+              fill:#FFF;
             }
           }
         }
