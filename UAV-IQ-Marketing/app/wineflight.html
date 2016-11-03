@@ -10,6 +10,7 @@
   </head>
   <body class="wineflight">
     <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+      <div class="droneOperators"><p>Are you a drone operator or a farmer flying your own drone? <button type="button" name="button">GET STARTED NOW</button></p></div>
       <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" /></a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
@@ -28,7 +29,7 @@
       </div>
     </nav>
 
-    <div class="jumbotron" style="background-image: url('img/BG WineFlight banner.png');  background-size: 120%;">
+    <div class="jumbotron" style="background-image: url('img/BG WineFlight banner.png');">
       <div class="container">
         <div class="image-container">
           <img src="img/WineFligth-logo.png" alt="" />
@@ -39,6 +40,10 @@
           <a class="btn btn-primary btn-lg" href="#" role="button">SIGN UP »</a>
           <span>to create a free demo account</span>
         </p>
+        <div class="app col-sm-3 col-md-3 col-lg-4">
+          <img class="col-sm-12 col-lg-6" src="img/App Store.png" alt="" />
+          <img class="col-sm-12 col-lg-6" src="img/google-play-badge.png" alt="" />
+        </div>
       </div>
     </div>
 
@@ -186,6 +191,39 @@
       </div>
     </div>
 
+    <div class="container-fluid">
+      <div id="contact-us" class="row">
+        <h1>Get in touch with us</h1>
+        <form class="" action="index.html" method="post">
+          <div class="col-sm-6">
+            <input type="text" name="name" value="" placeholder="First Name">
+          </div>
+          <div  class="col-sm-6">
+            <input type="text" name="name" value="" placeholder="Last Name">
+          </div>
+
+          <div class="col-sm-6">
+            <label for="">E-Mail</label>
+            <input type="text" name="name" value="">
+          </div>
+          <div  class="col-sm-6">
+            <label for="">Location</label>
+            <input type="text" name="name" value="">
+          </div>
+
+          <div  class="col-sm-12">
+            <label for="">Location</label>
+            <textarea name="message"></textarea>
+          </div>
+
+          <div class="col-sm-12">
+            <button type="button" name="button">SEND</button>
+            <div class="g-recaptcha" data-sitekey="6Lfw2CcTAAAAAMUgBk7J4Qg3si_bz6NWFuQJigbN"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <div class="footer">
       <h4>Follow our news on</h4>
 
@@ -253,11 +291,10 @@
           function _loop(idx) {
               $looped.removeClass('current').eq(idx).addClass('current');
               document.getElementById("imageid2").src="img/WineFlight Page/"+$looped.eq(idx)[0].dataset.id+".png";
-              console.log($looped.eq(idx)[0].dataset.id);
               timeOut = setTimeout(function () {
                   index = (idx + 1) % $looped.length;
                   _loop(index);
-              }, 1500);
+              }, 3500);
           };
           _loop(index);
           $("#best-practice ul").hover(function () {
@@ -268,7 +305,6 @@
           $("#best-practice ul li").hover(function () {
               $("#best-practice ul li").removeClass("current");
               $(this).addClass("current");
-              console.log($(this)[0].dataset.id);
               document.getElementById("imageid2").src="img/WineFlight Page/"+$(this)[0].dataset.id+".png";
           }, function () {
               $("li").removeClass("current");

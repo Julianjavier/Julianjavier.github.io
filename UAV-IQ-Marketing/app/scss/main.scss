@@ -2,7 +2,7 @@
   font-family: 'Raleway', sans-serif;
 
   .jumbotron{
-    padding-top: 130px !important;
+    padding-top: 184px !important;
     background-color:#fff;
     // background-image: url('../img/TV-Colchagua.png');
     background-repeat: no-repeat;
@@ -512,10 +512,29 @@
   }
 
   nav{
-
     position: absolute !important;
     width: 100%;
     padding:0 20px;
+    padding-top:53px;
+
+    .droneOperators{
+      position: absolute;
+      background-color:#D4D6CD;
+      text-align: center;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:2;
+      p{
+        margin:14px 0;
+      }
+
+      button{
+        background-color:#A3CB00;
+        border:none;
+        color: #FFF;
+      }
+    }
 
     .navbar-brand{
       height: auto;
@@ -566,9 +585,9 @@
       .stack{
         display: block;
         position: absolute;
-        top: 0;
+        bottom: 2px;
         right:0;
-        height: 100%;
+        height: 110px;
         width: 50px;
         background-color:#FFF;
         color:#A3CB00;
@@ -629,3 +648,4 @@
 
   @import "comoponets/wineflight";
   @import "comoponets/datacollection";
+  @import "comoponets/instafarm"

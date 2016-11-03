@@ -1,7 +1,7 @@
 .home {
   font-family: 'Raleway', sans-serif; }
   .home .jumbotron {
-    padding-top: 130px !important;
+    padding-top: 184px !important;
     background-color: #fff;
     background-repeat: no-repeat;
     max-height: 800px;
@@ -303,7 +303,22 @@
 nav {
   position: absolute !important;
   width: 100%;
-  padding: 0 20px; }
+  padding: 0 20px;
+  padding-top: 53px; }
+  nav .droneOperators {
+    position: absolute;
+    background-color: #D4D6CD;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+    nav .droneOperators p {
+      margin: 14px 0; }
+    nav .droneOperators button {
+      background-color: #A3CB00;
+      border: none;
+      color: #FFF; }
   nav .navbar-brand {
     height: auto; }
     nav .navbar-brand img {
@@ -335,9 +350,9 @@ nav {
     nav .stack {
       display: block;
       position: absolute;
-      top: 0;
+      bottom: 2px;
       right: 0;
-      height: 100%;
+      height: 110px;
       width: 50px;
       background-color: #FFF;
       color: #A3CB00; }
@@ -385,18 +400,27 @@ nav {
 .wineflight {
   font-family: 'Raleway', sans-serif; }
   .wineflight .jumbotron {
-    padding-top: 130px !important;
+    background-size: 120%;
+    padding-top: 184px !important;
     background-color: #fff;
     background-repeat: no-repeat;
     background-color: #000;
     max-height: 800px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
+    @media only screen and (max-device-width: 1024px) {
+      .wineflight .jumbotron {
+        background-size: 117%; } }
+    .wineflight .jumbotron .app {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
     .wineflight .jumbotron .container {
       color: #FFF; }
       .wineflight .jumbotron .container .image-container {
         width: 100%; }
         .wineflight .jumbotron .container .image-container img {
-          width: 30%;
+          width: 20%;
           display: block;
           margin: 0px auto;
           margin-bottom: 40px; }
@@ -420,6 +444,9 @@ nav {
         .wineflight .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight .jumbotron .container .button span {
+              font-size: 15px; } }
       .wineflight .jumbotron .container .banner {
         width: 100%; }
     .wineflight .jumbotron .back-opacity {
@@ -538,7 +565,8 @@ nav {
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-wine .left ul li {
-              font-size: 20px; } }
+              font-size: 20px;
+              padding-left: 60px; } }
           .wineflight #best-wine .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -557,6 +585,10 @@ nav {
             background: #FFF;
             border: solid 3px #A3CB00;
             border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .wineflight #best-wine .left ul li .img {
+                width: 50px;
+                height: 50px; } }
             .wineflight #best-wine .left ul li .img svg {
               position: absolute;
               top: 50%;
@@ -564,6 +596,9 @@ nav {
               transform: translate(-50%, -50%);
               width: 100%;
               fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .wineflight #best-wine .left ul li .img svg {
+                  width: 55%; } }
       .wineflight #best-wine .left .current .img {
         background: #A3CB00;
         border: solid 3px #FFF; }
@@ -603,7 +638,8 @@ nav {
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-practice .left ul li {
-              font-size: 20px; } }
+              font-size: 20px;
+              padding-left: 60px; } }
           .wineflight #best-practice .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -622,6 +658,10 @@ nav {
             background: #FFF;
             border: solid 3px #A3CB00;
             border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .wineflight #best-practice .left ul li .img {
+                width: 50px;
+                height: 50px; } }
             .wineflight #best-practice .left ul li .img svg {
               position: absolute;
               top: 50%;
@@ -629,11 +669,50 @@ nav {
               transform: translate(-50%, -50%);
               width: 100%;
               fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .wineflight #best-practice .left ul li .img svg {
+                  width: 55%; } }
       .wineflight #best-practice .left .current .img {
         background: #A3CB00;
         border: solid 3px #FFF; }
         .wineflight #best-practice .left .current .img svg {
           fill: #FFF; }
+  .wineflight #contact-us h1 {
+    text-align: center; }
+  .wineflight #contact-us form {
+    width: 60%;
+    margin: 0 auto; }
+    .wineflight #contact-us form div {
+      margin: 10px 0; }
+      .wineflight #contact-us form div label {
+        font-size: 25px; }
+      .wineflight #contact-us form div textarea {
+        width: 100%;
+        height: 200px;
+        background-color: #ADADAD;
+        border: none; }
+      .wineflight #contact-us form div input {
+        width: 100%;
+        color: #FFF;
+        background-color: #ADADAD;
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        padding: 1px 20px; }
+        .wineflight #contact-us form div input::-webkit-input-placeholder {
+          color: #FFF; }
+    .wineflight #contact-us form button {
+      background-color: #A3CB00;
+      font-size: 25px;
+      padding: 10px 90px;
+      border: none;
+      float: left;
+      color: #FFF; }
+    .wineflight #contact-us form .g-recaptcha {
+      float: right;
+      margin: 0; }
+      .wineflight #contact-us form .g-recaptcha div {
+        margin: 0; }
   .wineflight .footer {
     margin-top: 100px;
     position: relative; }
@@ -731,7 +810,7 @@ nav {
 .datacollection {
   font-family: 'Raleway', sans-serif; }
   .datacollection .jumbotron {
-    padding-top: 130px !important;
+    padding-top: 184px !important;
     background-color: #fff;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -961,4 +1040,449 @@ nav {
           font-size: 45px; }
           @media only screen and (min-device-width: 1024px) {
             .datacollection #start-servises div .button .btn {
+              font-size: 20px; } }
+
+.instafarm {
+  font-family: 'Raleway', sans-serif; }
+  .instafarm .jumbotron {
+    background-size: 120%;
+    padding-top: 184px !important;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-color: #000;
+    max-height: 800px;
+    overflow: hidden;
+    position: relative; }
+    @media only screen and (max-device-width: 1024px) {
+      .instafarm .jumbotron {
+        background-size: 142%; } }
+    .instafarm .jumbotron .app {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    .instafarm .jumbotron .container {
+      color: #FFF; }
+      .instafarm .jumbotron .container .image-container {
+        width: 100%; }
+        .instafarm .jumbotron .container .image-container img {
+          width: 20%;
+          display: block;
+          margin: 0px auto;
+          margin-bottom: 40px; }
+      .instafarm .jumbotron .container h1 {
+        font-size: 50px;
+        text-align: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .instafarm .jumbotron .container h1 {
+            font-size: 70px !important; } }
+      .instafarm .jumbotron .container p {
+        font-size: 25px;
+        text-align: center; }
+      .instafarm .jumbotron .container .button {
+        margin-top: 48px; }
+        .instafarm .jumbotron .container .button .btn {
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 45px; }
+        .instafarm .jumbotron .container .button span {
+          display: block;
+          font-size: 11px; }
+          @media only screen and (min-device-width: 1024px) {
+            .instafarm .jumbotron .container .button span {
+              font-size: 15px; } }
+      .instafarm .jumbotron .container .banner {
+        width: 100%; }
+    .instafarm .jumbotron .back-opacity {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6; }
+  .instafarm .container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .instafarm .container-fluid .section-header {
+      font-size: 35px;
+      margin-bottom: 20px; }
+    .instafarm .container-fluid .section-sub-header {
+      font-size: 30px; }
+  .instafarm #actionalble_data .section-header {
+    text-align: center;
+    padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .instafarm #actionalble_data .section-header {
+        font-size: 45px; } }
+  .instafarm #actionalble_data div {
+    margin-top: 30px;
+    position: relative; }
+    .instafarm #actionalble_data div h2 {
+      text-align: center;
+      font-weight: bold; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #actionalble_data div h2 {
+          font-size: 45px; } }
+    .instafarm #actionalble_data div p {
+      text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #actionalble_data div p {
+          font-size: 30px; } }
+    .instafarm #actionalble_data div img {
+      width: 100%;
+      padding: 0 100px; }
+      @media only screen and (min-device-width: 1024px) {
+        .instafarm #actionalble_data div img {
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #actionalble_data div img {
+          padding: 0px 350px; } }
+  .instafarm #work {
+    background-image: url("../img/BG How It Works Main AG.jpg");
+    background-size: 100% 100%;
+    color: #FFF;
+    padding: 70px; }
+    .instafarm #work .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .instafarm #work .section-header {
+          font-size: 45px; } }
+    .instafarm #work div {
+      margin-top: 30px;
+      position: relative; }
+      .instafarm #work div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #work div h2 {
+            font-size: 45px; } }
+      .instafarm #work div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #work div p {
+            font-size: 30px; } }
+      .instafarm #work div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .instafarm #work div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #work div img {
+            padding: 0px 300px; } }
+  .instafarm #crops {
+    padding: 0px 40px; }
+    .instafarm #crops .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .instafarm #crops .section-header {
+          font-size: 45px; } }
+    .instafarm #crops .parent {
+      margin-top: 30px;
+      position: relative;
+      padding: 0 20px;
+      width: 14.2%;
+      float: left; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #crops .parent {
+          width: 33.3%;
+          min-height: 420px; } }
+      .instafarm #crops .parent .image-container {
+        position: relative;
+        margin: 0 auto; }
+        .instafarm #crops .parent .image-container img {
+          width: 100%; }
+      .instafarm #crops .parent h2 {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #crops .parent h2 {
+            font-size: 45px; } }
+      .instafarm #crops .parent p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #crops .parent p {
+            font-size: 30px; } }
+  .instafarm #best-wine {
+    padding: 0 70px; }
+    .instafarm #best-wine .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #best-wine .section-header {
+          font-size: 45px; } }
+    .instafarm #best-wine .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .instafarm #best-wine .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .instafarm #best-wine .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .instafarm #best-wine .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .instafarm #best-wine .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .instafarm #best-wine .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .instafarm #best-wine .left ul li {
+          font-size: 30px;
+          padding-left: 75px;
+          position: relative;
+          margin-bottom: 10px;
+          min-height: 75px; }
+          @media only screen and (min-device-width: 1024px) {
+            .instafarm #best-wine .left ul li {
+              font-size: 20px;
+              padding-left: 60px; } }
+          .instafarm #best-wine .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .instafarm #best-wine .left ul li .img {
+                width: 50px;
+                height: 50px; } }
+            .instafarm #best-wine .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .instafarm #best-wine .left ul li .img svg {
+                  width: 55%; } }
+      .instafarm #best-wine .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
+        .instafarm #best-wine .left .current .img svg {
+          fill: #FFF; }
+  .instafarm #best-practice {
+    padding: 0 70px; }
+    .instafarm #best-practice .section-header {
+      text-align: center;
+      padding: 0 20px; }
+    .instafarm #best-practice .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .instafarm #best-practice .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .instafarm #best-practice .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .instafarm #best-practice .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .instafarm #best-practice .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .instafarm #best-practice .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .instafarm #best-practice .left ul li {
+          font-size: 30px;
+          padding-left: 75px;
+          position: relative;
+          margin-bottom: 10px;
+          min-height: 75px; }
+          @media only screen and (min-device-width: 1024px) {
+            .instafarm #best-practice .left ul li {
+              font-size: 20px;
+              padding-left: 60px; } }
+          .instafarm #best-practice .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .instafarm #best-practice .left ul li .img {
+                width: 50px;
+                height: 50px; } }
+            .instafarm #best-practice .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .instafarm #best-practice .left ul li .img svg {
+                  width: 55%; } }
+      .instafarm #best-practice .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
+        .instafarm #best-practice .left .current .img svg {
+          fill: #FFF; }
+  .instafarm #contact-us h1 {
+    text-align: center; }
+  .instafarm #contact-us form {
+    width: 60%;
+    margin: 0 auto; }
+    .instafarm #contact-us form div {
+      margin: 10px 0; }
+      .instafarm #contact-us form div label {
+        font-size: 25px; }
+      .instafarm #contact-us form div textarea {
+        width: 100%;
+        height: 200px;
+        background-color: #ADADAD;
+        border: none; }
+      .instafarm #contact-us form div input {
+        width: 100%;
+        color: #FFF;
+        background-color: #ADADAD;
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        padding: 1px 20px; }
+        .instafarm #contact-us form div input::-webkit-input-placeholder {
+          color: #FFF; }
+    .instafarm #contact-us form button {
+      background-color: #A3CB00;
+      font-size: 25px;
+      padding: 10px 90px;
+      border: none;
+      float: left;
+      color: #FFF; }
+    .instafarm #contact-us form .g-recaptcha {
+      float: right;
+      margin: 0; }
+      .instafarm #contact-us form .g-recaptcha div {
+        margin: 0; }
+  .instafarm .footer {
+    margin-top: 100px;
+    position: relative; }
+    .instafarm .footer h4 {
+      font-size: 12px;
+      color: #ADADAD;
+      text-align: center; }
+    .instafarm .footer ul {
+      margin-bottom: 20px;
+      font-size: 10px; }
+      .instafarm .footer ul .first {
+        font-weight: bold; }
+      .instafarm .footer ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+    .instafarm .footer .social {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto; }
+  .instafarm #advanteges {
+    background-image: url("../img/BG WineFlight_Advantages for.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #FFF;
+    padding: 70px; }
+    @media only screen and (max-device-width: 768px) {
+      .instafarm #advanteges {
+        background-size: 280%; } }
+    .instafarm #advanteges .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .instafarm #advanteges .section-header {
+          font-size: 45px; } }
+    .instafarm #advanteges div {
+      margin-top: 30px;
+      position: relative; }
+      .instafarm #advanteges div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #advanteges div h2 {
+            font-size: 45px; } }
+      .instafarm #advanteges div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #advanteges div p {
+            font-size: 30px; } }
+      .instafarm #advanteges div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .instafarm #advanteges div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #advanteges div img {
+            padding: 0px 300px; } }
+  .instafarm #start-servises {
+    padding: 30px 70px; }
+    .instafarm #start-servises .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .instafarm #start-servises .section-header {
+          font-size: 45px; } }
+    .instafarm #start-servises div {
+      margin-top: 30px;
+      position: relative; }
+      .instafarm #start-servises div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .instafarm #start-servises div h2 {
+            font-size: 20px; } }
+      .instafarm #start-servises div .button {
+        width: 100%;
+        background-color: #A3CB00; }
+        .instafarm #start-servises div .button .btn {
+          width: 100%;
+          font-size: 35px;
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .instafarm #start-servises div .button .btn {
               font-size: 20px; } }

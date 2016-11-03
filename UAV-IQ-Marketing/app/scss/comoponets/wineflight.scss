@@ -2,13 +2,27 @@
   font-family: 'Raleway', sans-serif;
 
     .jumbotron{
-      padding-top: 130px !important;
+      background-size: 120%;
+      padding-top: 184px !important;
       background-color:#fff;
       // background-image: url('../img/TV-Colchagua.png');
       background-repeat: no-repeat;
       background-color:#000;
       max-height:800px;
       overflow: hidden;
+      position: relative;
+
+      @media only screen and (max-device-width: 1024px) {
+        background-size: 117%;
+      }
+
+      .app{
+        position: absolute;
+        right:0;
+        bottom:0;
+        img{
+        }
+      }
 
       .container{
         color:#FFF;
@@ -16,7 +30,7 @@
         .image-container{
           width: 100%;
           img{
-            width: 30%;
+            width: 20%;
             display: block;
             margin: 0px auto;
             margin-bottom: 40px;
@@ -50,6 +64,10 @@
           span{
             display: block;
             font-size:11px;
+
+            @media only screen and (min-device-width: 1024px) {
+              font-size:15px;
+            }
           }
         }
 
@@ -236,7 +254,9 @@
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
+              padding-left:60px;
             }
+
             .img{
               -webkit-transition: all .3s;/* Safari */
               -moz-transition: all .3s;/*Firefox*/
@@ -252,6 +272,11 @@
               border: solid 3px #A3CB00;
               border-radius: 50%;
 
+              @media only screen and (min-device-width: 1024px) {
+                width: 50px;
+                height: 50px;
+              }
+
               svg{
                 position: absolute;
                 top: 50%;
@@ -259,6 +284,10 @@
                 transform: translate(-50%, -50%);
                 width:100%;
                 fill:#A3CB00;
+
+                @media only screen and (min-device-width: 1024px) {
+                  width: 55%;
+                }
               }
             }
           }
@@ -326,7 +355,9 @@
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
+              padding-left:60px;
             }
+
             .img{
               -webkit-transition: all .3s;/* Safari */
               -moz-transition: all .3s;/*Firefox*/
@@ -342,6 +373,11 @@
               border: solid 3px #A3CB00;
               border-radius: 50%;
 
+              @media only screen and (min-device-width: 1024px) {
+                width: 50px;
+                height: 50px;
+              }
+
               svg{
                 position: absolute;
                 top: 50%;
@@ -349,6 +385,10 @@
                 transform: translate(-50%, -50%);
                 width:100%;
                 fill:#A3CB00;
+
+                @media only screen and (min-device-width: 1024px) {
+                  width: 55%;
+                }
               }
             }
           }
@@ -361,6 +401,61 @@
             svg{
               fill:#FFF;
             }
+          }
+        }
+      }
+    }
+
+    #contact-us{
+      h1{
+        text-align: center;
+      }
+      form{
+        width: 60%;
+        margin: 0 auto;
+
+        div{
+          margin:10px 0;
+          label{
+            font-size:25px;
+          }
+
+          textarea{
+            width:100%;
+            height: 200px;
+            background-color:#ADADAD;
+            border:none;
+          }
+
+          input{
+            width:100%;
+            color:#FFF;
+            background-color:#ADADAD;
+            height:50px;
+            font-size:20px;
+            border:none;
+            padding: 1px 20px;
+
+            &::-webkit-input-placeholder {
+                color: #FFF;
+            }
+          }
+        }
+
+        button{
+          background-color: #A3CB00;
+          font-size: 25px;
+          padding: 10px 90px;
+          border: none;
+          float: left;
+          color:#FFF;
+        }
+
+        .g-recaptcha{
+          float: right;
+          margin: 0;
+          div{
+            margin: 0;
           }
         }
       }
