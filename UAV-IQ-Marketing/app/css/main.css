@@ -335,7 +335,7 @@ nav {
       background-color: #fff;
       position: absolute;
       width: 100%;
-      top: 110px;
+      top: 161px;
       left: 0; }
       nav .nav .nav-item {
         clear: both;
@@ -1485,4 +1485,470 @@ nav {
           padding: 10px 35px; }
           @media only screen and (min-device-width: 1024px) {
             .instafarm #start-servises div .button .btn {
+              font-size: 20px; } }
+
+.ourProducts {
+  font-family: 'Raleway', sans-serif; }
+  .ourProducts .jumbotron {
+    background-size: 100%;
+    padding-top: 184px !important;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-color: #000;
+    max-height: 800px;
+    overflow: hidden;
+    position: relative; }
+    @media only screen and (max-device-width: 1024px) {
+      .ourProducts .jumbotron {
+        background-size: 142%; } }
+    .ourProducts .jumbotron .app {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    .ourProducts .jumbotron .container {
+      color: #FFF; }
+      .ourProducts .jumbotron .container .image-container {
+        width: 100%; }
+        .ourProducts .jumbotron .container .image-container img {
+          width: 20%;
+          display: block;
+          margin: 0px auto;
+          margin-bottom: 40px; }
+      .ourProducts .jumbotron .container h1 {
+        font-size: 50px;
+        text-align: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .ourProducts .jumbotron .container h1 {
+            font-size: 70px !important; } }
+      .ourProducts .jumbotron .container p {
+        font-size: 25px;
+        text-align: center; }
+      .ourProducts .jumbotron .container .button {
+        margin-top: 48px; }
+        .ourProducts .jumbotron .container .button .btn {
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 45px; }
+        .ourProducts .jumbotron .container .button span {
+          display: block;
+          font-size: 11px; }
+          @media only screen and (min-device-width: 1024px) {
+            .ourProducts .jumbotron .container .button span {
+              font-size: 15px; } }
+      .ourProducts .jumbotron .container .banner {
+        width: 100%; }
+    .ourProducts .jumbotron .back-opacity {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6; }
+  .ourProducts .container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .ourProducts .container-fluid .section-header {
+      font-size: 35px;
+      margin-bottom: 20px; }
+    .ourProducts .container-fluid .section-sub-header {
+      font-size: 30px; }
+  .ourProducts #actionalble_data .section-header {
+    text-align: center;
+    padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #actionalble_data .section-header {
+        font-size: 45px; } }
+  .ourProducts #actionalble_data .premium img {
+    padding: 0 200px; }
+    @media only screen and (min-device-width: 1024px) {
+      .ourProducts #actionalble_data .premium img {
+        padding: 0px 130px; } }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #actionalble_data .premium img {
+        padding: 0 320px; } }
+  .ourProducts #actionalble_data div {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden; }
+    .ourProducts #actionalble_data div h2 {
+      text-align: center;
+      font-weight: bold; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #actionalble_data div h2 {
+          font-size: 45px; } }
+    .ourProducts #actionalble_data div p {
+      text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #actionalble_data div p {
+          font-size: 30px; } }
+    .ourProducts #actionalble_data div img {
+      width: 100%;
+      padding: 0 100px; }
+      @media only screen and (min-device-width: 1024px) {
+        .ourProducts #actionalble_data div img {
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #actionalble_data div img {
+          padding: 0px 270px; } }
+  .ourProducts #work {
+    background-image: url("../img/Pattern_Specialized projects.png");
+    background-size: 40%;
+    color: #FFF;
+    padding: 70px;
+    position: relative; }
+    .ourProducts #work .button {
+      position: absolute;
+      bottom: 60px; }
+      .ourProducts #work .button .btn {
+        background-color: #A3CB00;
+        border: none;
+        border-radius: 0;
+        padding: 10px 35px;
+        font-size: 15px; }
+    @media only screen and (max-device-width: 1024px) {
+      .ourProducts #work .section-header {
+        font-size: 45px; } }
+    .ourProducts #work ul {
+      margin-bottom: 75px; }
+      .ourProducts #work ul li {
+        font-size: 20px; }
+    .ourProducts #work div {
+      margin-top: 30px;
+      position: relative; }
+      .ourProducts #work div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work div h2 {
+            font-size: 45px; } }
+      .ourProducts #work div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work div p {
+            font-size: 30px; } }
+      .ourProducts #work div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .ourProducts #work div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work div img {
+            padding: 0px 300px; } }
+  .ourProducts #crops {
+    padding: 0px 40px; }
+    .ourProducts #crops .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #crops .section-header {
+          font-size: 45px; } }
+    .ourProducts #crops .parent {
+      margin-top: 30px;
+      position: relative;
+      padding: 0 20px;
+      width: 14.2%;
+      float: left; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #crops .parent {
+          width: 33.3%;
+          min-height: 420px; } }
+      .ourProducts #crops .parent .image-container {
+        position: relative;
+        margin: 0 auto; }
+        .ourProducts #crops .parent .image-container img {
+          width: 100%; }
+      .ourProducts #crops .parent h2 {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #crops .parent h2 {
+            font-size: 45px; } }
+      .ourProducts #crops .parent p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #crops .parent p {
+            font-size: 30px; } }
+  .ourProducts #best-wine {
+    padding: 0 70px; }
+    .ourProducts #best-wine .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #best-wine .section-header {
+          font-size: 45px; } }
+    .ourProducts #best-wine .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .ourProducts #best-wine .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .ourProducts #best-wine .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .ourProducts #best-wine .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .ourProducts #best-wine .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .ourProducts #best-wine .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .ourProducts #best-wine .left ul li {
+          font-size: 30px;
+          padding-left: 75px;
+          position: relative;
+          margin-bottom: 10px;
+          min-height: 75px; }
+          @media only screen and (min-device-width: 1024px) {
+            .ourProducts #best-wine .left ul li {
+              font-size: 20px;
+              padding-left: 60px; } }
+          .ourProducts #best-wine .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .ourProducts #best-wine .left ul li .img {
+                width: 50px;
+                height: 50px; } }
+            .ourProducts #best-wine .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .ourProducts #best-wine .left ul li .img svg {
+                  width: 55%; } }
+      .ourProducts #best-wine .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
+        .ourProducts #best-wine .left .current .img svg {
+          fill: #FFF; }
+  .ourProducts #best-practice {
+    padding: 0 70px; }
+    .ourProducts #best-practice .section-header {
+      text-align: center;
+      padding: 0 20px; }
+    .ourProducts #best-practice .ipad {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative; }
+      .ourProducts #best-practice .ipad h2 {
+        font-size: 40px;
+        text-align: center; }
+      .ourProducts #best-practice .ipad p {
+        font-size: 30px;
+        text-align: center; }
+      .ourProducts #best-practice .ipad img {
+        width: 100%;
+        padding: 0 40px; }
+    .ourProducts #best-practice .left {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+      .ourProducts #best-practice .left ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        padding: 0; }
+        .ourProducts #best-practice .left ul li {
+          font-size: 30px;
+          padding-left: 75px;
+          position: relative;
+          margin-bottom: 10px;
+          min-height: 75px; }
+          @media only screen and (min-device-width: 1024px) {
+            .ourProducts #best-practice .left ul li {
+              font-size: 20px;
+              padding-left: 60px; } }
+          .ourProducts #best-practice .left ul li .img {
+            -webkit-transition: all .3s;
+            /* Safari */
+            -moz-transition: all .3s;
+            /*Firefox*/
+            -ms-transition: all .3s;
+            /*IE10+*/
+            -o-transition: all .3s;
+            /*Opera*/
+            transition: all .3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            background: #FFF;
+            border: solid 3px #A3CB00;
+            border-radius: 50%; }
+            @media only screen and (min-device-width: 1024px) {
+              .ourProducts #best-practice .left ul li .img {
+                width: 50px;
+                height: 50px; } }
+            .ourProducts #best-practice .left ul li .img svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              fill: #A3CB00; }
+              @media only screen and (min-device-width: 1024px) {
+                .ourProducts #best-practice .left ul li .img svg {
+                  width: 55%; } }
+      .ourProducts #best-practice .left .current .img {
+        background: #A3CB00;
+        border: solid 3px #FFF; }
+        .ourProducts #best-practice .left .current .img svg {
+          fill: #FFF; }
+  .ourProducts #contact-us h1 {
+    text-align: center; }
+  .ourProducts #contact-us form {
+    width: 60%;
+    margin: 0 auto; }
+    .ourProducts #contact-us form div {
+      margin: 10px 0; }
+      .ourProducts #contact-us form div label {
+        font-size: 25px; }
+      .ourProducts #contact-us form div textarea {
+        width: 100%;
+        height: 200px;
+        background-color: #ADADAD;
+        border: none; }
+      .ourProducts #contact-us form div input {
+        width: 100%;
+        color: #FFF;
+        background-color: #ADADAD;
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        padding: 1px 20px; }
+        .ourProducts #contact-us form div input::-webkit-input-placeholder {
+          color: #FFF; }
+    .ourProducts #contact-us form button {
+      background-color: #A3CB00;
+      font-size: 25px;
+      padding: 10px 90px;
+      border: none;
+      float: left;
+      color: #FFF; }
+    .ourProducts #contact-us form .g-recaptcha {
+      float: right;
+      margin: 0; }
+      .ourProducts #contact-us form .g-recaptcha div {
+        margin: 0; }
+  .ourProducts .footer {
+    margin-top: 100px;
+    position: relative; }
+    .ourProducts .footer h4 {
+      font-size: 12px;
+      color: #ADADAD;
+      text-align: center; }
+    .ourProducts .footer ul {
+      margin-bottom: 20px;
+      font-size: 10px; }
+      .ourProducts .footer ul .first {
+        font-weight: bold; }
+      .ourProducts .footer ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+    .ourProducts .footer .social {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto; }
+  .ourProducts #advanteges {
+    background-image: url("../img/BG WineFlight_Advantages for.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #FFF;
+    padding: 70px; }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #advanteges {
+        background-size: 280%; } }
+    .ourProducts #advanteges .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #advanteges .section-header {
+          font-size: 45px; } }
+    .ourProducts #advanteges div {
+      margin-top: 30px;
+      position: relative; }
+      .ourProducts #advanteges div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #advanteges div h2 {
+            font-size: 45px; } }
+      .ourProducts #advanteges div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #advanteges div p {
+            font-size: 30px; } }
+      .ourProducts #advanteges div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (min-device-width: 1024px) {
+          .ourProducts #advanteges div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #advanteges div img {
+            padding: 0px 300px; } }
+  .ourProducts #start-servises {
+    padding: 30px 70px; }
+    .ourProducts #start-servises .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #start-servises .section-header {
+          font-size: 45px; } }
+    .ourProducts #start-servises div {
+      margin-top: 30px;
+      position: relative; }
+      .ourProducts #start-servises div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .ourProducts #start-servises div h2 {
+            font-size: 20px; } }
+      .ourProducts #start-servises div .button {
+        width: 100%;
+        background-color: #A3CB00; }
+        .ourProducts #start-servises div .button .btn {
+          width: 100%;
+          font-size: 35px;
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .ourProducts #start-servises div .button .btn {
               font-size: 20px; } }
