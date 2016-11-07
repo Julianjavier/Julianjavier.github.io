@@ -13,7 +13,7 @@
       position: relative;
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 142%;
+        background-size: 155%;
       }
 
       .app{
@@ -134,8 +134,9 @@
         img{
           width:100%;
           padding: 0 100px;
+          padding:0px 110px;
 
-          @media only screen and (min-device-width: 1024px) {
+          @media only screen and (max-device-width: 1024px) {
             padding:0px 70px;
           }
 
@@ -222,6 +223,17 @@
         @media only screen and (max-device-width: 768px) {
           width: 33.3%;
           min-height: 420px;
+
+          &:last-child{
+            width: 100%;
+            .image-container{
+              width: 32%;
+            }
+          }
+
+          h2{
+            font-size: 40px;
+          }
         }
 
         .image-container{
@@ -518,8 +530,7 @@
         }
 
         .g-recaptcha{
-          float: right;
-          margin: 0;
+          margin: 0 0 20px 0;
           div{
             margin: 0;
           }

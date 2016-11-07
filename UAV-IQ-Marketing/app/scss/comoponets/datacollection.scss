@@ -16,7 +16,7 @@
       }
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 133%;
+        background-size: 145%;
       }
 
       .container{
@@ -48,6 +48,10 @@
             border-radius:0;
             padding: 10px 35px;
             font-size: 45px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 45px;
+            }
           }
 
           span{
@@ -234,7 +238,7 @@
     min-height: 688px;
 
     @media only screen and (max-device-width: 768px) {
-      background-size: 280%;
+      background-size: 330%;
     }
 
     .section-header{
