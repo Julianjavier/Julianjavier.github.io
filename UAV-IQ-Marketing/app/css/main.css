@@ -101,6 +101,7 @@ button {
   .home #issue {
     background-image: url(../img/BG_zoom_level.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: left bottom;
     background-size: 100%; }
     .home #issue .section-header {
