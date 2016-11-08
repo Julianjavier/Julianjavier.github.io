@@ -122,6 +122,10 @@ button{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media only screen and (max-device-width: 768px){
+          font-size: 70px !important;
+        }
       }
 
       p{
@@ -131,6 +135,10 @@ button{
         color:#fff;
         left: 50%;
         bottom:0;
+
+        @media only screen and (max-device-width: 768px){
+          font-size: 40px !important;
+        }
       }
     }
     .fa{
@@ -414,7 +422,7 @@ button{
         img{
         }
         h2{
-          font-size: 55px;
+          font-size: 25px;
         }
       }
       .fa{
@@ -590,7 +598,7 @@ button{
       }
 
       .stack{
-        height:156px !important;
+        height:160px !important;
       }
     }
 
@@ -620,7 +628,7 @@ button{
           width: 100%;
           border-bottom: 2px solid #A3CB00;
           a{
-            color:#A3CB00;
+            color:#000;
             padding:20px 20px;
             font-size:17px;
           }
@@ -642,7 +650,7 @@ button{
           clear: both;
           width: 100%;
           a{
-            color:#A3CB00;
+            color:#000;
             padding:30px 20px;
             font-size:30px;
           }
@@ -661,14 +669,14 @@ button{
         bottom: 2px;
         right:0;
         height: 110px;
-        width: 70px;
+        width: 100px;
         background-color:#FFF;
         color:#A3CB00;
 
         button{
           height:100%;
           width:100%;
-          font-size: 40px;
+          font-size: 55px;
           border: none;
           background-color: #FFF
         }

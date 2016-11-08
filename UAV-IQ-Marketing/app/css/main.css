@@ -79,6 +79,9 @@ button {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+      @media only screen and (max-device-width: 768px) {
+        .home #industries div h2 {
+          font-size: 70px !important; } }
     .home #industries div p {
       transform: translate(-50%, -50%);
       position: absolute;
@@ -86,6 +89,9 @@ button {
       color: #fff;
       left: 50%;
       bottom: 0; }
+      @media only screen and (max-device-width: 768px) {
+        .home #industries div p {
+          font-size: 40px !important; } }
   .home #industries .fa {
     text-align: center;
     margin-top: 25px;
@@ -258,7 +264,7 @@ button {
     .home #industries .section-sub-header {
       font-size: 30px; }
     .home #industries div h2 {
-      font-size: 55px; }
+      font-size: 25px; }
     .home #issue .section-header {
       font-size: 35px; }
     .home #issue .section-sub-header {
@@ -356,7 +362,7 @@ nav {
     nav .navbar-brand img {
       height: 130px; }
     nav .stack {
-      height: 156px !important; } }
+      height: 160px !important; } }
   nav .nav .nav-item a {
     color: #FFF;
     padding-top: 45px;
@@ -376,7 +382,7 @@ nav {
         width: 100%;
         border-bottom: 2px solid #A3CB00; }
         nav .nav .nav-item a {
-          color: #A3CB00;
+          color: #000;
           padding: 20px 20px;
           font-size: 17px; }
         nav .nav .nav-item:last-child {
@@ -392,7 +398,7 @@ nav {
         clear: both;
         width: 100%; }
         nav .nav .nav-item a {
-          color: #A3CB00;
+          color: #000;
           padding: 30px 20px;
           font-size: 30px; } }
   nav .stack {
@@ -404,13 +410,13 @@ nav {
       bottom: 2px;
       right: 0;
       height: 110px;
-      width: 70px;
+      width: 100px;
       background-color: #FFF;
       color: #A3CB00; }
       nav .stack button {
         height: 100%;
         width: 100%;
-        font-size: 40px;
+        font-size: 55px;
         border: none;
         background-color: #FFF; }
     nav ul {
@@ -812,6 +818,7 @@ nav {
     background-color: #fff;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #000;
     max-height: 700px;
     overflow: hidden; }
@@ -1062,6 +1069,7 @@ nav {
     padding-top: 210px !important;
     background-color: #fff;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
@@ -1513,13 +1521,14 @@ nav {
     padding-top: 210px !important;
     background-color: #fff;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
     position: relative; }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts .jumbotron {
-        background-size: 142%; } }
+        background-size: 150%; } }
     .ourProducts .jumbotron .app {
       position: absolute;
       right: 0;
@@ -1567,6 +1576,9 @@ nav {
   .ourProducts #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #actionalble_data .section-header {
+        font-size: 45px; } }
   .ourProducts #actionalble_data .premium img {
     padding: 0 200px; }
     @media only screen and (min-device-width: 1024px) {
@@ -1583,8 +1595,14 @@ nav {
     .ourProducts #actionalble_data div h2 {
       text-align: center;
       font-weight: bold; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #actionalble_data div h2 {
+          font-size: 45px; } }
     .ourProducts #actionalble_data div p {
       text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #actionalble_data div p {
+          font-size: 20px; } }
     .ourProducts #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -1593,7 +1611,7 @@ nav {
           padding: 0px 70px; } }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #actionalble_data div img {
-          padding: 0px 270px; } }
+          padding: 0px 230px; } }
   .ourProducts #work {
     background-image: url("../img/Pattern_Specialized projects.png");
     background-size: 40%;
