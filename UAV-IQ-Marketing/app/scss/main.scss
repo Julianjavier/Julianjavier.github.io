@@ -1,11 +1,16 @@
+button{
+  -webkit-appearance:none
+}
+
 .home{
   font-family: 'Raleway', sans-serif;
 
   .jumbotron{
-    padding-top: 184px !important;
+    padding-top: 210px !important;
     background-color:#fff;
     // background-image: url('../img/TV-Colchagua.png');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     max-height:800px;
     overflow: hidden;
     background-size: 110%;
@@ -83,6 +88,7 @@
       text-align: center;
       font-size: 13px;
       padding:0 20px;
+
     }
     .section-sub-header{
       text-align: center;
@@ -101,6 +107,11 @@
       img{
         width:100%;
       }
+
+      a{
+        display: block;
+      }
+
       h2{
         text-align: center;
         position: absolute;
@@ -133,6 +144,11 @@
 
 
   #issue{
+    background-image: url(../img/BG_zoom_level.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
+
     .section-header{
       text-align: center;
       font-size: 13px;
@@ -147,13 +163,6 @@
     }
 
     div{
-
-      background-image: url("../img/BG_zoom_level.png");
-      background-repeat: no-repeat;
-      background-position:left bottom;
-      background-size:100%;
-      margin: 50px 0;
-
 
       .asset{
         width: 100%;
@@ -413,6 +422,7 @@
     }
 
     #issue{
+
       .section-header{
         font-size: 35px;
       }
@@ -572,6 +582,18 @@
       }
     }
 
+    @media only screen and (max-device-width: 768px) {
+      .navbar-brand{
+        img{
+          height: 130px;
+        }
+      }
+
+      .stack{
+        height:156px !important;
+      }
+    }
+
     .nav{
       .nav-item{
         a{
@@ -590,7 +612,30 @@
         background-color: #fff;
         position: absolute;
         width: 100%;
-        top: 161px;
+        top: 210px;
+        left: 0;
+
+        .nav-item{
+          clear: both;
+          width: 100%;
+          border-bottom: 2px solid #A3CB00;
+          a{
+            color:#A3CB00;
+            padding:20px 20px;
+            font-size:17px;
+          }
+
+          &:last-child{
+            border: none;
+          }
+        }
+      }
+
+      @media only screen and (max-device-width: 768px) {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 210px;
         left: 0;
 
         .nav-item{
@@ -598,11 +643,10 @@
           width: 100%;
           a{
             color:#A3CB00;
-            padding:20px 20px;
-            font-size:17px;
+            padding:30px 20px;
+            font-size:30px;
           }
         }
-
       }
     }
 
@@ -625,6 +669,8 @@
           height:100%;
           width:100%;
           font-size: 40px;
+          border: none;
+          background-color: #FFF
         }
       }
 
@@ -677,6 +723,11 @@
 
   .changeHeader{
     background:#FFF;
+    -webkit-transition: all .3s;/* Safari */
+    -moz-transition: all .3s;/*Firefox*/
+    -ms-transition: all .3s;/*IE10+*/
+    -o-transition: all .3s;/*Opera*/
+    transition: all .3s;
 
     .nav-item{
       a{

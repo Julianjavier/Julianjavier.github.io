@@ -3,7 +3,7 @@
 
     .jumbotron{
       background-size: 100%;
-      padding-top: 184px !important;
+      padding-top: 210px !important;
       background-color:#fff;
       // background-image: url('../img/TV-Colchagua.png');
       background-repeat: no-repeat;
@@ -42,12 +42,12 @@
           text-align: center;
 
           @media only screen and (max-device-width: 1024px) {
-            // font-size: 70px !important;
+            font-size: 60px !important;
           }
         }
 
         p{
-          // font-size: 25px;
+          font-size: 25px;
           text-align: center;
         }
 

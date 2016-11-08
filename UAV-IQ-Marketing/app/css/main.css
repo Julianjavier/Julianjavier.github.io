@@ -1,9 +1,13 @@
+button {
+  -webkit-appearance: none; }
+
 .home {
   font-family: 'Raleway', sans-serif; }
   .home .jumbotron {
-    padding-top: 184px !important;
+    padding-top: 210px !important;
     background-color: #fff;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     max-height: 800px;
     overflow: hidden;
     background-size: 110%; }
@@ -63,6 +67,8 @@
         padding: 0 50px; } }
     .home #industries div img {
       width: 100%; }
+    .home #industries div a {
+      display: block; }
     .home #industries div h2 {
       text-align: center;
       position: absolute;
@@ -86,19 +92,18 @@
     width: 100%;
     color: #ADADAD;
     font-size: 70px; }
-  .home #issue .section-header {
-    text-align: center;
-    font-size: 13px; }
-  .home #issue .section-sub-header {
-    text-align: center;
-    font-size: 13px;
-    color: #A3CB00; }
-  .home #issue div {
-    background-image: url("../img/BG_zoom_level.png");
+  .home #issue {
+    background-image: url(../img/BG_zoom_level.png);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: 100%;
-    margin: 50px 0; }
+    background-size: 100%; }
+    .home #issue .section-header {
+      text-align: center;
+      font-size: 13px; }
+    .home #issue .section-sub-header {
+      text-align: center;
+      font-size: 13px;
+      color: #A3CB00; }
     .home #issue div .asset {
       width: 100%; }
       @media only screen and (min-device-width: 1024px) {
@@ -347,6 +352,11 @@ nav {
     height: auto; }
     nav .navbar-brand img {
       height: 80px; }
+  @media only screen and (max-device-width: 768px) {
+    nav .navbar-brand img {
+      height: 130px; }
+    nav .stack {
+      height: 156px !important; } }
   nav .nav .nav-item a {
     color: #FFF;
     padding-top: 45px;
@@ -359,15 +369,32 @@ nav {
       background-color: #fff;
       position: absolute;
       width: 100%;
-      top: 161px;
+      top: 210px;
+      left: 0; }
+      nav .nav .nav-item {
+        clear: both;
+        width: 100%;
+        border-bottom: 2px solid #A3CB00; }
+        nav .nav .nav-item a {
+          color: #A3CB00;
+          padding: 20px 20px;
+          font-size: 17px; }
+        nav .nav .nav-item:last-child {
+          border: none; } }
+  @media only screen and (max-device-width: 768px) {
+    nav .nav {
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      top: 210px;
       left: 0; }
       nav .nav .nav-item {
         clear: both;
         width: 100%; }
         nav .nav .nav-item a {
           color: #A3CB00;
-          padding: 20px 20px;
-          font-size: 17px; } }
+          padding: 30px 20px;
+          font-size: 30px; } }
   nav .stack {
     display: none; }
   @media screen and (max-device-width: 1024px) {
@@ -383,7 +410,9 @@ nav {
       nav .stack button {
         height: 100%;
         width: 100%;
-        font-size: 40px; }
+        font-size: 40px;
+        border: none;
+        background-color: #FFF; }
     nav ul {
       overflow: hidden;
       float: none;
@@ -422,7 +451,16 @@ nav {
       overflow: auto; } }
 
 .changeHeader {
-  background: #FFF; }
+  background: #FFF;
+  -webkit-transition: all .3s;
+  /* Safari */
+  -moz-transition: all .3s;
+  /*Firefox*/
+  -ms-transition: all .3s;
+  /*IE10+*/
+  -o-transition: all .3s;
+  /*Opera*/
+  transition: all .3s; }
   .changeHeader .nav-item a {
     color: #7F5E3B !important;
     padding-top: 45px;
@@ -432,9 +470,9 @@ nav {
   font-family: 'Raleway', sans-serif; }
   .wineflight .jumbotron {
     background-size: 120%;
-    padding-top: 184px !important;
-    background-color: #fff;
+    padding-top: 210px !important;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
@@ -456,9 +494,14 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .wineflight .jumbotron .container h1 {
+        font-size: 50px;
         text-align: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .wineflight .jumbotron .container h1 {
+            font-size: 60px !important; } }
       .wineflight .jumbotron .container p {
-        text-align: center; }
+        text-align: center;
+        font-size: 25px; }
       .wineflight .jumbotron .container .button {
         margin-top: 48px; }
         .wineflight .jumbotron .container .button .btn {
@@ -498,7 +541,7 @@ nav {
       padding: 0 100px; }
       @media only screen and (min-device-width: 1024px) {
         .wineflight #actionalble_data div img {
-          padding: 0px 70px; } }
+          padding: 0px 110px; } }
       @media only screen and (max-device-width: 768px) {
         .wineflight #actionalble_data div img {
           padding: 0px 350px; } }
@@ -765,7 +808,7 @@ nav {
 .datacollection {
   font-family: 'Raleway', sans-serif; }
   .datacollection .jumbotron {
-    padding-top: 184px !important;
+    padding-top: 210px !important;
     background-color: #fff;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -788,7 +831,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .jumbotron .container h1 {
-            font-size: 70px !important; } }
+            font-size: 60px !important; } }
       .datacollection .jumbotron .container p {
         font-size: 35px;
         text-align: center; }
@@ -844,7 +887,7 @@ nav {
     .datacollection #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
-      @media only screen and (min-device-width: 1024px) {
+      @media only screen and (max-device-width: 1024px) {
         .datacollection #actionalble_data div img {
           padding: 0px 70px; } }
       @media only screen and (max-device-width: 768px) {
@@ -855,9 +898,21 @@ nav {
       border: none;
       border-radius: 0;
       padding: 10px 35px;
-      font-size: 45px; }
+      font-size: 25px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection #actionalble_data div .button .btn {
+          font-size: 25px; } }
+      @media only screen and (max-device-width: 768px) {
+        .datacollection #actionalble_data div .button .btn {
+          font-size: 40px; } }
+    .datacollection #actionalble_data div:last-child {
+      margin-top: 80px;
+      margin-bottom: 40px; }
   .datacollection .work {
     padding: 20px 70px; }
+    @media only screen and (min-device-width: 1024px) {
+      .datacollection .work {
+        padding: 20px 15px; } }
     .datacollection .work .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -887,10 +942,10 @@ nav {
             font-size: 25px; } }
       .datacollection .work div img {
         width: 100%;
-        padding: 0 100px; }
-        @media only screen and (min-device-width: 1024px) {
+        padding: 0 50px; }
+        @media only screen and (max-device-width: 1024px) {
           .datacollection .work div img {
-            padding: 0px 70px; } }
+            padding: 0px 15px; } }
         @media only screen and (max-device-width: 768px) {
           .datacollection .work div img {
             padding: 0px 333px; } }
@@ -1004,7 +1059,7 @@ nav {
   font-family: 'Raleway', sans-serif; }
   .instafarm .jumbotron {
     background-size: 120%;
-    padding-top: 184px !important;
+    padding-top: 210px !important;
     background-color: #fff;
     background-repeat: no-repeat;
     background-color: #000;
@@ -1032,7 +1087,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 1024px) {
           .instafarm .jumbotron .container h1 {
-            font-size: 70px !important; } }
+            font-size: 60px !important; } }
       .instafarm .jumbotron .container p {
         font-size: 25px;
         text-align: center; }
@@ -1455,7 +1510,7 @@ nav {
   font-family: 'Raleway', sans-serif; }
   .ourProducts .jumbotron {
     background-size: 100%;
-    padding-top: 184px !important;
+    padding-top: 210px !important;
     background-color: #fff;
     background-repeat: no-repeat;
     background-color: #000;
@@ -1480,7 +1535,11 @@ nav {
           margin-bottom: 40px; }
       .ourProducts .jumbotron .container h1 {
         text-align: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .ourProducts .jumbotron .container h1 {
+            font-size: 60px !important; } }
       .ourProducts .jumbotron .container p {
+        font-size: 25px;
         text-align: center; }
       .ourProducts .jumbotron .container .button {
         margin-top: 48px; }
