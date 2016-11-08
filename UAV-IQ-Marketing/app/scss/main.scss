@@ -35,7 +35,7 @@ button{
       }
 
       p{
-        font-size: 25px;
+        font-size: 36px;
       }
 
       .button{
@@ -573,6 +573,7 @@ button{
       top:0;
       left:0;
       z-index:2;
+
       p{
         margin:14px 0;
       }
@@ -581,6 +582,13 @@ button{
         background-color:#A3CB00;
         border:none;
         color: #FFF;
+      }
+
+      @media only screen and (max-device-width: 768px) {
+        p{
+          font-size:20px;
+          margin:14px 0;
+        }
       }
     }
 
@@ -732,6 +740,7 @@ button{
 
   .changeHeader{
     background:#FFF;
+    padding-top: 0;
     -webkit-transition: all .3s;/* Safari */
     -moz-transition: all .3s;/*Firefox*/
     -ms-transition: all .3s;/*IE10+*/
@@ -745,6 +754,10 @@ button{
         padding-bottom: 45px;
       }
     }
+  }
+
+  .displayNone{
+    display: none;
   }
 
   @import "comoponets/wineflight";

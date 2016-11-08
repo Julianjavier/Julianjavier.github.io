@@ -37,7 +37,7 @@
         }
 
         p{
-          font-size: 35px;
+          font-size: 36px;
           text-align: center;
         }
 
@@ -205,10 +205,10 @@
 
         img{
           width:100%;
-          padding: 0 50px;
+          padding: 0 170px;
 
           @media only screen and (max-device-width: 1024px) {
-            padding: 0px 15px;
+            padding: 0px 110px;
           }
 
           @media only screen and (max-device-width: 768px) {
@@ -299,7 +299,7 @@
         width:100%;
         padding: 0 100px;
 
-        @media only screen and (min-device-width: 1024px) {
+        @media only screen and (max-device-width: 1024px) {
           padding:0px 70px;
         }
 
@@ -317,6 +317,11 @@
           text-decoration: none;
           color:#FFF;
           font-size: 45px;
+
+
+          @media only screen and (max-device-width: 1024px) {
+            font-size: 25px;
+          }
         }
       }
     }

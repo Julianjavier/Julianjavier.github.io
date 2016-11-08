@@ -25,7 +25,7 @@ button {
           .home .jumbotron .container h1 {
             font-size: 60px !important; } }
       .home .jumbotron .container p {
-        font-size: 25px; }
+        font-size: 36px; }
       .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
@@ -355,6 +355,10 @@ nav {
       background-color: #A3CB00;
       border: none;
       color: #FFF; }
+    @media only screen and (max-device-width: 768px) {
+      nav .droneOperators p {
+        font-size: 20px;
+        margin: 14px 0; } }
   nav .navbar-brand {
     height: auto; }
     nav .navbar-brand img {
@@ -459,6 +463,7 @@ nav {
 
 .changeHeader {
   background: #FFF;
+  padding-top: 0;
   -webkit-transition: all .3s;
   /* Safari */
   -moz-transition: all .3s;
@@ -473,6 +478,9 @@ nav {
     padding-top: 45px;
     padding-bottom: 45px; }
 
+.displayNone {
+  display: none; }
+
 .wineflight {
   font-family: 'Raleway', sans-serif; }
   .wineflight .jumbotron {
@@ -486,7 +494,7 @@ nav {
     position: relative; }
     @media only screen and (max-device-width: 1024px) {
       .wineflight .jumbotron {
-        background-size: 117%; } }
+        background-size: 125%; } }
     .wineflight .jumbotron .app {
       position: absolute;
       right: 0;
@@ -508,16 +516,21 @@ nav {
             font-size: 60px !important; } }
       .wineflight .jumbotron .container p {
         text-align: center;
-        font-size: 25px; }
+        font-size: 36px; }
       .wineflight .jumbotron .container .button {
         margin-top: 48px; }
         .wineflight .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
           border-radius: 0;
-          padding: 10px 35px; }
+          padding: 10px 35px;
+          font-size: 45px; }
         .wineflight .jumbotron .container .button span {
-          display: block; }
+          display: block;
+          font-size: 11px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight .jumbotron .container .button span {
+              font-size: 15px; } }
       .wineflight .jumbotron .container .banner {
         width: 100%; }
     .wineflight .jumbotron .back-opacity {
@@ -531,18 +544,30 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px; }
     .wineflight .container-fluid .section-header {
+      font-size: 35px;
       margin-bottom: 20px; }
+    .wineflight .container-fluid .section-sub-header {
+      font-size: 30px; }
   .wineflight #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .wineflight #actionalble_data .section-header {
+        font-size: 45px; } }
   .wineflight #actionalble_data div {
     margin-top: 30px;
     position: relative; }
     .wineflight #actionalble_data div h2 {
       text-align: center;
       font-weight: bold; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #actionalble_data div h2 {
+          font-size: 45px; } }
     .wineflight #actionalble_data div p {
       text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #actionalble_data div p {
+          font-size: 30px; } }
     .wineflight #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -560,13 +585,24 @@ nav {
     .wineflight #work .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #work .section-header {
+          font-size: 45px; } }
     .wineflight #work div {
       margin-top: 30px;
       position: relative; }
       .wineflight #work div h2 {
+        font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #work div h2 {
+            font-size: 45px; } }
       .wineflight #work div p {
+        font-size: 20px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #work div p {
+            font-size: 30px; } }
       .wineflight #work div img {
         width: 100%;
         padding: 0 100px; }
@@ -581,13 +617,18 @@ nav {
     .wineflight #best-wine .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #best-wine .section-header {
+          font-size: 45px; } }
     .wineflight #best-wine .ipad {
       margin-top: 30px;
       margin-bottom: 30px;
       position: relative; }
       .wineflight #best-wine .ipad h2 {
+        font-size: 40px;
         text-align: center; }
       .wineflight #best-wine .ipad p {
+        font-size: 30px;
         text-align: center; }
       .wineflight #best-wine .ipad img {
         width: 100%;
@@ -601,12 +642,14 @@ nav {
         overflow: hidden;
         padding: 0; }
         .wineflight #best-wine .left ul li {
+          font-size: 30px;
           padding-left: 75px;
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-wine .left ul li {
+              font-size: 20px;
               padding-left: 60px; } }
           .wineflight #best-wine .left ul li .img {
             -webkit-transition: all .3s;
@@ -655,8 +698,10 @@ nav {
       margin-bottom: 30px;
       position: relative; }
       .wineflight #best-practice .ipad h2 {
+        font-size: 40px;
         text-align: center; }
       .wineflight #best-practice .ipad p {
+        font-size: 30px;
         text-align: center; }
       .wineflight #best-practice .ipad img {
         width: 100%;
@@ -670,12 +715,14 @@ nav {
         overflow: hidden;
         padding: 0; }
         .wineflight #best-practice .left ul li {
+          font-size: 30px;
           padding-left: 75px;
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-practice .left ul li {
+              font-size: 20px;
               padding-left: 60px; } }
           .wineflight #best-practice .left ul li .img {
             -webkit-transition: all .3s;
@@ -721,6 +768,8 @@ nav {
     margin: 0 auto; }
     .wineflight #contact-us form div {
       margin: 10px 0; }
+      .wineflight #contact-us form div label {
+        font-size: 25px; }
       .wineflight #contact-us form div textarea {
         width: 100%;
         height: 200px;
@@ -731,12 +780,14 @@ nav {
         color: #FFF;
         background-color: #ADADAD;
         height: 50px;
+        font-size: 20px;
         border: none;
         padding: 1px 20px; }
         .wineflight #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
     .wineflight #contact-us form button {
       background-color: #A3CB00;
+      font-size: 25px;
       padding: 10px 90px;
       border: none;
       float: left;
@@ -749,10 +800,12 @@ nav {
     margin-top: 100px;
     position: relative; }
     .wineflight .footer h4 {
+      font-size: 12px;
       color: #ADADAD;
       text-align: center; }
     .wineflight .footer ul {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 10px; }
       .wineflight .footer ul .first {
         font-weight: bold; }
       .wineflight .footer ul li {
@@ -776,13 +829,24 @@ nav {
     .wineflight #advanteges .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #advanteges .section-header {
+          font-size: 45px; } }
     .wineflight #advanteges div {
       margin-top: 30px;
       position: relative; }
       .wineflight #advanteges div h2 {
+        font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #advanteges div h2 {
+            font-size: 45px; } }
       .wineflight #advanteges div p {
+        font-size: 20px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #advanteges div p {
+            font-size: 30px; } }
       .wineflight #advanteges div img {
         width: 100%;
         padding: 0 100px; }
@@ -797,20 +861,34 @@ nav {
     .wineflight #start-servises .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .wineflight #start-servises .section-header {
+          font-size: 45px; } }
     .wineflight #start-servises div {
       margin-top: 30px;
       position: relative; }
       .wineflight #start-servises div h2 {
+        font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .wineflight #start-servises div h2 {
+            font-size: 20px; } }
       .wineflight #start-servises div .button {
         width: 100%;
         background-color: #A3CB00; }
         .wineflight #start-servises div .button .btn {
           width: 100%;
+          font-size: 35px;
           background-color: #A3CB00;
           border: none;
           border-radius: 0;
           padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .wineflight #start-servises div .button .btn {
+              font-size: 20px; } }
 
 .datacollection {
   font-family: 'Raleway', sans-serif; }
@@ -841,7 +919,7 @@ nav {
           .datacollection .jumbotron .container h1 {
             font-size: 60px !important; } }
       .datacollection .jumbotron .container p {
-        font-size: 35px;
+        font-size: 36px;
         text-align: center; }
       .datacollection .jumbotron .container .button {
         margin-top: 48px; }
@@ -950,10 +1028,10 @@ nav {
             font-size: 25px; } }
       .datacollection .work div img {
         width: 100%;
-        padding: 0 50px; }
+        padding: 0 170px; }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .work div img {
-            padding: 0px 15px; } }
+            padding: 0px 110px; } }
         @media only screen and (max-device-width: 768px) {
           .datacollection .work div img {
             padding: 0px 333px; } }
@@ -1014,7 +1092,7 @@ nav {
       .datacollection #advanteges div img {
         width: 100%;
         padding: 0 100px; }
-        @media only screen and (min-device-width: 1024px) {
+        @media only screen and (max-device-width: 1024px) {
           .datacollection #advanteges div img {
             padding: 0px 70px; } }
         @media only screen and (max-device-width: 768px) {
@@ -1028,6 +1106,9 @@ nav {
         text-decoration: none;
         color: #FFF;
         font-size: 45px; }
+        @media only screen and (max-device-width: 1024px) {
+          .datacollection #advanteges div .button .btn {
+            font-size: 25px; } }
   .datacollection #start-servises {
     padding: 30px 70px; }
     .datacollection #start-servises .section-header {
@@ -1098,7 +1179,7 @@ nav {
           .instafarm .jumbotron .container h1 {
             font-size: 60px !important; } }
       .instafarm .jumbotron .container p {
-        font-size: 25px;
+        font-size: 36px;
         text-align: center; }
       .instafarm .jumbotron .container .button {
         margin-top: 48px; }
@@ -1524,12 +1605,11 @@ nav {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #000;
-    max-height: 800px;
     overflow: hidden;
     position: relative; }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts .jumbotron {
-        background-size: 150%; } }
+        background-size: 170%; } }
     .ourProducts .jumbotron .app {
       position: absolute;
       right: 0;
@@ -1544,12 +1624,13 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .ourProducts .jumbotron .container h1 {
+        font-size: 50px;
         text-align: center; }
         @media only screen and (max-device-width: 1024px) {
           .ourProducts .jumbotron .container h1 {
             font-size: 60px !important; } }
       .ourProducts .jumbotron .container p {
-        font-size: 25px;
+        font-size: 36px;
         text-align: center; }
       .ourProducts .jumbotron .container .button {
         margin-top: 48px; }
@@ -1557,9 +1638,14 @@ nav {
           background-color: #A3CB00;
           border: none;
           border-radius: 0;
-          padding: 10px 35px; }
+          padding: 10px 35px;
+          font-size: 45px; }
         .ourProducts .jumbotron .container .button span {
-          display: block; }
+          display: block;
+          font-size: 11px; }
+          @media only screen and (max-device-width: 1024px) {
+            .ourProducts .jumbotron .container .button span {
+              font-size: 20px; } }
       .ourProducts .jumbotron .container .banner {
         width: 100%; }
     .ourProducts .jumbotron .back-opacity {
@@ -1573,7 +1659,10 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px; }
     .ourProducts .container-fluid .section-header {
+      font-size: 35px;
       margin-bottom: 20px; }
+    .ourProducts .container-fluid .section-sub-header {
+      font-size: 30px; }
   .ourProducts #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
@@ -1627,7 +1716,8 @@ nav {
         background-color: #A3CB00;
         border: none;
         border-radius: 0;
-        padding: 10px 35px; }
+        padding: 10px 35px;
+        font-size: 15px; }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts #work .section-header {
         font-size: 55px; } }
@@ -1664,6 +1754,9 @@ nav {
     .ourProducts #crops .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #crops .section-header {
+          font-size: 45px; } }
     .ourProducts #crops .parent {
       margin-top: 30px;
       position: relative;
@@ -1680,21 +1773,34 @@ nav {
         .ourProducts #crops .parent .image-container img {
           width: 100%; }
       .ourProducts #crops .parent h2 {
+        font-size: 20px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #crops .parent h2 {
+            font-size: 45px; } }
       .ourProducts #crops .parent p {
+        font-size: 20px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #crops .parent p {
+            font-size: 30px; } }
   .ourProducts #best-wine {
     padding: 0 70px; }
     .ourProducts #best-wine .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #best-wine .section-header {
+          font-size: 45px; } }
     .ourProducts #best-wine .ipad {
       margin-top: 30px;
       margin-bottom: 30px;
       position: relative; }
       .ourProducts #best-wine .ipad h2 {
+        font-size: 40px;
         text-align: center; }
       .ourProducts #best-wine .ipad p {
+        font-size: 30px;
         text-align: center; }
       .ourProducts #best-wine .ipad img {
         width: 100%;
@@ -1708,12 +1814,14 @@ nav {
         overflow: hidden;
         padding: 0; }
         .ourProducts #best-wine .left ul li {
+          font-size: 30px;
           padding-left: 75px;
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .ourProducts #best-wine .left ul li {
+              font-size: 20px;
               padding-left: 60px; } }
           .ourProducts #best-wine .left ul li .img {
             -webkit-transition: all .3s;
@@ -1762,8 +1870,10 @@ nav {
       margin-bottom: 30px;
       position: relative; }
       .ourProducts #best-practice .ipad h2 {
+        font-size: 40px;
         text-align: center; }
       .ourProducts #best-practice .ipad p {
+        font-size: 30px;
         text-align: center; }
       .ourProducts #best-practice .ipad img {
         width: 100%;
@@ -1777,12 +1887,14 @@ nav {
         overflow: hidden;
         padding: 0; }
         .ourProducts #best-practice .left ul li {
+          font-size: 30px;
           padding-left: 75px;
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
           @media only screen and (min-device-width: 1024px) {
             .ourProducts #best-practice .left ul li {
+              font-size: 20px;
               padding-left: 60px; } }
           .ourProducts #best-practice .left ul li .img {
             -webkit-transition: all .3s;
@@ -1828,6 +1940,8 @@ nav {
     margin: 0 auto; }
     .ourProducts #contact-us form div {
       margin: 10px 0; }
+      .ourProducts #contact-us form div label {
+        font-size: 25px; }
       .ourProducts #contact-us form div textarea {
         width: 100%;
         height: 200px;
@@ -1838,12 +1952,14 @@ nav {
         color: #FFF;
         background-color: #ADADAD;
         height: 50px;
+        font-size: 20px;
         border: none;
         padding: 1px 20px; }
         .ourProducts #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
     .ourProducts #contact-us form button {
       background-color: #A3CB00;
+      font-size: 25px;
       padding: 10px 90px;
       border: none;
       float: left;
@@ -1856,10 +1972,12 @@ nav {
     margin-top: 100px;
     position: relative; }
     .ourProducts .footer h4 {
+      font-size: 12px;
       color: #ADADAD;
       text-align: center; }
     .ourProducts .footer ul {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 10px; }
       .ourProducts .footer ul .first {
         font-weight: bold; }
       .ourProducts .footer ul li {
@@ -1883,13 +2001,24 @@ nav {
     .ourProducts #advanteges .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #advanteges .section-header {
+          font-size: 45px; } }
     .ourProducts #advanteges div {
       margin-top: 30px;
       position: relative; }
       .ourProducts #advanteges div h2 {
+        font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #advanteges div h2 {
+            font-size: 45px; } }
       .ourProducts #advanteges div p {
+        font-size: 20px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #advanteges div p {
+            font-size: 30px; } }
       .ourProducts #advanteges div img {
         width: 100%;
         padding: 0 100px; }
@@ -1904,17 +2033,31 @@ nav {
     .ourProducts #start-servises .section-header {
       text-align: center;
       padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #start-servises .section-header {
+          font-size: 45px; } }
     .ourProducts #start-servises div {
       margin-top: 30px;
       position: relative; }
       .ourProducts #start-servises div h2 {
+        font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .ourProducts #start-servises div h2 {
+            font-size: 20px; } }
       .ourProducts #start-servises div .button {
         width: 100%;
         background-color: #A3CB00; }
         .ourProducts #start-servises div .button .btn {
           width: 100%;
+          font-size: 35px;
           background-color: #A3CB00;
           border: none;
           border-radius: 0;
           padding: 10px 35px; }
+          @media only screen and (min-device-width: 1024px) {
+            .ourProducts #start-servises div .button .btn {
+              font-size: 20px; } }
