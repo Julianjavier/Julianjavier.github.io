@@ -116,7 +116,7 @@
         img{
           padding: 0 200px;
 
-          @media only screen and (min-device-width: 1024px) {
+          @media only screen and (max-device-width: 1024px) {
             padding:0px 130px;
           }
 
@@ -152,7 +152,7 @@
           width:100%;
           padding: 0 100px;
 
-          @media only screen and (min-device-width: 1024px) {
+          @media only screen and (max-device-width: 1024px) {
             padding:0px 70px;
           }
 
@@ -167,6 +167,7 @@
 
     #work{
       background-image: url("../img/Pattern_Specialized projects.png");
+      background-attachment: fixed;
       background-size: 40%;
       color:#FFF;
       padding: 70px;
@@ -187,50 +188,54 @@
       .section-header{
 
         @media only screen and (max-device-width: 1024px) {
-          // font-size:45px;
+          font-size:55px  ;
         }
       }
 
       ul{
         margin-bottom:75px;
         li{
-          // font-size:20px;
+          font-size:22px;
         }
       }
 
       div{
         margin-top:30px;
         position: relative;
+      }
 
-        h2{
-          // font-size:30px;
-          text-align: center;
+      h2{
+        font-size:30px;
 
-          @media only screen and (max-device-width: 768px) {
-            // font-size: 45px;
-          }
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+      }
+
+      p{
+        font-size:20px;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 24px;
+        }
+      }
+
+      .button{
+        a{
+          font-size: 25px;
+        }
+      }
+
+      img{
+        width:100%;
+        padding: 0 100px;
+
+        @media only screen and (min-device-width: 1024px) {
+          padding:0px 70px;
         }
 
-        p{
-          // font-size:20px;
-          text-align: center;
-
-          @media only screen and (max-device-width: 768px) {
-            // font-size: 30px;
-          }
-        }
-
-        img{
-          width:100%;
-          padding: 0 100px;
-
-          @media only screen and (min-device-width: 1024px) {
-            padding:0px 70px;
-          }
-
-          @media only screen and (max-device-width: 768px) {
-            padding:0px 300px;
-          }
+        @media only screen and (max-device-width: 768px) {
+          padding:0px 300px;
         }
       }
     }

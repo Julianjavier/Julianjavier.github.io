@@ -1582,7 +1582,7 @@ nav {
         font-size: 45px; } }
   .ourProducts #actionalble_data .premium img {
     padding: 0 200px; }
-    @media only screen and (min-device-width: 1024px) {
+    @media only screen and (max-device-width: 1024px) {
       .ourProducts #actionalble_data .premium img {
         padding: 0px 130px; } }
     @media only screen and (max-device-width: 768px) {
@@ -1607,7 +1607,7 @@ nav {
     .ourProducts #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
-      @media only screen and (min-device-width: 1024px) {
+      @media only screen and (max-device-width: 1024px) {
         .ourProducts #actionalble_data div img {
           padding: 0px 70px; } }
       @media only screen and (max-device-width: 768px) {
@@ -1615,6 +1615,7 @@ nav {
           padding: 0px 230px; } }
   .ourProducts #work {
     background-image: url("../img/Pattern_Specialized projects.png");
+    background-attachment: fixed;
     background-size: 40%;
     color: #FFF;
     padding: 70px;
@@ -1627,24 +1628,37 @@ nav {
         border: none;
         border-radius: 0;
         padding: 10px 35px; }
+    @media only screen and (max-device-width: 1024px) {
+      .ourProducts #work .section-header {
+        font-size: 55px; } }
     .ourProducts #work ul {
       margin-bottom: 75px; }
+      .ourProducts #work ul li {
+        font-size: 22px; }
     .ourProducts #work div {
       margin-top: 30px;
       position: relative; }
-      .ourProducts #work div h2 {
-        text-align: center; }
-      .ourProducts #work div p {
-        text-align: center; }
-      .ourProducts #work div img {
-        width: 100%;
-        padding: 0 100px; }
-        @media only screen and (min-device-width: 1024px) {
-          .ourProducts #work div img {
-            padding: 0px 70px; } }
-        @media only screen and (max-device-width: 768px) {
-          .ourProducts #work div img {
-            padding: 0px 300px; } }
+    .ourProducts #work h2 {
+      font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #work h2 {
+          font-size: 45px; } }
+    .ourProducts #work p {
+      font-size: 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #work p {
+          font-size: 24px; } }
+    .ourProducts #work .button a {
+      font-size: 25px; }
+    .ourProducts #work img {
+      width: 100%;
+      padding: 0 100px; }
+      @media only screen and (min-device-width: 1024px) {
+        .ourProducts #work img {
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #work img {
+          padding: 0px 300px; } }
   .ourProducts #crops {
     padding: 0px 40px; }
     .ourProducts #crops .section-header {
