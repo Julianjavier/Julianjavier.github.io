@@ -16,7 +16,8 @@ button{
     background-size: 110%;
 
     @media only screen and (max-device-width: 1024px) {
-      background-size: 185%;
+      background-size: 200%;
+      max-height: 900px;
     }
 
     .container{
@@ -35,7 +36,11 @@ button{
       }
 
       p{
-        font-size: 36px;
+        font-size: 25px;
+
+        @media only screen and (max-device-width: 1024px) {
+          font-size: 30px !important;
+        }
       }
 
       .button{
@@ -232,6 +237,11 @@ button{
             padding-right:40px;
             position: relative;
             margin-bottom:10px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 30px;
+            }
+
             img{
               position: absolute;
               top:7px;
@@ -254,6 +264,11 @@ button{
             padding-left:40px;
             position: relative;
             margin-bottom:10px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 30px;
+            }
+
             img{
               position: absolute;
               top:7px;
@@ -298,7 +313,11 @@ button{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     .option{
-      padding: 80px;
+      padding: 100px;
+
+      @media only screen and (max-device-width: 768px) {
+        padding: 55px;
+      }
 
       div{
         padding:40px;

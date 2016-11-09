@@ -13,7 +13,8 @@ button {
     background-size: 110%; }
     @media only screen and (max-device-width: 1024px) {
       .home .jumbotron {
-        background-size: 185%; } }
+        background-size: 200%;
+        max-height: 900px; } }
     .home .jumbotron .container {
       color: #FFF; }
       @media only screen and (min-device-width: 1024px) {
@@ -25,7 +26,10 @@ button {
           .home .jumbotron .container h1 {
             font-size: 60px !important; } }
       .home .jumbotron .container p {
-        font-size: 36px; }
+        font-size: 25px; }
+        @media only screen and (max-device-width: 1024px) {
+          .home .jumbotron .container p {
+            font-size: 30px !important; } }
       .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
@@ -148,6 +152,9 @@ button {
         padding-right: 40px;
         position: relative;
         margin-bottom: 10px; }
+        @media only screen and (max-device-width: 1024px) {
+          .home #observe .wrap .left ul li {
+            font-size: 30px; } }
         .home #observe .wrap .left ul li img {
           position: absolute;
           top: 7px;
@@ -161,6 +168,9 @@ button {
         padding-left: 40px;
         position: relative;
         margin-bottom: 10px; }
+        @media only screen and (max-device-width: 1024px) {
+          .home #observe .wrap .right ul li {
+            font-size: 30px; } }
         .home #observe .wrap .right ul li img {
           position: absolute;
           top: 7px;
@@ -188,7 +198,10 @@ button {
     background-repeat: no-repeat;
     background-size: 100% 100%; }
     .home #options .option {
-      padding: 80px; }
+      padding: 100px; }
+      @media only screen and (max-device-width: 768px) {
+        .home #options .option {
+          padding: 55px; } }
       .home #options .option div {
         padding: 40px;
         background: rgba(0, 0, 0, 0.5);
@@ -2065,3 +2078,19 @@ nav {
           @media only screen and (min-device-width: 1024px) {
             .ourProducts #start-servises div .button .btn {
               font-size: 20px; } }
+  .ourProducts #advance-research {
+    margin: 50px 0; }
+    .ourProducts #advance-research .section-header {
+      padding: 0 20px;
+      font-size: 45px;
+      font-weight: bold; }
+      @media only screen and (max-device-width: 1024px) {
+        .ourProducts #advance-research .section-header {
+          font-size: 45px; } }
+    .ourProducts #advance-research h2 {
+      margin: 40px auto;
+      text-align: center;
+      width: 70%; }
+    .ourProducts #advance-research p {
+      margin: 40px 0;
+      font-size: 20px; }
