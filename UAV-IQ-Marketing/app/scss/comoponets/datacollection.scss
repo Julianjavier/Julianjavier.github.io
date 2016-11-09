@@ -48,7 +48,7 @@
             border: none;
             border-radius:0;
             padding: 10px 35px;
-            font-size: 45px;
+            font-size: 30px;
 
             @media only screen and (max-device-width: 1024px) {
               font-size: 45px;
@@ -316,8 +316,7 @@
           padding: 10px 35px;
           text-decoration: none;
           color:#FFF;
-          font-size: 45px;
-
+          font-size: 30px !important;
 
           @media only screen and (max-device-width: 1024px) {
             font-size: 25px;
