@@ -625,7 +625,7 @@ nav {
         padding: 0 100px; }
         @media only screen and (min-device-width: 1024px) {
           .wineflight #work div img {
-            padding: 0px 70px; } }
+            padding: 0px 100px; } }
         @media only screen and (max-device-width: 768px) {
           .wineflight #work div img {
             padding: 0px 300px; } }
@@ -1170,12 +1170,12 @@ nav {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #000;
-    max-height: 800px;
+    max-height: 900px;
     overflow: hidden;
     position: relative; }
     @media only screen and (max-device-width: 1024px) {
       .instafarm .jumbotron {
-        background-size: 155%; } }
+        background-size: 175%; } }
     .instafarm .jumbotron .app {
       position: absolute;
       right: 0;
@@ -1209,9 +1209,9 @@ nav {
         .instafarm .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
-          @media only screen and (min-device-width: 1024px) {
+          @media only screen and (max-device-width: 1024px) {
             .instafarm .jumbotron .container .button span {
-              font-size: 15px; } }
+              font-size: 20px; } }
       .instafarm .jumbotron .container .banner {
         width: 100%; }
     .instafarm .jumbotron .back-opacity {
@@ -1290,7 +1290,7 @@ nav {
         padding: 0 100px; }
         @media only screen and (min-device-width: 1024px) {
           .instafarm #work div img {
-            padding: 0px 70px; } }
+            padding: 0px 100px; } }
         @media only screen and (max-device-width: 768px) {
           .instafarm #work div img {
             padding: 0px 300px; } }
@@ -2094,3 +2094,271 @@ nav {
     .ourProducts #advance-research p {
       margin: 40px 0;
       font-size: 20px; }
+
+.operators {
+  font-family: 'Raleway', sans-serif; }
+  .operators .jumbotron {
+    padding-top: 210px !important;
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000;
+    max-height: 700px;
+    overflow: hidden; }
+    @media only screen and (min-device-width: 1024px) {
+      .operators .jumbotron {
+        min-height: 550px; } }
+    @media only screen and (max-device-width: 1024px) {
+      .operators .jumbotron {
+        background-size: 145%; } }
+    .operators .jumbotron .container {
+      color: #FFF; }
+      .operators .jumbotron .container .down {
+        width: 60px;
+        margin: 0 auto;
+        margin-top: 70px; }
+        .operators .jumbotron .container .down img {
+          width: 100%; }
+      @media only screen and (min-device-width: 1024px) {
+        .operators .jumbotron .container {
+          margin-top: 10px; } }
+      .operators .jumbotron .container h1 {
+        font-size: 50px;
+        text-align: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .operators .jumbotron .container h1 {
+            font-size: 60px !important; } }
+      .operators .jumbotron .container p {
+        font-size: 36px;
+        text-align: center; }
+      .operators .jumbotron .container .button {
+        margin-top: 48px; }
+        .operators .jumbotron .container .button .btn {
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 30px; }
+          @media only screen and (max-device-width: 1024px) {
+            .operators .jumbotron .container .button .btn {
+              font-size: 45px; } }
+        .operators .jumbotron .container .button span {
+          display: block;
+          font-size: 11px; }
+      .operators .jumbotron .container .banner {
+        width: 100%; }
+    .operators .jumbotron .back-opacity {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.6; }
+  .operators .container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .operators .container-fluid .section-header {
+      font-size: 35px; }
+    .operators .container-fluid .section-sub-header {
+      font-size: 30px; }
+  .operators #actionalble_data .section-header {
+    text-align: center;
+    padding: 0 20px; }
+    @media only screen and (max-device-width: 768px) {
+      .operators #actionalble_data .section-header {
+        font-size: 40px; } }
+  .operators #actionalble_data div {
+    margin-top: 30px;
+    position: relative; }
+    .operators #actionalble_data div h2 {
+      text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .operators #actionalble_data div h2 {
+          font-size: 45px; } }
+    .operators #actionalble_data div p {
+      text-align: center;
+      font-size: 18px; }
+      @media only screen and (max-device-width: 768px) {
+        .operators #actionalble_data div p {
+          font-size: 25px; } }
+    .operators #actionalble_data div img {
+      width: 100%;
+      padding: 0 130px; }
+      @media only screen and (max-device-width: 1024px) {
+        .operators #actionalble_data div img {
+          padding: 0px 70px; } }
+      @media only screen and (max-device-width: 768px) {
+        .operators #actionalble_data div img {
+          padding: 0px 351.5px; } }
+    .operators #actionalble_data div .button .btn {
+      background-color: #A3CB00;
+      border: none;
+      border-radius: 0;
+      padding: 10px 35px;
+      font-size: 25px; }
+      @media only screen and (max-device-width: 1024px) {
+        .operators #actionalble_data div .button .btn {
+          font-size: 25px; } }
+      @media only screen and (max-device-width: 768px) {
+        .operators #actionalble_data div .button .btn {
+          font-size: 40px; } }
+  .operators #drone-form {
+    margin: 40px 0px; }
+    .operators #drone-form h1 {
+      text-align: center; }
+    .operators #drone-form form {
+      width: 90%;
+      margin: 0 auto; }
+      .operators #drone-form form div {
+        margin: 10px 0px; }
+        .operators #drone-form form div input {
+          width: 100%;
+          height: 35px;
+          padding: 0px 10px;
+          border: 2px solid #A3CB00; }
+          @media only screen and (max-device-width: 768px) {
+            .operators #drone-form form div input {
+              height: 65px;
+              font-size: 30px; } }
+        .operators #drone-form form div button {
+          width: 100%;
+          color: #FFF;
+          height: 35px;
+          background-color: #A3CB00;
+          border: 2px solid #A3CB00; }
+          @media only screen and (max-device-width: 768px) {
+            .operators #drone-form form div button {
+              height: 65px;
+              font-size: 30px; } }
+  .operators #acquisition {
+    margin: 50px 0px; }
+    .operators #acquisition div img {
+      width: 100%; }
+    .operators #acquisition div p {
+      font-size: 30px; }
+    .operators #acquisition div h3 {
+      margin: 40px 0;
+      text-align: center; }
+    .operators #acquisition div a {
+      display: block;
+      width: 40%;
+      margin: 0 auto; }
+      .operators #acquisition div a button {
+        width: 100%;
+        color: #FFF;
+        height: 45px;
+        background-color: #A3CB00;
+        border: 2px solid #A3CB00; }
+        @media only screen and (max-device-width: 768px) {
+          .operators #acquisition div a button {
+            height: 65px;
+            font-size: 30px; } }
+  .operators .footer {
+    margin-top: 100px;
+    position: relative; }
+    .operators .footer h4 {
+      font-size: 12px;
+      color: #ADADAD;
+      text-align: center; }
+    .operators .footer ul {
+      margin-bottom: 20px;
+      font-size: 10px; }
+      .operators .footer ul .first {
+        font-weight: bold; }
+      .operators .footer ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+    .operators .footer .social {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto; }
+  .operators #advanteges {
+    background-image: url("../img/BG dotted map.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 70px;
+    min-height: 688px; }
+    @media only screen and (max-device-width: 768px) {
+      .operators #advanteges {
+        background-size: 330%; } }
+    .operators #advanteges .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .operators #advanteges .section-header {
+          font-size: 45px; } }
+    .operators #advanteges div {
+      margin-top: 30px;
+      position: relative; }
+      .operators #advanteges div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .operators #advanteges div h2 {
+            font-size: 45px; } }
+      .operators #advanteges div a {
+        text-decoration: underline;
+        color: #000; }
+      .operators #advanteges div p {
+        font-size: 20px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .operators #advanteges div p {
+            font-size: 30px; } }
+      .operators #advanteges div img {
+        width: 100%;
+        padding: 0 100px; }
+        @media only screen and (max-device-width: 1024px) {
+          .operators #advanteges div img {
+            padding: 0px 70px; } }
+        @media only screen and (max-device-width: 768px) {
+          .operators #advanteges div img {
+            padding: 0px 300px; } }
+      .operators #advanteges div .button .btn {
+        background-color: #A3CB00;
+        border: none;
+        border-radius: 0;
+        padding: 10px 35px;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 30px !important; }
+        @media only screen and (max-device-width: 1024px) {
+          .operators #advanteges div .button .btn {
+            font-size: 25px; } }
+  .operators #start-servises {
+    padding: 30px 70px; }
+    .operators #start-servises .section-header {
+      text-align: center;
+      padding: 0 20px; }
+      @media only screen and (max-device-width: 1024px) {
+        .operators #start-servises .section-header {
+          font-size: 45px; } }
+    .operators #start-servises div {
+      margin-top: 30px;
+      position: relative; }
+      .operators #start-servises div h2 {
+        font-size: 30px;
+        text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .operators #start-servises div h2 {
+            font-size: 45px; } }
+        @media only screen and (min-device-width: 1024px) {
+          .operators #start-servises div h2 {
+            font-size: 20px; } }
+      .operators #start-servises div .button {
+        width: 100%;
+        background-color: #A3CB00; }
+        .operators #start-servises div .button .btn {
+          width: 100%;
+          font-size: 35px;
+          background-color: #A3CB00;
+          border: none;
+          border-radius: 0;
+          padding: 10px 35px;
+          font-size: 45px; }
+          @media only screen and (min-device-width: 1024px) {
+            .operators #start-servises div .button .btn {
+              font-size: 20px; } }

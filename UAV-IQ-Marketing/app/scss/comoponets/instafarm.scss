@@ -8,12 +8,12 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-color:#000;
-      max-height:800px;
+      max-height:900px;
       overflow: hidden;
       position: relative;
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 155%;
+        background-size: 175%;
       }
 
       .app{
@@ -65,8 +65,8 @@
             display: block;
             font-size:11px;
 
-            @media only screen and (min-device-width: 1024px) {
-              font-size:15px;
+            @media only screen and (max-device-width: 1024px) {
+              font-size:20px;
             }
           }
         }
@@ -191,7 +191,7 @@
           padding: 0 100px;
 
           @media only screen and (min-device-width: 1024px) {
-            padding:0px 70px;
+            padding:0px 100px;
           }
 
           @media only screen and (max-device-width: 768px) {

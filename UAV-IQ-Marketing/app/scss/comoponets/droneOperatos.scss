@@ -1,0 +1,400 @@
+.operators{
+  font-family: 'Raleway', sans-serif;
+
+    .jumbotron{
+      padding-top: 210px !important;
+      background-color:#fff;
+      // background-image: url('../img/TV-Colchagua.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color:#000;
+      max-height:700px;
+      overflow: hidden;
+
+      @media only screen and (min-device-width: 1024px) {
+        min-height: 550px;
+      }
+
+      @media only screen and (max-device-width: 1024px) {
+        background-size: 145%;
+      }
+
+      .container{
+        color:#FFF;
+
+        .down{
+          width:60px;
+          margin: 0 auto;
+          margin-top:70px;
+          img{
+            width:100%;
+          }
+        }
+
+        @media only screen and (min-device-width: 1024px) {
+          margin-top: 10px;
+        }
+
+        h1{
+          font-size: 50px;
+          text-align: center;
+
+          @media only screen and (max-device-width: 1024px) {
+            font-size: 60px !important;
+          }
+        }
+
+        p{
+          font-size: 36px;
+          text-align: center;
+        }
+
+        .button{
+          margin-top: 48px;
+          .btn{
+            background-color:#A3CB00;
+            border: none;
+            border-radius:0;
+            padding: 10px 35px;
+            font-size: 30px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 45px;
+            }
+          }
+
+          span{
+            display: block;
+            font-size:11px;
+          }
+        }
+
+        .banner{
+          width:100%;
+        }
+      }
+
+      .back-opacity{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.6;
+      }
+    }
+
+
+
+    .container-fluid{
+        margin-top:20px;
+        margin-bottom:20px;
+
+        .section-header{
+          font-size: 35px ;
+        }
+        .section-sub-header{
+          font-size: 30px;
+        }
+    }
+
+    #actionalble_data{
+      .section-header{
+        text-align: center;
+        padding:0 20px;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 40px;
+        }
+      }
+
+      div{
+        margin-top:30px;
+        position: relative;
+
+        h2{
+          text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 25px;
+          }
+        }
+
+        img{
+          width:100%;
+          padding: 0 130px;
+
+          @media only screen and (max-device-width: 1024px) {
+            padding:0px 70px;
+          }
+
+          @media only screen and (max-device-width: 768px) {
+            padding:0px 351.5px;
+          }
+        }
+
+        .button{
+          .btn{
+            background-color:#A3CB00;
+            border: none;
+            border-radius:0;
+            padding: 10px 35px;
+            font-size: 25px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 25px;
+            }
+
+            @media only screen and (max-device-width: 768px) {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    #drone-form{
+      margin: 40px 0px;
+
+      h1{
+        text-align: center;
+      }
+
+      form{
+        width: 90%;
+        margin: 0 auto;
+
+        div{
+          margin:10px 0px;
+          input{
+            width: 100%;
+            height:35px;
+            padding: 0px 10px;
+            border: 2px solid #A3CB00;
+
+            @media only screen and (max-device-width: 768px) {
+              height:65px;
+              font-size: 30px;
+            }
+          }
+
+          button{
+            width: 100%;
+            color:#FFF;
+            height: 35px;
+            background-color: #A3CB00;
+            border: 2px solid #A3CB00;
+
+            @media only screen and (max-device-width: 768px) {
+              height:65px;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    #acquisition{
+      margin: 50px 0px;
+      div{
+        img{
+          width: 100%;
+        }
+
+        p{
+          font-size: 30px;
+        }
+
+        h3{
+          margin: 40px 0;
+          text-align: center;
+        }
+
+        a{
+          display: block;
+          width: 40%;
+          margin: 0 auto;
+
+          button{
+            width: 100%;
+            color:#FFF;
+            height: 45px;
+            background-color: #A3CB00;
+            border: 2px solid #A3CB00;
+
+            @media only screen and (max-device-width: 768px) {
+              height:65px;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer{
+      margin-top:100px;
+      position: relative;
+
+      h4{
+        font-size:12px;
+        color:#ADADAD;
+        text-align: center;
+      }
+      ul{
+        margin-bottom: 20px;
+        font-size:10px;
+        .first{
+          font-weight:bold;
+        }
+        li{
+          margin-bottom:10px;
+          list-style: none;
+        }
+      }
+
+      .social{
+        position: absolute;
+        top: 70px;
+        left:50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+      }
+    }
+
+  #advanteges{
+    background-image: url("../img/BG dotted map.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 70px;
+    min-height: 688px;
+
+    @media only screen and (max-device-width: 768px) {
+      background-size: 330%;
+    }
+
+    .section-header{
+      text-align: center;
+      padding:0 20px;
+
+      @media only screen and (max-device-width: 1024px) {
+        font-size:45px;
+      }
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        font-size:30px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+      }
+
+      a{
+        text-decoration: underline;
+        color:#000;
+      }
+
+      p{
+        font-size:20px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      img{
+        width:100%;
+        padding: 0 100px;
+
+        @media only screen and (max-device-width: 1024px) {
+          padding:0px 70px;
+        }
+
+        @media only screen and (max-device-width: 768px) {
+          padding:0px 300px;
+        }
+      }
+
+      .button{
+        .btn{
+          background-color:#A3CB00;
+          border: none;
+          border-radius:0;
+          padding: 10px 35px;
+          text-decoration: none;
+          color:#FFF;
+          font-size: 30px !important;
+
+          @media only screen and (max-device-width: 1024px) {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  #start-servises{
+    padding: 30px 70px;
+
+    .section-header{
+      text-align: center;
+      padding:0 20px;
+
+      @media only screen and (max-device-width: 1024px) {
+        font-size:45px;
+      }
+    }
+
+    div{
+      margin-top:30px;
+      position: relative;
+
+      h2{
+        font-size:30px;
+        text-align: center;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size: 45px;
+        }
+
+        @media only screen and (min-device-width: 1024px) {
+          font-size:20px;
+        }
+      }
+
+      .button{
+        width: 100%;
+        background-color:#A3CB00;
+        .btn{
+          width: 100%;
+          font-size: 35px;
+          background-color:#A3CB00;
+          border: none;
+          border-radius:0;
+          padding: 10px 35px;
+          font-size: 45px;
+
+          @media only screen and (min-device-width: 1024px) {
+            font-size:20px;
+          }
+        }
+      }
+    }
+  }
+}
