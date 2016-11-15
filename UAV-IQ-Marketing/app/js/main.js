@@ -20,7 +20,6 @@ $(document).ready(function(){
           $(".droneOperators").addClass("displayNone");
           $(".navbar .navbar-brand img").attr("src","img/uav-iq-precision-agriculture-logo-horizontal.png");
           $(".nav").css('top','160px');
-          nav
       } else {
           $(".navbar").removeClass("changeHeader");
           $(".droneOperators").removeClass("displayNone");

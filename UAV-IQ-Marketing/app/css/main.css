@@ -564,15 +564,16 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .wineflight .jumbotron .container h1 {
-        font-size: 70px;
+        font-size: 65px;
         text-align: center;
         font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .wineflight .jumbotron .container h1 {
             font-size: 60px !important; } }
       .wineflight .jumbotron .container p {
+        font-size: 23px;
         text-align: center;
-        font-size: 20px; }
+        padding: 0 15%; }
       .wineflight .jumbotron .container .button {
         margin-top: 48px; }
         .wineflight .jumbotron .container .button .btn {
@@ -987,14 +988,16 @@ nav {
         .datacollection .jumbotron .container {
           margin-top: 60px; } }
       .datacollection .jumbotron .container h1 {
-        font-size: 50px;
-        text-align: center; }
+        font-size: 65px;
+        text-align: center;
+        font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .jumbotron .container h1 {
             font-size: 60px !important; } }
       .datacollection .jumbotron .container p {
-        font-size: 36px;
-        text-align: center; }
+        font-size: 23px;
+        text-align: center;
+        padding: 0 15%; }
       .datacollection .jumbotron .container .button {
         margin-top: 48px; }
         .datacollection .jumbotron .container .button .btn {
@@ -1247,14 +1250,16 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .instafarm .jumbotron .container h1 {
-        font-size: 50px;
-        text-align: center; }
+        font-size: 65px;
+        text-align: center;
+        font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .instafarm .jumbotron .container h1 {
             font-size: 60px !important; } }
       .instafarm .jumbotron .container p {
-        font-size: 36px;
-        text-align: center; }
+        font-size: 23px;
+        text-align: center;
+        padding: 0 15%; }
       .instafarm .jumbotron .container .button {
         margin-top: 48px; }
         .instafarm .jumbotron .container .button .btn {
@@ -1693,6 +1698,13 @@ nav {
       bottom: 0; }
     .ourProducts .jumbotron .container {
       color: #FFF; }
+      .ourProducts .jumbotron .container .subcontainer {
+        padding: 0 25px; }
+        @media only screen and (min-device-width: 1025px) {
+          .ourProducts .jumbotron .container .subcontainer {
+            position: absolute;
+            top: 30%;
+            transform: translateY(30%); } }
       .ourProducts .jumbotron .container .image-container {
         width: 100%; }
         .ourProducts .jumbotron .container .image-container img {
@@ -1701,14 +1713,13 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .ourProducts .jumbotron .container h1 {
-        font-size: 50px;
-        text-align: center; }
+        font-size: 70px;
+        font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .ourProducts .jumbotron .container h1 {
             font-size: 60px !important; } }
       .ourProducts .jumbotron .container p {
-        font-size: 36px;
-        text-align: center; }
+        font-size: 36px; }
       .ourProducts .jumbotron .container .button {
         margin-top: 48px; }
         .ourProducts .jumbotron .container .button .btn {
@@ -1725,6 +1736,10 @@ nav {
               font-size: 20px; } }
       .ourProducts .jumbotron .container .banner {
         width: 100%; }
+    .ourProducts .jumbotron .image .subcontainer {
+      padding: 0 25px; }
+    .ourProducts .jumbotron .image img {
+      width: 100%; }
     .ourProducts .jumbotron .back-opacity {
       position: absolute;
       left: 0;
@@ -2193,7 +2208,7 @@ nav {
         .operators .jumbotron .container {
           margin-top: 10px; } }
       .operators .jumbotron .container h1 {
-        font-size: 50px;
+        font-weight: bold;
         text-align: center; }
         @media only screen and (max-device-width: 1024px) {
           .operators .jumbotron .container h1 {

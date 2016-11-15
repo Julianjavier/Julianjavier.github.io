@@ -38,8 +38,9 @@
         }
 
         h1{
-          font-size: 50px;
+          font-size: 65px;
           text-align: center;
+          font-weight: bold;
 
           @media only screen and (max-device-width: 1024px) {
             font-size: 60px !important;
@@ -47,8 +48,9 @@
         }
 
         p{
-          font-size: 36px;
+          font-size: 23px;
           text-align: center;
+          padding: 0 15%;
         }
 
         .button{
