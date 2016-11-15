@@ -388,6 +388,43 @@ nav {
     nav .nav .nav-item a:hover {
       color: #A3CB00;
       background-color: #FFF; }
+  nav .nav .nav-item ul {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: 0;
+    overflow: hidden; }
+    nav .nav .nav-item ul li {
+      margin: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      color: #FFF;
+      z-index: 999; }
+      nav .nav .nav-item ul li a {
+        display: block;
+        padding: 5px 40px;
+        white-space: nowrap;
+        color: #A3CB00;
+        background-color: #FFF; }
+      nav .nav .nav-item ul li:hover a {
+        color: #FFF !important;
+        background-color: #A3CB00; }
+  nav .nav .nav-item .nav-active {
+    z-index: 99;
+    margin-top: 48px; }
+    nav .nav .nav-item .nav-active li {
+      padding: 30px 40px;
+      border-bottom: 2px solid #A3CB00; }
+      nav .nav .nav-item .nav-active li:hover a {
+        color: #A3CB00 !important;
+        background-color: #FFF; }
+  @media screen and (min-width: 768px) {
+    nav .nav .nav-item:hover ul {
+      height: auto;
+      width: 100%; } }
   @media only screen and (max-device-width: 1024px) {
     nav .nav {
       background-color: #fff;
@@ -401,8 +438,9 @@ nav {
         border-bottom: 2px solid #A3CB00; }
         nav .nav .nav-item a {
           color: #000;
-          padding: 20px 20px;
-          font-size: 17px; }
+          font-size: 17px;
+          display: inline;
+          padding: 0 !important; }
         nav .nav .nav-item:last-child {
           border: none; } }
   @media only screen and (max-device-width: 768px) {
@@ -450,7 +488,7 @@ nav {
         position: static;
         list-style: none;
         margin: 0;
-        padding: 10px;
+        padding: 45px;
         height: auto;
         width: 100%;
         clear: both;
@@ -486,7 +524,6 @@ nav {
   -o-transition: all .3s;
   /*Opera*/
   transition: all .3s;
-  border-bottom: 2px solid #A3CB00;
   -webkit-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75); }
@@ -517,7 +554,8 @@ nav {
       right: 0;
       bottom: 0; }
     .wineflight .jumbotron .container {
-      color: #FFF; }
+      color: #FFF;
+      width: 100%; }
       .wineflight .jumbotron .container .image-container {
         width: 100%; }
         .wineflight .jumbotron .container .image-container img {
@@ -526,14 +564,15 @@ nav {
           margin: 0px auto;
           margin-bottom: 40px; }
       .wineflight .jumbotron .container h1 {
-        font-size: 50px;
-        text-align: center; }
+        font-size: 70px;
+        text-align: center;
+        font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .wineflight .jumbotron .container h1 {
             font-size: 60px !important; } }
       .wineflight .jumbotron .container p {
         text-align: center;
-        font-size: 36px; }
+        font-size: 20px; }
       .wineflight .jumbotron .container .button {
         margin-top: 48px; }
         .wineflight .jumbotron .container .button .btn {
@@ -613,13 +652,13 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .wineflight #work div h2 {
-            font-size: 45px; } }
+            font-size: 50px; } }
       .wineflight #work div p {
         font-size: 20px;
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .wineflight #work div p {
-            font-size: 30px; } }
+            font-size: 40px; } }
       .wineflight #work div img {
         width: 100%;
         padding: 0 100px; }
@@ -631,6 +670,9 @@ nav {
             padding: 0px 300px; } }
   .wineflight #best-wine {
     padding: 0 70px; }
+    @media only screen and (max-device-width: 768px) {
+      .wineflight #best-wine {
+        padding: 0 20px; } }
     .wineflight #best-wine .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -650,9 +692,15 @@ nav {
       .wineflight #best-wine .ipad img {
         width: 100%;
         padding: 0 40px; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #best-wine .ipad img {
+            padding: 0; } }
     .wineflight #best-wine .left {
       margin-top: 30px;
       margin-bottom: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #best-wine .left {
+          padding: 0 50px; } }
       .wineflight #best-wine .left ul {
         text-align: left;
         list-style: none;
@@ -707,6 +755,9 @@ nav {
           fill: #FFF; }
   .wineflight #best-practice {
     padding: 0 70px; }
+    @media only screen and (max-device-width: 768px) {
+      .wineflight #best-practice {
+        padding: 0 20px; } }
     .wineflight #best-practice .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -723,9 +774,15 @@ nav {
       .wineflight #best-practice .ipad img {
         width: 100%;
         padding: 0 40px; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #best-practice .ipad img {
+            padding: 0; } }
     .wineflight #best-practice .left {
       margin-top: 30px;
       margin-bottom: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #best-practice .left {
+          padding: 0 50px; } }
       .wineflight #best-practice .left ul {
         text-align: left;
         list-style: none;
@@ -1205,7 +1262,10 @@ nav {
           border: none;
           border-radius: 0;
           padding: 10px 35px;
-          font-size: 45px; }
+          font-size: 20px; }
+          @media only screen and (max-device-width: 768px) {
+            .instafarm .jumbotron .container .button .btn {
+              font-size: 45px; } }
         .instafarm .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
@@ -1709,7 +1769,7 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #actionalble_data div p {
-          font-size: 20px; } }
+          font-size: 30px; } }
     .ourProducts #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -1737,11 +1797,17 @@ nav {
         font-size: 15px; }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts #work .section-header {
-        font-size: 55px; } }
+        font-size: 70px; } }
     .ourProducts #work ul {
       margin-bottom: 75px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #work ul {
+          margin-top: 75px; } }
       .ourProducts #work ul li {
         font-size: 22px; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work ul li {
+            font-size: 25px; } }
     .ourProducts #work div {
       margin-top: 30px;
       position: relative; }
@@ -1754,7 +1820,7 @@ nav {
       font-size: 20px; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #work p {
-          font-size: 24px; } }
+          font-size: 28px; } }
     .ourProducts #work .button a {
       font-size: 25px; }
     .ourProducts #work img {
@@ -2086,7 +2152,7 @@ nav {
       font-weight: bold; }
       @media only screen and (max-device-width: 1024px) {
         .ourProducts #advance-research .section-header {
-          font-size: 45px; } }
+          font-size: 70px; } }
     .ourProducts #advance-research h2 {
       margin: 40px auto;
       text-align: center;
@@ -2094,6 +2160,9 @@ nav {
     .ourProducts #advance-research p {
       margin: 40px 0;
       font-size: 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #advance-research p {
+          font-size: 28px; } }
 
 .operators {
   font-family: 'Raleway', sans-serif; }

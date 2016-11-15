@@ -25,6 +25,7 @@
 
       .container{
         color:#FFF;
+        width: 100%;
 
         .image-container{
           width: 100%;
@@ -37,8 +38,9 @@
         }
 
         h1{
-          font-size: 50px;
+          font-size: 70px;
           text-align: center;
+          font-weight: bold;
 
           @media only screen and (max-device-width: 1024px) {
             font-size: 60px !important;
@@ -47,7 +49,7 @@
 
         p{
           text-align: center;
-          font-size: 36px;
+          font-size: 20px;
         }
 
         .button{
@@ -171,7 +173,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 45px;
+            font-size: 50px;
           }
         }
 
@@ -180,7 +182,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size: 40px;
           }
         }
 
@@ -201,6 +203,10 @@
 
     #best-wine{
       padding: 0 70px;
+
+      @media only screen and (max-device-width: 768px) {
+        padding: 0 20px;
+      }
 
       .section-header{
         text-align: center;
@@ -229,12 +235,20 @@
         img{
           width:100%;
           padding: 0 40px;
+
+          @media only screen and (max-device-width: 768px) {
+            padding: 0;
+          }
         }
       }
 
       .left{
         margin-top:30px;
         margin-bottom: 30px;
+
+        @media only screen and (max-device-width: 768px) {
+          padding: 0 50px;
+        }
 
         ul{
           text-align: left;
@@ -307,6 +321,10 @@
     #best-practice{
       padding: 0 70px;
 
+      @media only screen and (max-device-width: 768px) {
+        padding: 0 20px;
+      }
+
       .section-header{
         text-align: center;
         padding:0 20px;
@@ -330,12 +348,20 @@
         img{
           width:100%;
           padding: 0 40px;
+
+          @media only screen and (max-device-width: 768px) {
+            padding: 0;
+          }
         }
       }
 
       .left{
         margin-top:30px;
         margin-bottom: 30px;
+
+          @media only screen and (max-device-width: 768px) {
+            padding: 0 50px;
+          }
 
         ul{
           text-align: left;

@@ -5,18 +5,27 @@ $(document).ready(function(){
     $(".nav").toggleClass("show");
   });
 
+  //this is for the moblie version of the stacked headers
+  $(".navbar .nav li").click(function() {
+    var target = this.getElementsByTagName("ul")[0];
+    $(target).toggleClass("nav-active");
+    console.log(target);
+  });
+
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
       if (scroll >= 20) {
-        console.log(this);
           $(".navbar").addClass("changeHeader");
           $(".droneOperators").addClass("displayNone");
           $(".navbar .navbar-brand img").attr("src","img/uav-iq-precision-agriculture-logo-horizontal.png");
+          $(".nav").css('top','160px');
+          nav
       } else {
           $(".navbar").removeClass("changeHeader");
           $(".droneOperators").removeClass("displayNone");
           $(".navbar .navbar-brand img").attr("src","img/uav-iq-precision-agriculture-logo-horizontal_white.png");
+          $(".nav").css('top','210px');
       }
   });
 })
