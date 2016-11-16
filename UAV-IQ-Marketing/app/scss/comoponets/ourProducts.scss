@@ -3,17 +3,19 @@
 
     .jumbotron{
       background-size: 100%;
-      padding-top: 210px !important;
+      padding-top: 180px !important;
       background-color:#fff;
       // background-image: url('../img/TV-Colchagua.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-color:#000;
+      max-height: 800px;
       overflow: hidden;
       position: relative;
 
       @media only screen and (max-device-width: 1024px) {
         background-size: 170%;
+        padding-top: 235px !important;
       }
 
       .app{

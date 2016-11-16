@@ -14,18 +14,19 @@ button{
   font-family: 'Raleway', sans-serif;
 
   .jumbotron{
-    padding-top: 210px !important;
+    padding-top: 180px !important;
     background-color:#fff;
     // background-image: url('../img/TV-Colchagua.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    max-height:800px;
+    max-height: 800px;
     overflow: hidden;
     background-size: 110%;
 
     @media only screen and (max-device-width: 1024px) {
       background-size: 200%;
       max-height: 900px;
+      padding-top: 235px !important;
     }
 
     .container{
@@ -694,7 +695,6 @@ button{
 
         .nav-active{
           z-index: 99;
-          margin-top: 48px;
 
           li{
             padding:30px 40px;

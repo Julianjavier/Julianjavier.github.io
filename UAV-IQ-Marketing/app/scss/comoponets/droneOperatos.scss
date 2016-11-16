@@ -2,14 +2,14 @@
   font-family: 'Raleway', sans-serif;
 
     .jumbotron{
-      padding-top: 210px !important;
+      padding-top: 180px !important;
       background-color:#fff;
       // background-image: url('../img/TV-Colchagua.png');
       background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-color:#000;
-      max-height:700px;
+      max-height: 800px;
       overflow: hidden;
 
       @media only screen and (min-device-width: 1024px) {
@@ -18,6 +18,7 @@
 
       @media only screen and (max-device-width: 1024px) {
         background-size: 145%;
+        padding-top: 235px !important;
       }
 
       .container{

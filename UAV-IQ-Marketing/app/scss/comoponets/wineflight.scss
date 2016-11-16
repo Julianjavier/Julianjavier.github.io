@@ -3,16 +3,17 @@
 
     .jumbotron{
       background-size: 100%;
-      padding-top: 210px !important;
+      padding-top: 180px !important;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-color:#000;
-      max-height:800px;
+      max-height: 800px;
       overflow: hidden;
       position: relative;
 
       @media only screen and (max-device-width: 1024px) {
         background-size: 125%;
+        padding-top: 235px !important;
       }
 
       .app{
@@ -30,10 +31,14 @@
         .image-container{
           width: 100%;
           img{
-            width: 20%;
+            width: 10%;
             display: block;
             margin: 0px auto;
             margin-bottom: 40px;
+
+            @media only screen and (max-device-width: 768px) {
+              width: 20%;
+            }
           }
         }
 
