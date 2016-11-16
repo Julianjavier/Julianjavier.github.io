@@ -327,11 +327,15 @@ button{
         padding: 55px;
       }
 
+      @media only screen and (max-device-width: 1024px) {
+        padding: 25px;
+      }
+
       div{
         padding:40px;
         background: rgba(0, 0, 0, 0.5);
         color:#fff;
-        font-size:23px;
+        font-size:20px;
         text-align: center;
 
         .image{
@@ -346,7 +350,7 @@ button{
         button{
           width:100%;
           background: rgba(163, 203, 0, 0.5);
-          border: 5px solid #a3cb00;
+          border: 2px solid #a3cb00;
         }
       }
     }
