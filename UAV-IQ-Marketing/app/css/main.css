@@ -397,50 +397,55 @@ nav {
       height: 160px !important; } }
   nav .nav {
     border: none; }
-    nav .nav .nav-item a {
-      color: #FFF;
-      padding-top: 45px;
-      padding-bottom: 45px; }
-      nav .nav .nav-item a:hover {
-        color: #A3CB00;
-        background-color: #FFF; }
-    nav .nav .nav-item ul {
-      list-style: none;
-      padding: 0;
-      position: absolute;
-      left: 0;
-      top: 70px;
-      height: 0;
-      overflow: hidden; }
-      nav .nav .nav-item ul li {
-        margin: 0;
-        display: block;
-        width: 100%;
-        height: auto;
+    nav .nav .nav-item {
+      padding-top: 30px;
+      padding-bottom: 30px; }
+      nav .nav .nav-item a {
         color: #FFF;
-        z-index: 999; }
-        nav .nav .nav-item ul li a {
-          display: block;
-          padding: 5px 40px;
-          white-space: nowrap;
+        border-radius: 5px; }
+        nav .nav .nav-item a:hover {
           color: #A3CB00;
           background-color: #FFF; }
-        nav .nav .nav-item ul li:hover a {
-          color: #FFF !important;
-          background-color: #A3CB00; }
-    nav .nav .nav-item .nav-active {
-      z-index: 99;
-      margin-top: 48px; }
-      nav .nav .nav-item .nav-active li {
-        padding: 30px 40px;
-        border-bottom: 2px solid #A3CB00; }
-        nav .nav .nav-item .nav-active li:hover a {
-          color: #A3CB00 !important;
-          background-color: #FFF; }
-    @media screen and (min-width: 768px) {
-      nav .nav .nav-item:hover ul {
-        height: auto;
-        width: 100%; } }
+      nav .nav .nav-item ul {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        height: 0;
+        overflow: hidden; }
+        nav .nav .nav-item ul li {
+          margin: 0;
+          display: block;
+          width: 100%;
+          height: auto;
+          color: #FFF;
+          z-index: 999; }
+          nav .nav .nav-item ul li a {
+            display: block;
+            padding: 5px 40px;
+            white-space: nowrap;
+            color: #A3CB00;
+            background-color: #FFF;
+            border-radius: 0px;
+            padding-top: 25px !important;
+            padding-bottom: 25px !important; }
+          nav .nav .nav-item ul li:hover a {
+            color: #FFF !important;
+            background-color: #A3CB00; }
+      nav .nav .nav-item .nav-active {
+        z-index: 99;
+        margin-top: 48px; }
+        nav .nav .nav-item .nav-active li {
+          padding: 30px 40px;
+          border-bottom: 2px solid #A3CB00; }
+          nav .nav .nav-item .nav-active li:hover a {
+            color: #A3CB00 !important;
+            background-color: #FFF; }
+      @media screen and (min-width: 768px) {
+        nav .nav .nav-item:hover ul {
+          height: auto;
+          width: 100%; } }
     @media only screen and (max-device-width: 1024px) {
       nav .nav {
         background-color: #fff;
@@ -545,6 +550,9 @@ nav {
   -webkit-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75); }
+  .changeHeader .nav .nav-item {
+    padding-top: 0px;
+    padding-bottom: 0px; }
   @media screen and (min-device-width: 1025px) {
     .changeHeader .navbar-brand img {
       height: 40px; }
