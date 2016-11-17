@@ -5,6 +5,10 @@ $(document).ready(function(){
     $(".nav").toggleClass("show");
   });
 
+  var size = window.innerHeight || document.body.clientHeight
+  console.log(size);
+  $(".jumbotron").css("min-height", size);
+
   //this is for the moblie version of the stacked headers
   $(".navbar .nav li").click(function() {
     var target = this.getElementsByTagName("ul")[0];

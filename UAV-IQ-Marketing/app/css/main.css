@@ -21,7 +21,7 @@ button {
     background-attachment: fixed;
     max-height: 800px;
     overflow: hidden;
-    background-size: 110%; }
+    background-size: 115%; }
     @media only screen and (max-device-width: 1024px) {
       .home .jumbotron {
         background-size: 200%;
@@ -1014,7 +1014,8 @@ nav {
     background-attachment: fixed;
     background-color: #000;
     max-height: 800px;
-    overflow: hidden; }
+    overflow: hidden;
+    background-size: 115%; }
     @media only screen and (min-device-width: 1024px) {
       .datacollection .jumbotron {
         min-height: 550px; } }
