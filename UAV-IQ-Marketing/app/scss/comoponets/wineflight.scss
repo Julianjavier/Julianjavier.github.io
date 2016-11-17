@@ -67,9 +67,9 @@
           .btn{
             background-color:#A3CB00;
             border: none;
-            border-radius:0;
+            border-radius: 3px;
             padding: 10px 35px;
-            font-size: 30px;
+            font-size: 18px;
           }
 
           span{
@@ -620,7 +620,7 @@
           font-size: 35px;
           background-color:#A3CB00;
           border: none;
-          border-radius:0;
+          border-radius: 3px;
           padding: 10px 35px;
 
           @media only screen and (min-device-width: 1024px) {

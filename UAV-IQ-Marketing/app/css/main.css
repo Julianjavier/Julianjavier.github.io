@@ -45,7 +45,7 @@ button {
       .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
-        border-radius: 0;
+        border-radius: 3px;
         padding: 10px 35px; }
       .home .jumbotron .container .button span {
         display: block;
@@ -281,7 +281,7 @@ button {
       .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
-        border-radius: 0;
+        border-radius: 3px;
         padding: 10px 35px;
         font-size: 35px; }
       .home .jumbotron .container .button span {
@@ -382,7 +382,8 @@ nav {
     nav .droneOperators button {
       background-color: #A3CB00;
       border: none;
-      color: #FFF; }
+      color: #FFF;
+      border-radius: 3px; }
     @media only screen and (max-device-width: 768px) {
       nav .droneOperators p {
         font-size: 20px;
@@ -422,6 +423,8 @@ nav {
           height: auto;
           color: #FFF;
           z-index: 999; }
+          nav .nav .nav-item ul li:last-child a {
+            border-radius: 0 0 5px 5px; }
           nav .nav .nav-item ul li a {
             display: block;
             padding: 5px 40px;
@@ -615,9 +618,9 @@ nav {
         .wineflight .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
-          font-size: 30px; }
+          font-size: 18px; }
         .wineflight .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
@@ -995,7 +998,7 @@ nav {
           font-size: 35px;
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #start-servises div .button .btn {
@@ -1043,9 +1046,9 @@ nav {
         .datacollection .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
-          font-size: 30px; }
+          font-size: 18px; }
           @media only screen and (max-device-width: 1024px) {
             .datacollection .jumbotron .container .button .btn {
               font-size: 45px; } }
@@ -1099,7 +1102,7 @@ nav {
     .datacollection #actionalble_data div .button .btn {
       background-color: #A3CB00;
       border: none;
-      border-radius: 0;
+      border-radius: 3px;
       padding: 10px 35px;
       font-size: 25px; }
       @media only screen and (max-device-width: 1024px) {
@@ -1218,7 +1221,7 @@ nav {
       .datacollection #advanteges div .button .btn {
         background-color: #A3CB00;
         border: none;
-        border-radius: 0;
+        border-radius: 3px;
         padding: 10px 35px;
         text-decoration: none;
         color: #FFF;
@@ -1254,7 +1257,7 @@ nav {
           font-size: 35px;
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
           font-size: 45px; }
           @media only screen and (min-device-width: 1024px) {
@@ -1312,18 +1315,18 @@ nav {
         .instafarm .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
-          font-size: 20px; }
+          font-size: 18px; }
           @media only screen and (max-device-width: 768px) {
             .instafarm .jumbotron .container .button .btn {
               font-size: 45px; } }
         .instafarm .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
-          @media only screen and (max-device-width: 1024px) {
+          @media only screen and (min-device-width: 1024px) {
             .instafarm .jumbotron .container .button span {
-              font-size: 20px; } }
+              font-size: 15px; } }
       .instafarm .jumbotron .container .banner {
         width: 100%; }
     .instafarm .jumbotron .back-opacity {
@@ -1719,7 +1722,7 @@ nav {
           font-size: 35px;
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px; }
           @media only screen and (min-device-width: 1024px) {
             .instafarm #start-servises div .button .btn {
@@ -1777,9 +1780,9 @@ nav {
         .ourProducts .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
-          font-size: 30px; }
+          font-size: 18px; }
         .ourProducts .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
@@ -1865,7 +1868,7 @@ nav {
       .ourProducts #work .button .btn {
         background-color: #A3CB00;
         border: none;
-        border-radius: 0;
+        border-radius: 3px;
         padding: 10px 35px;
         font-size: 15px; }
     @media only screen and (max-device-width: 1024px) {
@@ -2212,7 +2215,7 @@ nav {
           font-size: 35px;
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px; }
           @media only screen and (min-device-width: 1024px) {
             .ourProducts #start-servises div .button .btn {
@@ -2283,9 +2286,9 @@ nav {
         .operators .jumbotron .container .button .btn {
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
-          font-size: 30px; }
+          font-size: 18px; }
           @media only screen and (max-device-width: 1024px) {
             .operators .jumbotron .container .button .btn {
               font-size: 45px; } }
@@ -2340,7 +2343,7 @@ nav {
     .operators #actionalble_data div .button .btn {
       background-color: #A3CB00;
       border: none;
-      border-radius: 0;
+      border-radius: 3px;
       padding: 10px 35px;
       font-size: 25px; }
       @media only screen and (max-device-width: 1024px) {
@@ -2466,7 +2469,7 @@ nav {
       .operators #advanteges div .button .btn {
         background-color: #A3CB00;
         border: none;
-        border-radius: 0;
+        border-radius: 3px;
         padding: 10px 35px;
         text-decoration: none;
         color: #FFF;
@@ -2502,7 +2505,7 @@ nav {
           font-size: 35px;
           background-color: #A3CB00;
           border: none;
-          border-radius: 0;
+          border-radius: 3px;
           padding: 10px 35px;
           font-size: 45px; }
           @media only screen and (min-device-width: 1024px) {
