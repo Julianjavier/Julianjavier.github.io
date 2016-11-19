@@ -11,14 +11,14 @@
       background-color:#000;
       max-height: 800px;
       overflow: hidden;
-      background-size: 115%;
+      background-position: center;
+      background-size: cover;
 
       @media only screen and (min-device-width: 1024px) {
         min-height: 550px;
       }
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 155%;
         padding-top: 235px !important;
       }
 
@@ -29,13 +29,21 @@
           margin-top: 60px;
         }
 
+        @media only screen and (max-device-width: 768px) {
+          width:880px;
+        }
+
         h1{
           font-size: 65px;
           text-align: center;
           font-weight: bold;
 
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
+
           @media only screen and (max-device-width: 1024px) {
-            font-size: 60px !important;
+            font-size: 85px !important;
           }
         }
 
@@ -45,7 +53,7 @@
           font-size: 25px;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 30px !important;
+            font-size: 45px !important;
           }
         }
 
@@ -87,14 +95,23 @@
 
 
     .container-fluid{
-        margin-top:20px;
-        margin-bottom:20px;
+      margin-top: 80px;
+      margin-bottom: 80px;
 
         .section-header{
           font-size: 35px ;
+
+          @media only screen and (max-device-width: 1024px) {
+            font-weight: bold;
+            font-size: 45px !important;
+          }
         }
         .section-sub-header{
           font-size: 30px;
+
+          @media only screen and (max-device-width: 1024px) {
+            font-size: 45px !important;
+          }
         }
     }
 
@@ -104,7 +121,7 @@
         padding:0 20px;
 
         @media only screen and (max-device-width: 768px) {
-          font-size: 65px;
+          font-size: 65px !important;
         }
       }
 
@@ -122,8 +139,9 @@
 
         p{
           text-align: center;
+
           @media only screen and (max-device-width: 768px) {
-            font-size: 25px;
+            font-size: 45px;
           }
         }
 
@@ -153,7 +171,7 @@
             }
 
             @media only screen and (max-device-width: 768px) {
-              font-size: 40px;
+              font-size: 45px;
             }
           }
         }
@@ -177,7 +195,7 @@
         padding:0 20px;
 
         @media only screen and (max-device-width: 1024px) {
-          font-size:65px;
+          font-size:65px !important;
         }
       }
 
@@ -203,7 +221,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size: 45px;
           }
 
           @media only screen and (max-device-width: 1024px) {
@@ -238,9 +256,11 @@
       ul{
         margin-bottom: 20px;
         font-size:10px;
+
         .first{
           font-weight:bold;
         }
+
         li{
           margin-bottom:10px;
           list-style: none;
@@ -257,15 +277,12 @@
     }
 
   #advanteges{
-    background-image: url("../img/BG dotted map.png");
-    background-size: 100% 100%;
+    background-image: url("../img/BG/BG dotted map.png");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 70px;
     min-height: 688px;
-
-    @media only screen and (max-device-width: 768px) {
-      background-size: 330%;
-    }
 
     .section-header{
       text-align: center;
@@ -299,7 +316,7 @@
         text-align: center;
 
         @media only screen and (max-device-width: 768px) {
-          font-size: 30px;
+          font-size: 45px;
         }
       }
 
@@ -324,10 +341,9 @@
           padding: 10px 35px;
           text-decoration: none;
           color:#FFF;
-          font-size: 30px !important;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 25px;
+            font-size: 45px;
           }
         }
       }

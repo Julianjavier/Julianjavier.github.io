@@ -22,11 +22,11 @@ $(document).ready(function(){
       if (scroll >= 20) {
           $(".navbar").addClass("changeHeader");
           $(".droneOperators").addClass("displayNone");
-          $(".navbar .navbar-brand img").attr("src","img/uav-iq-precision-agriculture-logo-horizontal.png");
+          $(".navbar .navbar-brand img").attr("src","img/logos/uav-iq-precision-agriculture-logo-horizontal.png");
       } else {
           $(".navbar").removeClass("changeHeader");
           $(".droneOperators").removeClass("displayNone");
-          $(".navbar .navbar-brand img").attr("src","img/uav-iq-precision-agriculture-logo-horizontal_white.png");
+          $(".navbar .navbar-brand img").attr("src","img/logos/uav-iq-precision-agriculture-logo-horizontal_white.png");
       }
   });
 })

@@ -11,9 +11,10 @@
       max-height: 800px;
       overflow: hidden;
       position: relative;
+      background-position: center;
+      background-size: cover;
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 175%;
         padding-top: 235px !important;
       }
 
@@ -27,6 +28,10 @@
 
       .container{
         color:#FFF;
+
+        @media only screen and (max-device-width: 768px) {
+          width:880px;
+        }
 
         .image-container{
           width: 100%;
@@ -48,7 +53,7 @@
           font-weight: bold;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 60px !important;
+            font-size: 85px !important;
           }
         }
 
@@ -58,7 +63,7 @@
           font-size: 25px;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 30px !important;
+            font-size: 45px !important;
           }
         }
 
@@ -80,8 +85,12 @@
             display: block;
             font-size:11px;
 
-            @media only screen and (min-device-width: 1024px) {
-              font-size:15px;
+            @media only screen and (max-device-width: 1024px) {
+              font-size:20px;
+            }
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
             }
           }
         }
@@ -104,15 +113,24 @@
 
 
     .container-fluid{
-        margin-top:20px;
-        margin-bottom:20px;
+        margin-top: 80px;
+        margin-bottom: 80px;
 
         .section-header{
           font-size: 35px ;
           margin-bottom:20px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-weight: bold;
+            font-size:45px;
+          }
         }
         .section-sub-header{
           font-size: 30px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+          }
         }
     }
 
@@ -141,8 +159,9 @@
 
         p{
           text-align: center;
+
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size: 45px;
           }
         }
 
@@ -165,7 +184,7 @@
     }
 
     #work{
-      background-image: url("../img/BG How It Works Main AG.jpg");
+      background-image: url("../img/BG/BG How It Works Main AG.jpg");
       background-size: 100% 100%;
       color:#FFF;
       padding: 70px;
@@ -197,7 +216,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size:45px;
           }
         }
 
@@ -274,7 +293,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size:45px;
           }
         }
         //
@@ -313,11 +332,20 @@
         h2{
           font-size:40px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-weight: bold;
+            font-size:45px;
+          }
         }
 
         p{
           font-size:30px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+          }
         }
 
         img{
@@ -344,6 +372,10 @@
             position: relative;
             margin-bottom:10px;
             min-height: 75px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
@@ -414,11 +446,20 @@
         h2{
           font-size:40px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-weight: bold;
+            font-size:45px;
+          }
         }
 
         p{
           font-size:30px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+          }
         }
 
         img{
@@ -445,6 +486,10 @@
             position: relative;
             margin-bottom:10px;
             min-height: 75px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
 
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
@@ -511,23 +556,31 @@
           margin:10px 0;
           label{
             font-size:25px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
           }
 
           textarea{
             width:100%;
             height: 200px;
-            background-color:#ADADAD;
+            background-color:#E2E2E2;
             border:none;
           }
 
           input{
             width:100%;
             color:#FFF;
-            background-color:#ADADAD;
+            background-color:#E2E2E2;
             height:50px;
             font-size:20px;
             border:none;
             padding: 1px 20px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
 
             &::-webkit-input-placeholder {
                 color: #FFF;
@@ -542,9 +595,15 @@
           border: none;
           float: left;
           color:#FFF;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+            width: 100%;
+          }
         }
 
         .g-recaptcha{
+          // float: right;
           margin: 0 0 20px 0;
           div{
             margin: 0;

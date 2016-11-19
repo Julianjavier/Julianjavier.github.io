@@ -10,9 +10,10 @@
       max-height: 800px;
       overflow: hidden;
       position: relative;
+      background-position: center;
+      background-size: cover;
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 125%;
         padding-top: 235px !important;
       }
 
@@ -48,7 +49,7 @@
           font-weight: bold;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 60px !important;
+            font-size: 75px !important;
           }
         }
 
@@ -58,7 +59,7 @@
           font-size: 25px;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 30px !important;
+            font-size: 45px !important;
           }
         }
 
@@ -70,6 +71,10 @@
             border-radius: 3px;
             padding: 10px 35px;
             font-size: 18px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size: 45px;
+            }
           }
 
           span{
@@ -78,6 +83,10 @@
 
             @media only screen and (min-device-width: 1024px) {
               font-size:15px;
+            }
+
+            @media only screen and (max-device-width: 768px) {
+              font-size: 45px;
             }
           }
         }
@@ -100,15 +109,24 @@
 
 
     .container-fluid{
-        margin-top:20px;
-        margin-bottom:20px;
+      margin-top: 80px;
+      margin-bottom: 80px;
 
         .section-header{
           font-size: 35px ;
           margin-bottom:20px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+            font-weight: bold;
+          }
         }
         .section-sub-header{
           font-size: 30px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
         }
     }
 
@@ -138,7 +156,7 @@
         p{
           text-align: center;
           @media only screen and (max-device-width: 768px) {
-            font-size: 30px;
+            font-size: 45px;
           }
         }
 
@@ -160,8 +178,8 @@
     }
 
     #work{
-      background-image: url("../img/how-it-works.png");
-      background-size: 100% 100%;
+      background-image: url("../img/BG/how-it-works.png");
+      background-size: cover;
       color:#FFF;
       padding: 70px;
 
@@ -192,7 +210,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 40px;
+            font-size: 45px;
           }
         }
 
@@ -269,7 +287,6 @@
           padding: 0;
           li{
             font-size: 30px;
-            // float: right;
             padding-left:75px;
             position: relative;
             margin-bottom:10px;
@@ -278,6 +295,10 @@
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
               padding-left:60px;
+            }
+
+            @media only screen and (max-device-width: 768px) {
+              font-size: 45px;
             }
 
             .img{
@@ -348,11 +369,19 @@
         h2{
           font-size:40px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
         }
 
         p{
           font-size:30px;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
         }
 
         img{
@@ -391,6 +420,10 @@
             @media only screen and (min-device-width: 1024px) {
               font-size: 20px;
               padding-left:60px;
+            }
+
+            @media only screen and (max-device-width: 768px) {
+              font-size: 45px;
             }
 
             .img{
@@ -453,23 +486,31 @@
           margin:10px 0;
           label{
             font-size:25px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
           }
 
           textarea{
             width:100%;
             height: 200px;
-            background-color:#ADADAD;
+            background-color:#E2E2E2;
             border:none;
           }
 
           input{
             width:100%;
             color:#FFF;
-            background-color:#ADADAD;
+            background-color:#E2E2E2;
             height:50px;
             font-size:20px;
             border:none;
             padding: 1px 20px;
+
+            @media only screen and (max-device-width: 768px) {
+              font-size:45px;
+            }
 
             &::-webkit-input-placeholder {
                 color: #FFF;
@@ -484,9 +525,15 @@
           border: none;
           float: left;
           color:#FFF;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+            width: 100%;
+          }
         }
 
         .g-recaptcha{
+          // float: right;
           margin: 0 0 20px 0;
           div{
             margin: 0;
@@ -526,15 +573,11 @@
     }
 
   #advanteges{
-    background-image: url("../img/BG WineFlight_Advantages for.png");
-    background-size: 100%;
+    background-image: url("../img/BG/BG WineFlight_Advantages for.png");
+    background-size: cover;
     background-repeat: no-repeat;
     color:#FFF;
     padding: 70px;
-
-    @media only screen and (max-device-width: 768px) {
-      background-size: 280%;
-    }
 
     .section-header{
       text-align: center;
@@ -554,6 +597,7 @@
         text-align: center;
 
         @media only screen and (max-device-width: 768px) {
+          font-weight: bold;
           font-size: 45px;
         }
       }
@@ -563,7 +607,7 @@
         text-align: center;
 
         @media only screen and (max-device-width: 768px) {
-          font-size: 30px;
+          font-size: 45px;
         }
       }
 

@@ -21,10 +21,11 @@ button {
     background-attachment: fixed;
     max-height: 800px;
     overflow: hidden;
-    background-size: 115%; }
+    background-position: center;
+    background-size: cover;
+    position: relative; }
     @media only screen and (max-device-width: 1024px) {
       .home .jumbotron {
-        background-size: 200%;
         max-height: 900px;
         padding-top: 235px !important; } }
     .home .jumbotron .container {
@@ -36,12 +37,12 @@ button {
         font-size: 50px; }
         @media only screen and (max-device-width: 1024px) {
           .home .jumbotron .container h1 {
-            font-size: 60px !important; } }
+            font-size: 85px !important; } }
       .home .jumbotron .container p {
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .home .jumbotron .container p {
-            font-size: 30px !important; } }
+            font-size: 45px !important; } }
       .home .jumbotron .container .button .btn {
         background-color: #A3CB00;
         border: none;
@@ -50,23 +51,37 @@ button {
       .home .jumbotron .container .button span {
         display: block;
         font-size: 11px; }
-      .home .jumbotron .container .banner {
-        width: 100%; }
-        @media only screen and (min-device-width: 1025px) {
-          .home .jumbotron .container .banner {
-            display: none; } }
+        @media only screen and (max-device-width: 768px) {
+          .home .jumbotron .container .button span {
+            font-size: 45px !important; } }
+    .home .jumbotron .banner {
+      width: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      transform: translateY(30%); }
+      @media only screen and (min-device-width: 1025px) {
+        .home .jumbotron .banner {
+          display: none; } }
     .home .jumbotron .ipad img {
       width: 100%; }
     @media only screen and (max-device-width: 1024px) {
       .home .jumbotron .ipad {
         display: none; } }
   .home .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .home .container-fluid .section-header {
       font-size: 35px !important; }
+      @media only screen and (max-device-width: 768px) {
+        .home .container-fluid .section-header {
+          font-weight: bold;
+          font-size: 45px !important; } }
     .home .container-fluid .section-sub-header {
       font-size: 30px !important; }
+      @media only screen and (max-device-width: 768px) {
+        .home .container-fluid .section-sub-header {
+          font-size: 45px !important; } }
   .home #industries .section-header {
     text-align: center;
     font-size: 13px;
@@ -115,7 +130,7 @@ button {
     color: #ADADAD;
     font-size: 70px; }
   .home #issue {
-    background-image: url(../img/BG_zoom_level.png);
+    background-image: url("../img/BG/BG_zoom_level.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left bottom;
@@ -166,7 +181,7 @@ button {
         margin-bottom: 10px; }
         @media only screen and (max-device-width: 1024px) {
           .home #observe .wrap .left ul li {
-            font-size: 30px; } }
+            font-size: 45px; } }
         .home #observe .wrap .left ul li img {
           position: absolute;
           top: 7px;
@@ -182,7 +197,7 @@ button {
         margin-bottom: 10px; }
         @media only screen and (max-device-width: 1024px) {
           .home #observe .wrap .right ul li {
-            font-size: 30px; } }
+            font-size: 45px; } }
         .home #observe .wrap .right ul li img {
           position: absolute;
           top: 7px;
@@ -206,7 +221,7 @@ button {
       left: 50%;
       top: 40%; }
   .home #options {
-    background-image: url("../img/BG_Homepage_Call to Action_Button.png");
+    background-image: url("../img/BG/BG_Homepage_Call to Action_Button.png");
     background-repeat: no-repeat;
     background-size: 100% 100%; }
     .home #options .option {
@@ -239,6 +254,9 @@ button {
       font-size: 20px;
       text-align: center;
       margin: 20px 0; }
+      @media only screen and (max-device-width: 768px) {
+        .home #advert h4 {
+          font-size: 45px; } }
     .home #advert div {
       position: relative;
       height: 40px; }
@@ -283,7 +301,7 @@ button {
         border: none;
         border-radius: 3px;
         padding: 10px 35px;
-        font-size: 35px; }
+        font-size: 45px; }
       .home .jumbotron .container .button span {
         font-size: 17px; }
       .home .jumbotron .container .banner {
@@ -328,6 +346,9 @@ button {
     margin: 10px 0; }
     #contact-us form div label {
       font-size: 25px; }
+      @media only screen and (max-device-width: 768px) {
+        #contact-us form div label {
+          font-size: 45px; } }
     #contact-us form div textarea {
       width: 100%;
       height: 200px;
@@ -341,6 +362,9 @@ button {
       font-size: 20px;
       border: none;
       padding: 1px 20px; }
+      @media only screen and (max-device-width: 768px) {
+        #contact-us form div input {
+          font-size: 45px; } }
       #contact-us form div input::-webkit-input-placeholder {
         color: #FFF; }
   #contact-us form button {
@@ -350,6 +374,10 @@ button {
     border: none;
     float: left;
     color: #FFF; }
+    @media only screen and (max-device-width: 768px) {
+      #contact-us form button {
+        font-size: 45px;
+        width: 100%; } }
   #contact-us form .g-recaptcha {
     margin: 0 0 20px 0; }
     #contact-us form .g-recaptcha div {
@@ -577,10 +605,11 @@ nav {
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    background-position: center;
+    background-size: cover; }
     @media only screen and (max-device-width: 1024px) {
       .wineflight .jumbotron {
-        background-size: 125%;
         padding-top: 235px !important; } }
     .wineflight .jumbotron .app {
       position: absolute;
@@ -605,14 +634,14 @@ nav {
         font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .wineflight .jumbotron .container h1 {
-            font-size: 60px !important; } }
+            font-size: 75px !important; } }
       .wineflight .jumbotron .container p {
         text-align: center;
         padding: 0 15%;
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .wineflight .jumbotron .container p {
-            font-size: 30px !important; } }
+            font-size: 45px !important; } }
       .wineflight .jumbotron .container .button {
         margin-top: 48px; }
         .wineflight .jumbotron .container .button .btn {
@@ -621,12 +650,18 @@ nav {
           border-radius: 3px;
           padding: 10px 35px;
           font-size: 18px; }
+          @media only screen and (max-device-width: 768px) {
+            .wineflight .jumbotron .container .button .btn {
+              font-size: 45px; } }
         .wineflight .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight .jumbotron .container .button span {
               font-size: 15px; } }
+          @media only screen and (max-device-width: 768px) {
+            .wineflight .jumbotron .container .button span {
+              font-size: 45px; } }
       .wineflight .jumbotron .container .banner {
         width: 100%; }
     .wineflight .jumbotron .back-opacity {
@@ -637,13 +672,20 @@ nav {
       height: auto;
       opacity: 0.6; }
   .wineflight .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .wineflight .container-fluid .section-header {
       font-size: 35px;
       margin-bottom: 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight .container-fluid .section-header {
+          font-size: 45px;
+          font-weight: bold; } }
     .wineflight .container-fluid .section-sub-header {
       font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight .container-fluid .section-sub-header {
+          font-size: 45px; } }
   .wineflight #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
@@ -663,7 +705,7 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .wineflight #actionalble_data div p {
-          font-size: 30px; } }
+          font-size: 45px; } }
     .wineflight #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -674,8 +716,8 @@ nav {
         .wineflight #actionalble_data div img {
           padding: 0px 350px; } }
   .wineflight #work {
-    background-image: url("../img/how-it-works.png");
-    background-size: 100% 100%;
+    background-image: url("../img/BG/how-it-works.png");
+    background-size: cover;
     color: #FFF;
     padding: 70px; }
     .wineflight #work .section-header {
@@ -698,7 +740,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .wineflight #work div p {
-            font-size: 40px; } }
+            font-size: 45px; } }
       .wineflight #work div img {
         width: 100%;
         padding: 0 100px; }
@@ -756,6 +798,9 @@ nav {
             .wineflight #best-wine .left ul li {
               font-size: 20px;
               padding-left: 60px; } }
+          @media only screen and (max-device-width: 768px) {
+            .wineflight #best-wine .left ul li {
+              font-size: 45px; } }
           .wineflight #best-wine .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -808,9 +853,15 @@ nav {
       .wineflight #best-practice .ipad h2 {
         font-size: 40px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #best-practice .ipad h2 {
+            font-size: 45px; } }
       .wineflight #best-practice .ipad p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #best-practice .ipad p {
+            font-size: 45px; } }
       .wineflight #best-practice .ipad img {
         width: 100%;
         padding: 0 40px; }
@@ -838,6 +889,9 @@ nav {
             .wineflight #best-practice .left ul li {
               font-size: 20px;
               padding-left: 60px; } }
+          @media only screen and (max-device-width: 768px) {
+            .wineflight #best-practice .left ul li {
+              font-size: 45px; } }
           .wineflight #best-practice .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -884,19 +938,25 @@ nav {
       margin: 10px 0; }
       .wineflight #contact-us form div label {
         font-size: 25px; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #contact-us form div label {
+            font-size: 45px; } }
       .wineflight #contact-us form div textarea {
         width: 100%;
         height: 200px;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         border: none; }
       .wineflight #contact-us form div input {
         width: 100%;
         color: #FFF;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         height: 50px;
         font-size: 20px;
         border: none;
         padding: 1px 20px; }
+        @media only screen and (max-device-width: 768px) {
+          .wineflight #contact-us form div input {
+            font-size: 45px; } }
         .wineflight #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
     .wineflight #contact-us form button {
@@ -906,6 +966,10 @@ nav {
       border: none;
       float: left;
       color: #FFF; }
+      @media only screen and (max-device-width: 768px) {
+        .wineflight #contact-us form button {
+          font-size: 45px;
+          width: 100%; } }
     .wineflight #contact-us form .g-recaptcha {
       margin: 0 0 20px 0; }
       .wineflight #contact-us form .g-recaptcha div {
@@ -932,14 +996,11 @@ nav {
       transform: translateX(-50%);
       margin: 0 auto; }
   .wineflight #advanteges {
-    background-image: url("../img/BG WineFlight_Advantages for.png");
-    background-size: 100%;
+    background-image: url("../img/BG/BG WineFlight_Advantages for.png");
+    background-size: cover;
     background-repeat: no-repeat;
     color: #FFF;
     padding: 70px; }
-    @media only screen and (max-device-width: 768px) {
-      .wineflight #advanteges {
-        background-size: 280%; } }
     .wineflight #advanteges .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -954,13 +1015,14 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .wineflight #advanteges div h2 {
+            font-weight: bold;
             font-size: 45px; } }
       .wineflight #advanteges div p {
         font-size: 20px;
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .wineflight #advanteges div p {
-            font-size: 30px; } }
+            font-size: 45px; } }
       .wineflight #advanteges div img {
         width: 100%;
         padding: 0 100px; }
@@ -1015,33 +1077,39 @@ nav {
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
-    background-size: 115%; }
+    background-position: center;
+    background-size: cover; }
     @media only screen and (min-device-width: 1024px) {
       .datacollection .jumbotron {
         min-height: 550px; } }
     @media only screen and (max-device-width: 1024px) {
       .datacollection .jumbotron {
-        background-size: 155%;
         padding-top: 235px !important; } }
     .datacollection .jumbotron .container {
       color: #FFF; }
       @media only screen and (min-device-width: 1024px) {
         .datacollection .jumbotron .container {
           margin-top: 60px; } }
+      @media only screen and (max-device-width: 768px) {
+        .datacollection .jumbotron .container {
+          width: 880px; } }
       .datacollection .jumbotron .container h1 {
         font-size: 65px;
         text-align: center;
         font-weight: bold; }
+        @media only screen and (max-device-width: 768px) {
+          .datacollection .jumbotron .container h1 {
+            font-size: 45px; } }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .jumbotron .container h1 {
-            font-size: 60px !important; } }
+            font-size: 85px !important; } }
       .datacollection .jumbotron .container p {
         text-align: center;
         padding: 0 15%;
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .jumbotron .container p {
-            font-size: 30px !important; } }
+            font-size: 45px !important; } }
       .datacollection .jumbotron .container .button {
         margin-top: 48px; }
         .datacollection .jumbotron .container .button .btn {
@@ -1066,18 +1134,25 @@ nav {
       height: auto;
       opacity: 0.6; }
   .datacollection .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .datacollection .container-fluid .section-header {
       font-size: 35px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection .container-fluid .section-header {
+          font-weight: bold;
+          font-size: 45px !important; } }
     .datacollection .container-fluid .section-sub-header {
       font-size: 30px; }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection .container-fluid .section-sub-header {
+          font-size: 45px !important; } }
   .datacollection #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
     @media only screen and (max-device-width: 768px) {
       .datacollection #actionalble_data .section-header {
-        font-size: 65px; } }
+        font-size: 65px !important; } }
   .datacollection #actionalble_data div {
     margin-top: 30px;
     position: relative; }
@@ -1090,7 +1165,7 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .datacollection #actionalble_data div p {
-          font-size: 25px; } }
+          font-size: 45px; } }
     .datacollection #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -1111,7 +1186,7 @@ nav {
           font-size: 25px; } }
       @media only screen and (max-device-width: 768px) {
         .datacollection #actionalble_data div .button .btn {
-          font-size: 40px; } }
+          font-size: 45px; } }
     .datacollection #actionalble_data div:last-child {
       margin-top: 80px;
       margin-bottom: 40px; }
@@ -1125,7 +1200,7 @@ nav {
       padding: 0 20px; }
       @media only screen and (max-device-width: 1024px) {
         .datacollection .work .section-header {
-          font-size: 65px; } }
+          font-size: 65px !important; } }
     .datacollection .work div {
       margin-top: 30px;
       position: relative; }
@@ -1143,7 +1218,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .datacollection .work div p {
-            font-size: 30px; } }
+            font-size: 45px; } }
         @media only screen and (max-device-width: 1024px) {
           .datacollection .work div p {
             font-size: 25px; } }
@@ -1178,14 +1253,12 @@ nav {
       transform: translateX(-50%);
       margin: 0 auto; }
   .datacollection #advanteges {
-    background-image: url("../img/BG dotted map.png");
-    background-size: 100% 100%;
+    background-image: url("../img/BG/BG dotted map.png");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 70px;
     min-height: 688px; }
-    @media only screen and (max-device-width: 768px) {
-      .datacollection #advanteges {
-        background-size: 330%; } }
     .datacollection #advanteges .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -1209,7 +1282,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .datacollection #advanteges div p {
-            font-size: 30px; } }
+            font-size: 45px; } }
       .datacollection #advanteges div img {
         width: 100%;
         padding: 0 100px; }
@@ -1225,11 +1298,10 @@ nav {
         border-radius: 3px;
         padding: 10px 35px;
         text-decoration: none;
-        color: #FFF;
-        font-size: 30px !important; }
+        color: #FFF; }
         @media only screen and (max-device-width: 1024px) {
           .datacollection #advanteges div .button .btn {
-            font-size: 25px; } }
+            font-size: 45px; } }
   .datacollection #start-servises {
     padding: 30px 70px; }
     .datacollection #start-servises .section-header {
@@ -1276,10 +1348,11 @@ nav {
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    background-position: center;
+    background-size: cover; }
     @media only screen and (max-device-width: 1024px) {
       .instafarm .jumbotron {
-        background-size: 175%;
         padding-top: 235px !important; } }
     .instafarm .jumbotron .app {
       position: absolute;
@@ -1287,6 +1360,9 @@ nav {
       bottom: 0; }
     .instafarm .jumbotron .container {
       color: #FFF; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm .jumbotron .container {
+          width: 880px; } }
       .instafarm .jumbotron .container .image-container {
         width: 100%; }
         .instafarm .jumbotron .container .image-container img {
@@ -1303,14 +1379,14 @@ nav {
         font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .instafarm .jumbotron .container h1 {
-            font-size: 60px !important; } }
+            font-size: 85px !important; } }
       .instafarm .jumbotron .container p {
         text-align: center;
         padding: 0 15%;
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .instafarm .jumbotron .container p {
-            font-size: 30px !important; } }
+            font-size: 45px !important; } }
       .instafarm .jumbotron .container .button {
         margin-top: 48px; }
         .instafarm .jumbotron .container .button .btn {
@@ -1325,9 +1401,12 @@ nav {
         .instafarm .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
-          @media only screen and (min-device-width: 1024px) {
+          @media only screen and (max-device-width: 1024px) {
             .instafarm .jumbotron .container .button span {
-              font-size: 15px; } }
+              font-size: 20px; } }
+          @media only screen and (max-device-width: 768px) {
+            .instafarm .jumbotron .container .button span {
+              font-size: 45px; } }
       .instafarm .jumbotron .container .banner {
         width: 100%; }
     .instafarm .jumbotron .back-opacity {
@@ -1338,13 +1417,20 @@ nav {
       height: auto;
       opacity: 0.6; }
   .instafarm .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .instafarm .container-fluid .section-header {
       font-size: 35px;
       margin-bottom: 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm .container-fluid .section-header {
+          font-weight: bold;
+          font-size: 45px; } }
     .instafarm .container-fluid .section-sub-header {
       font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm .container-fluid .section-sub-header {
+          font-size: 45px; } }
   .instafarm #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
@@ -1364,7 +1450,7 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .instafarm #actionalble_data div p {
-          font-size: 30px; } }
+          font-size: 45px; } }
     .instafarm #actionalble_data div img {
       width: 100%;
       padding: 0 100px;
@@ -1376,7 +1462,7 @@ nav {
         .instafarm #actionalble_data div img {
           padding: 0px 350px; } }
   .instafarm #work {
-    background-image: url("../img/BG How It Works Main AG.jpg");
+    background-image: url("../img/BG/BG How It Works Main AG.jpg");
     background-size: 100% 100%;
     color: #FFF;
     padding: 70px; }
@@ -1400,7 +1486,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .instafarm #work div p {
-            font-size: 30px; } }
+            font-size: 45px; } }
       .instafarm #work div img {
         width: 100%;
         padding: 0 100px; }
@@ -1450,7 +1536,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .instafarm #crops .parent p {
-            font-size: 30px; } }
+            font-size: 45px; } }
   .instafarm #best-wine {
     padding: 0 70px; }
     .instafarm #best-wine .section-header {
@@ -1466,9 +1552,16 @@ nav {
       .instafarm #best-wine .ipad h2 {
         font-size: 40px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #best-wine .ipad h2 {
+            font-weight: bold;
+            font-size: 45px; } }
       .instafarm #best-wine .ipad p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #best-wine .ipad p {
+            font-size: 45px; } }
       .instafarm #best-wine .ipad img {
         width: 100%;
         padding: 0 40px; }
@@ -1486,6 +1579,9 @@ nav {
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
+          @media only screen and (max-device-width: 768px) {
+            .instafarm #best-wine .left ul li {
+              font-size: 45px; } }
           @media only screen and (min-device-width: 1024px) {
             .instafarm #best-wine .left ul li {
               font-size: 20px;
@@ -1539,9 +1635,16 @@ nav {
       .instafarm #best-practice .ipad h2 {
         font-size: 40px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #best-practice .ipad h2 {
+            font-weight: bold;
+            font-size: 45px; } }
       .instafarm #best-practice .ipad p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #best-practice .ipad p {
+            font-size: 45px; } }
       .instafarm #best-practice .ipad img {
         width: 100%;
         padding: 0 40px; }
@@ -1559,6 +1662,9 @@ nav {
           position: relative;
           margin-bottom: 10px;
           min-height: 75px; }
+          @media only screen and (max-device-width: 768px) {
+            .instafarm #best-practice .left ul li {
+              font-size: 45px; } }
           @media only screen and (min-device-width: 1024px) {
             .instafarm #best-practice .left ul li {
               font-size: 20px;
@@ -1609,19 +1715,25 @@ nav {
       margin: 10px 0; }
       .instafarm #contact-us form div label {
         font-size: 25px; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #contact-us form div label {
+            font-size: 45px; } }
       .instafarm #contact-us form div textarea {
         width: 100%;
         height: 200px;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         border: none; }
       .instafarm #contact-us form div input {
         width: 100%;
         color: #FFF;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         height: 50px;
         font-size: 20px;
         border: none;
         padding: 1px 20px; }
+        @media only screen and (max-device-width: 768px) {
+          .instafarm #contact-us form div input {
+            font-size: 45px; } }
         .instafarm #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
     .instafarm #contact-us form button {
@@ -1631,6 +1743,10 @@ nav {
       border: none;
       float: left;
       color: #FFF; }
+      @media only screen and (max-device-width: 768px) {
+        .instafarm #contact-us form button {
+          font-size: 45px;
+          width: 100%; } }
     .instafarm #contact-us form .g-recaptcha {
       margin: 0 0 20px 0; }
       .instafarm #contact-us form .g-recaptcha div {
@@ -1740,10 +1856,11 @@ nav {
     background-color: #000;
     max-height: 800px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    background-position: center;
+    background-size: cover; }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts .jumbotron {
-        background-size: 170%;
         padding-top: 235px !important; } }
     .ourProducts .jumbotron .app {
       position: absolute;
@@ -1770,12 +1887,20 @@ nav {
         font-weight: bold; }
         @media only screen and (max-device-width: 1024px) {
           .ourProducts .jumbotron .container h1 {
-            font-size: 60px !important; } }
+            font-size: 85px !important; } }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts .jumbotron .container h1 {
+            text-align: center;
+            font-weight: bold; } }
       .ourProducts .jumbotron .container p {
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .ourProducts .jumbotron .container p {
             font-size: 30px !important; } }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts .jumbotron .container p {
+            text-align: center;
+            font-size: 45px !important; } }
       .ourProducts .jumbotron .container .button {
         margin-top: 48px; }
         .ourProducts .jumbotron .container .button .btn {
@@ -1804,13 +1929,20 @@ nav {
       height: auto;
       opacity: 0.6; }
   .ourProducts .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .ourProducts .container-fluid .section-header {
       font-size: 35px;
       margin-bottom: 20px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts .container-fluid .section-header {
+          font-size: 45px;
+          font-weight: bold; } }
     .ourProducts .container-fluid .section-sub-header {
       font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts .container-fluid .section-sub-header {
+          font-size: 45px; } }
   .ourProducts #actionalble_data .section-header {
     text-align: center;
     padding: 0 20px; }
@@ -1841,12 +1973,13 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #actionalble_data div h3 {
-          font-size: 43px; } }
+          font-size: 45px; } }
     .ourProducts #actionalble_data div p {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #actionalble_data div p {
-          font-size: 30px; } }
+          font-size: 45px;
+          margin-bottom: 40px; } }
     .ourProducts #actionalble_data div img {
       width: 100%;
       padding: 0 100px; }
@@ -1865,16 +1998,23 @@ nav {
     position: relative; }
     .ourProducts #work .button {
       position: absolute;
-      bottom: 60px; }
+      bottom: 20px; }
       .ourProducts #work .button .btn {
         background-color: #A3CB00;
         border: none;
         border-radius: 3px;
         padding: 10px 35px;
         font-size: 15px; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work .button .btn {
+            font-size: 45px; } }
     @media only screen and (max-device-width: 1024px) {
       .ourProducts #work .section-header {
         font-size: 70px; } }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #work .section-header {
+        font-size: 45px;
+        font-weight: bold; } }
     .ourProducts #work ul {
       margin-bottom: 75px; }
       @media only screen and (max-device-width: 768px) {
@@ -1884,7 +2024,7 @@ nav {
         font-size: 22px; }
         @media only screen and (max-device-width: 768px) {
           .ourProducts #work ul li {
-            font-size: 25px; } }
+            font-size: 45px; } }
     .ourProducts #work div {
       margin-top: 30px;
       position: relative; }
@@ -1892,14 +2032,26 @@ nav {
       font-size: 30px; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #work h2 {
-          font-size: 45px; } }
+          font-size: 45px;
+          font-weight: bold; } }
+    .ourProducts #work h3 {
+      font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #work h3 {
+          font-size: 45px;
+          font-weight: bold; } }
     .ourProducts #work p {
       font-size: 20px; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #work p {
-          font-size: 28px; } }
-    .ourProducts #work .button a {
-      font-size: 25px; }
+          font-size: 45px; } }
+    .ourProducts #work .button {
+      margin-top: 10px; }
+      .ourProducts #work .button a {
+        font-size: 25px; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #work .button a {
+            font-size: 45px; } }
     .ourProducts #work img {
       width: 100%;
       padding: 0 100px; }
@@ -1943,7 +2095,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .ourProducts #crops .parent p {
-            font-size: 30px; } }
+            font-size: 45px; } }
   .ourProducts #best-wine {
     padding: 0 70px; }
     .ourProducts #best-wine .section-header {
@@ -1959,9 +2111,16 @@ nav {
       .ourProducts #best-wine .ipad h2 {
         font-size: 40px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #best-wine .ipad h2 {
+            font-size: 45px;
+            font-weight: bold; } }
       .ourProducts #best-wine .ipad p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #best-wine .ipad p {
+            font-size: 45px; } }
       .ourProducts #best-wine .ipad img {
         width: 100%;
         padding: 0 40px; }
@@ -1983,6 +2142,9 @@ nav {
             .ourProducts #best-wine .left ul li {
               font-size: 20px;
               padding-left: 60px; } }
+          @media only screen and (max-device-width: 768px) {
+            .ourProducts #best-wine .left ul li {
+              font-size: 45px; } }
           .ourProducts #best-wine .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -2032,9 +2194,16 @@ nav {
       .ourProducts #best-practice .ipad h2 {
         font-size: 40px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #best-practice .ipad h2 {
+            font-size: 45px;
+            font-weight: bold; } }
       .ourProducts #best-practice .ipad p {
         font-size: 30px;
         text-align: center; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #best-practice .ipad p {
+            font-size: 45px; } }
       .ourProducts #best-practice .ipad img {
         width: 100%;
         padding: 0 40px; }
@@ -2056,6 +2225,9 @@ nav {
             .ourProducts #best-practice .left ul li {
               font-size: 20px;
               padding-left: 60px; } }
+          @media only screen and (max-device-width: 768px) {
+            .ourProducts #best-practice .left ul li {
+              font-size: 45px; } }
           .ourProducts #best-practice .left ul li .img {
             -webkit-transition: all .3s;
             /* Safari */
@@ -2102,19 +2274,25 @@ nav {
       margin: 10px 0; }
       .ourProducts #contact-us form div label {
         font-size: 25px; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #contact-us form div label {
+            font-size: 45px; } }
       .ourProducts #contact-us form div textarea {
         width: 100%;
         height: 200px;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         border: none; }
       .ourProducts #contact-us form div input {
         width: 100%;
         color: #FFF;
-        background-color: #ADADAD;
+        background-color: #E2E2E2;
         height: 50px;
         font-size: 20px;
         border: none;
         padding: 1px 20px; }
+        @media only screen and (max-device-width: 768px) {
+          .ourProducts #contact-us form div input {
+            font-size: 45px; } }
         .ourProducts #contact-us form div input::-webkit-input-placeholder {
           color: #FFF; }
     .ourProducts #contact-us form button {
@@ -2124,6 +2302,10 @@ nav {
       border: none;
       float: left;
       color: #FFF; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #contact-us form button {
+          font-size: 45px;
+          width: 100%; } }
     .ourProducts #contact-us form .g-recaptcha {
       margin: 0 0 20px 0; }
       .ourProducts #contact-us form .g-recaptcha div {
@@ -2234,30 +2416,33 @@ nav {
       margin: 40px auto;
       text-align: center;
       width: 70%; }
+      @media only screen and (max-device-width: 768px) {
+        .ourProducts #advance-research h2 {
+          font-size: 45px; } }
     .ourProducts #advance-research p {
       margin: 40px 0;
       font-size: 20px; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #advance-research p {
-          font-size: 28px; } }
+          font-size: 45px; } }
 
 .operators {
   font-family: 'Raleway', sans-serif; }
   .operators .jumbotron {
     padding-top: 180px !important;
     background-color: #fff;
-    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #000;
     max-height: 800px;
-    overflow: hidden; }
+    overflow: hidden;
+    background-position: center;
+    background-size: cover; }
     @media only screen and (min-device-width: 1024px) {
       .operators .jumbotron {
         min-height: 550px; } }
     @media only screen and (max-device-width: 1024px) {
       .operators .jumbotron {
-        background-size: 145%;
         padding-top: 235px !important; } }
     .operators .jumbotron .container {
       color: #FFF; }
@@ -2281,7 +2466,7 @@ nav {
         font-size: 25px; }
         @media only screen and (max-device-width: 1024px) {
           .operators .jumbotron .container p {
-            font-size: 30px !important; } }
+            font-size: 45px !important; } }
       .operators .jumbotron .container .button {
         margin-top: 48px; }
         .operators .jumbotron .container .button .btn {
@@ -2296,6 +2481,9 @@ nav {
         .operators .jumbotron .container .button span {
           display: block;
           font-size: 11px; }
+          @media only screen and (max-device-width: 1024px) {
+            .operators .jumbotron .container .button span {
+              font-size: 45px; } }
       .operators .jumbotron .container .banner {
         width: 100%; }
     .operators .jumbotron .back-opacity {
@@ -2306,8 +2494,8 @@ nav {
       height: auto;
       opacity: 0.6; }
   .operators .container-fluid {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
     .operators .container-fluid .section-header {
       font-size: 35px; }
     .operators .container-fluid .section-sub-header {
@@ -2317,7 +2505,7 @@ nav {
     padding: 0 20px; }
     @media only screen and (max-device-width: 768px) {
       .operators #actionalble_data .section-header {
-        font-size: 40px; } }
+        font-size: 45px; } }
   .operators #actionalble_data div {
     margin-top: 30px;
     position: relative; }
@@ -2325,13 +2513,14 @@ nav {
       text-align: center; }
       @media only screen and (max-device-width: 768px) {
         .operators #actionalble_data div h2 {
+          font-weight: bold;
           font-size: 45px; } }
     .operators #actionalble_data div p {
       text-align: center;
       font-size: 18px; }
       @media only screen and (max-device-width: 768px) {
         .operators #actionalble_data div p {
-          font-size: 25px; } }
+          font-size: 45px; } }
     .operators #actionalble_data div img {
       width: 100%;
       padding: 0 130px; }
@@ -2349,10 +2538,10 @@ nav {
       font-size: 25px; }
       @media only screen and (max-device-width: 1024px) {
         .operators #actionalble_data div .button .btn {
-          font-size: 25px; } }
+          font-size: 45px; } }
       @media only screen and (max-device-width: 768px) {
         .operators #actionalble_data div .button .btn {
-          font-size: 40px; } }
+          font-size: 45px; } }
   .operators #drone-form {
     margin: 40px 0px; }
     .operators #drone-form h1 {
@@ -2370,7 +2559,7 @@ nav {
           @media only screen and (max-device-width: 768px) {
             .operators #drone-form form div input {
               height: 65px;
-              font-size: 30px; } }
+              font-size: 45px; } }
         .operators #drone-form form div button {
           width: 100%;
           color: #FFF;
@@ -2380,16 +2569,22 @@ nav {
           @media only screen and (max-device-width: 768px) {
             .operators #drone-form form div button {
               height: 65px;
-              font-size: 30px; } }
+              font-size: 45px; } }
   .operators #acquisition {
     margin: 50px 0px; }
     .operators #acquisition div img {
       width: 100%; }
     .operators #acquisition div p {
       font-size: 30px; }
+      @media only screen and (max-device-width: 768px) {
+        .operators #acquisition div p {
+          font-size: 45px; } }
     .operators #acquisition div h3 {
       margin: 40px 0;
       text-align: center; }
+      @media only screen and (max-device-width: 768px) {
+        .operators #acquisition div h3 {
+          font-size: 45px; } }
     .operators #acquisition div a {
       display: block;
       width: 40%;
@@ -2403,7 +2598,7 @@ nav {
         @media only screen and (max-device-width: 768px) {
           .operators #acquisition div a button {
             height: 65px;
-            font-size: 30px; } }
+            font-size: 45px; } }
   .operators .footer {
     margin-top: 100px;
     position: relative; }
@@ -2426,14 +2621,15 @@ nav {
       transform: translateX(-50%);
       margin: 0 auto; }
   .operators #advanteges {
-    background-image: url("../img/BG dotted map.png");
-    background-size: 100% 100%;
+    background-image: url("../img/BG/BG dotted map.png");
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 70px;
     min-height: 688px; }
     @media only screen and (max-device-width: 768px) {
       .operators #advanteges {
-        background-size: 330%; } }
+        background-size: cover; } }
     .operators #advanteges .section-header {
       text-align: center;
       padding: 0 20px; }
@@ -2448,6 +2644,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .operators #advanteges div h2 {
+            font-weight: bold;
             font-size: 45px; } }
       .operators #advanteges div a {
         text-decoration: underline;
@@ -2457,7 +2654,7 @@ nav {
         text-align: center; }
         @media only screen and (max-device-width: 768px) {
           .operators #advanteges div p {
-            font-size: 30px; } }
+            font-size: 45px; } }
       .operators #advanteges div img {
         width: 100%;
         padding: 0 100px; }
@@ -2477,7 +2674,7 @@ nav {
         font-size: 30px !important; }
         @media only screen and (max-device-width: 1024px) {
           .operators #advanteges div .button .btn {
-            font-size: 25px; } }
+            font-size: 45px !important; } }
   .operators #start-servises {
     padding: 30px 70px; }
     .operators #start-servises .section-header {
@@ -2497,6 +2694,7 @@ nav {
             font-size: 45px; } }
         @media only screen and (min-device-width: 1024px) {
           .operators #start-servises div h2 {
+            font-weight: bold;
             font-size: 20px; } }
       .operators #start-servises div .button {
         width: 100%;
@@ -2511,4 +2709,4 @@ nav {
           font-size: 45px; }
           @media only screen and (min-device-width: 1024px) {
             .operators #start-servises div .button .btn {
-              font-size: 20px; } }
+              font-size: 45px; } }

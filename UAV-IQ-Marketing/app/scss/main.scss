@@ -21,10 +21,11 @@ button{
     background-attachment: fixed;
     max-height: 800px;
     overflow: hidden;
-    background-size: 115%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
 
     @media only screen and (max-device-width: 1024px) {
-      background-size: 200%;
       max-height: 900px;
       padding-top: 235px !important;
     }
@@ -40,7 +41,7 @@ button{
         font-size: 50px;
 
         @media only screen and (max-device-width: 1024px) {
-          font-size: 60px !important;
+          font-size: 85px !important;
         }
       }
 
@@ -48,7 +49,7 @@ button{
         font-size: 25px;
 
         @media only screen and (max-device-width: 1024px) {
-          font-size: 30px !important;
+          font-size: 45px !important;
         }
       }
 
@@ -63,17 +64,26 @@ button{
         span{
           display: block;
           font-size:11px;
-        }
-      }
 
-      .banner{
-        width:100%;
-
-        @media only screen and (min-device-width: 1025px) {
-          display: none;
+          @media only screen and (max-device-width: 768px){
+            font-size: 45px !important;
+          }
         }
       }
     }
+
+    .banner{
+      width:100%;
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      transform: translateY(30%);
+
+      @media only screen and (min-device-width: 1025px) {
+        display: none;
+      }
+    }
+
     .ipad{
       img{
         width: 100%;
@@ -86,14 +96,23 @@ button{
   }
 
   .container-fluid{
-      margin-top:20px;
-      margin-bottom:20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
       .section-header{
         font-size: 35px !important;
+
+        @media only screen and (max-device-width: 768px){
+          font-weight: bold;
+          font-size: 45px !important;
+        }
       }
       .section-sub-header{
         font-size: 30px !important;
+
+        @media only screen and (max-device-width: 768px){
+          font-size: 45px !important;
+        }
       }
   }
 
@@ -107,8 +126,8 @@ button{
     .section-sub-header{
       text-align: center;
       font-size: 13px;
-
     }
+
     div{
       margin-top:30px;
       position: relative;
@@ -166,7 +185,7 @@ button{
 
 
   #issue{
-    background-image: url(../img/BG_zoom_level.png);
+    background-image: url('../img/BG/BG_zoom_level.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left bottom;
@@ -222,7 +241,6 @@ button{
     .section-sub-header{
       text-align: center;
       font-size: 13px;
-      // color: #A3CB00;
     }
 
     .wrap{
@@ -248,7 +266,7 @@ button{
             margin-bottom:10px;
 
             @media only screen and (max-device-width: 1024px) {
-              font-size: 30px;
+              font-size: 45px;
             }
 
             img{
@@ -275,7 +293,7 @@ button{
             margin-bottom:10px;
 
             @media only screen and (max-device-width: 1024px) {
-              font-size: 30px;
+              font-size: 45px;
             }
 
             img{
@@ -318,7 +336,7 @@ button{
   }
 
   #options{
-    background-image: url("../img/BG_Homepage_Call to Action_Button.png");
+    background-image: url("../img/BG/BG_Homepage_Call to Action_Button.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     .option{
@@ -364,6 +382,10 @@ button{
       font-size:20px;
       text-align: center;
       margin:20px 0;
+
+      @media only screen and (max-device-width: 768px) {
+        font-size:45px;
+      }
     }
     div{
       position: relative;
@@ -428,7 +450,7 @@ button{
             border: none;
             border-radius: 3px;
             padding: 10px 35px;
-            font-size: 35px;
+            font-size: 45px;
           }
 
           span{
@@ -542,6 +564,10 @@ button{
         margin:10px 0;
         label{
           font-size:25px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+          }
         }
 
         textarea{
@@ -560,6 +586,10 @@ button{
           border:none;
           padding: 1px 20px;
 
+          @media only screen and (max-device-width: 768px) {
+            font-size:45px;
+          }
+
           &::-webkit-input-placeholder {
               color: #FFF;
           }
@@ -573,6 +603,11 @@ button{
         border: none;
         float: left;
         color:#FFF;
+
+        @media only screen and (max-device-width: 768px) {
+          font-size:45px;
+          width: 100%;
+        }
       }
 
       .g-recaptcha{

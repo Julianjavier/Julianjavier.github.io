@@ -5,19 +5,19 @@
       padding-top: 180px !important;
       background-color:#fff;
       // background-image: url('../img/TV-Colchagua.png');
-      background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-color:#000;
       max-height: 800px;
       overflow: hidden;
+      background-position: center;
+      background-size: cover;
 
       @media only screen and (min-device-width: 1024px) {
         min-height: 550px;
       }
 
       @media only screen and (max-device-width: 1024px) {
-        background-size: 145%;
         padding-top: 235px !important;
       }
 
@@ -51,7 +51,7 @@
           font-size: 25px;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 30px !important;
+            font-size: 45px !important;
           }
         }
 
@@ -72,6 +72,10 @@
           span{
             display: block;
             font-size:11px;
+
+            @media only screen and (max-device-width: 1024px) {
+              font-size: 45px;
+            }
           }
         }
 
@@ -93,8 +97,8 @@
 
 
     .container-fluid{
-        margin-top:20px;
-        margin-bottom:20px;
+      margin-top: 80px;
+      margin-bottom: 80px;
 
         .section-header{
           font-size: 35px ;
@@ -110,7 +114,7 @@
         padding:0 20px;
 
         @media only screen and (max-device-width: 768px) {
-          font-size: 40px;
+          font-size: 45px;
         }
       }
 
@@ -122,6 +126,7 @@
           text-align: center;
 
           @media only screen and (max-device-width: 768px) {
+            font-weight: bold;
             font-size: 45px;
           }
         }
@@ -131,7 +136,7 @@
           font-size: 18px;
 
           @media only screen and (max-device-width: 768px) {
-            font-size: 25px;
+            font-size: 45px;
           }
         }
 
@@ -157,11 +162,11 @@
             font-size: 25px;
 
             @media only screen and (max-device-width: 1024px) {
-              font-size: 25px;
+              font-size: 45px;
             }
 
             @media only screen and (max-device-width: 768px) {
-              font-size: 40px;
+              font-size: 45px;
             }
           }
         }
@@ -189,7 +194,7 @@
 
             @media only screen and (max-device-width: 768px) {
               height:65px;
-              font-size: 30px;
+              font-size: 45px;
             }
           }
 
@@ -202,7 +207,7 @@
 
             @media only screen and (max-device-width: 768px) {
               height:65px;
-              font-size: 30px;
+              font-size: 45px;
             }
           }
         }
@@ -218,11 +223,19 @@
 
         p{
           font-size: 30px;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
         }
 
         h3{
           margin: 40px 0;
           text-align: center;
+
+          @media only screen and (max-device-width: 768px) {
+            font-size: 45px;
+          }
         }
 
         a{
@@ -239,7 +252,7 @@
 
             @media only screen and (max-device-width: 768px) {
               height:65px;
-              font-size: 30px;
+              font-size: 45px;
             }
           }
         }
@@ -277,14 +290,15 @@
     }
 
   #advanteges{
-    background-image: url("../img/BG dotted map.png");
-    background-size: 100% 100%;
+    background-image: url("../img/BG/BG dotted map.png");
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 70px;
     min-height: 688px;
 
     @media only screen and (max-device-width: 768px) {
-      background-size: 330%;
+      background-size: cover;
     }
 
     .section-header{
@@ -305,6 +319,7 @@
         text-align: center;
 
         @media only screen and (max-device-width: 768px) {
+          font-weight: bold;
           font-size: 45px;
         }
       }
@@ -319,7 +334,7 @@
         text-align: center;
 
         @media only screen and (max-device-width: 768px) {
-          font-size: 30px;
+          font-size: 45px;
         }
       }
 
@@ -347,7 +362,7 @@
           font-size: 30px !important;
 
           @media only screen and (max-device-width: 1024px) {
-            font-size: 25px;
+            font-size: 45px !important;
           }
         }
       }
@@ -379,6 +394,7 @@
         }
 
         @media only screen and (min-device-width: 1024px) {
+          font-weight: bold;
           font-size:20px;
         }
       }
@@ -396,7 +412,7 @@
           font-size: 45px;
 
           @media only screen and (min-device-width: 1024px) {
-            font-size:20px;
+            font-size:45px;
           }
         }
       }
