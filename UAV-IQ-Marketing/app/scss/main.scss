@@ -63,7 +63,7 @@ button{
 
         span{
           display: block;
-          font-size:11px;
+          font-size:13px;
 
           @media only screen and (max-device-width: 768px){
             font-size: 45px !important;
@@ -263,15 +263,21 @@ button{
             // float: right;
             padding-right:40px;
             position: relative;
-            margin-bottom:10px;
+            margin-bottom:40px;
 
             @media only screen and (max-device-width: 1024px) {
               font-size: 45px;
+              padding-right: 80px;
+
+              img{
+                width: 60px !important;
+              }
             }
 
             img{
               position: absolute;
-              top:7px;
+              top: 50%;
+              transform: translateY(-50%);
               right:0;
               width:30px;
 
@@ -290,15 +296,21 @@ button{
             font-size: 20px;
             padding-left:40px;
             position: relative;
-            margin-bottom:10px;
+            margin-bottom:40px;
 
             @media only screen and (max-device-width: 1024px) {
               font-size: 45px;
+              padding-right: 80px;
+
+              img{
+                width: 60px !important;
+              }
             }
 
             img{
               position: absolute;
-              top:7px;
+              top: 50%;
+              transform: translateY(-50%);
               width:30px;
 
               @media only screen and (min-device-width: 1024px) {
@@ -684,6 +696,7 @@ button{
       .nav-item{
         padding-top: 30px;
         padding-bottom: 30px;
+
         a{
           color:#FFF;
           border-radius:5px;
@@ -692,6 +705,14 @@ button{
             background-color:#FFF;
           }
         }
+
+        &:nth-child(2){
+          a{
+            color:#A3CB00;
+            background-color:#FFF;
+          }
+        }
+
         ul{
           list-style: none;
           padding: 0;
