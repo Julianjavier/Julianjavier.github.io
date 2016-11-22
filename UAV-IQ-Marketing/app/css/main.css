@@ -438,6 +438,10 @@ nav {
     nav .nav .nav-item {
       padding-top: 30px;
       padding-bottom: 30px; }
+      @media screen and (max-device-width: 1024px) {
+        nav .nav .nav-item {
+          padding-top: 65px;
+          padding-bottom: 65px; } }
       nav .nav .nav-item a {
         color: #FFF;
         border-radius: 5px; }
@@ -455,6 +459,9 @@ nav {
         top: 70px;
         height: 0;
         overflow: hidden; }
+        @media screen and (max-device-width: 1024px) {
+          nav .nav .nav-item ul {
+            top: 163px; } }
         nav .nav .nav-item ul li {
           margin: 0;
           display: block;
@@ -531,15 +538,14 @@ nav {
       bottom: 0;
       right: 0;
       height: 110px;
-      width: 100px;
-      background-color: #FFF;
-      color: #A3CB00; }
+      width: 150px;
+      color: #FFF; }
       nav .stack button {
         height: 100%;
         width: 100%;
-        font-size: 55px;
+        font-size: 85px;
         border: none;
-        background-color: #FFF; }
+        background: transparent; }
     nav ul {
       overflow: hidden;
       float: none;
@@ -595,6 +601,12 @@ nav {
   .changeHeader .nav .nav-item {
     padding-top: 0px;
     padding-bottom: 0px; }
+    @media screen and (max-device-width: 1024px) {
+      .changeHeader .nav .nav-item {
+        padding-top: 65px;
+        padding-bottom: 65px; } }
+  .changeHeader .stack button {
+    color: #A3CB00; }
   @media screen and (min-device-width: 1025px) {
     .changeHeader .navbar-brand img {
       height: 40px; }

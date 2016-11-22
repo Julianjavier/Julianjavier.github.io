@@ -697,6 +697,11 @@ button{
         padding-top: 30px;
         padding-bottom: 30px;
 
+        @media screen and (max-device-width: 1024px){
+          padding-top: 65px;
+          padding-bottom: 65px;
+        }
+
         a{
           color:#FFF;
           border-radius:5px;
@@ -721,6 +726,11 @@ button{
           top: 70px;
           height: 0;
           overflow: hidden;
+
+          @media screen and (max-device-width: 1024px){
+            top: 163px;
+
+          }
 
           li{
             margin: 0;
@@ -838,16 +848,15 @@ button{
         bottom: 0;
         right:0;
         height: 110px;
-        width: 100px;
-        background-color:#FFF;
-        color:#A3CB00;
+        width: 150px;
+        color:#FFF;
 
         button{
           height:100%;
           width:100%;
-          font-size: 55px;
+          font-size: 85px;
           border: none;
-          background-color: #FFF
+          background: transparent;
         }
       }
 
@@ -914,6 +923,17 @@ button{
       .nav-item{
         padding-top: 0px;
         padding-bottom: 0px;
+
+        @media screen and (max-device-width: 1024px){
+          padding-top: 65px;
+          padding-bottom: 65px;
+        }
+      }
+    }
+
+    .stack{
+      button{
+        color:#A3CB00;
       }
     }
 
