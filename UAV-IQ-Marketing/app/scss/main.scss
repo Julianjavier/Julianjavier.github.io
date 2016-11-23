@@ -771,7 +771,6 @@ button{
 
           li{
             padding:30px 40px;
-            border-bottom: 2px solid #A3CB00;
 
             &:hover{
               a{
@@ -787,6 +786,7 @@ button{
             ul{
               height: auto;
               width: 100%;
+              border: none;
             }
           }
         }
@@ -831,7 +831,7 @@ button{
           a{
             color:#000;
             padding:30px 20px;
-            font-size:30px;
+            font-size: 40px;
           }
         }
       }
