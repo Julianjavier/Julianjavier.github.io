@@ -395,16 +395,7 @@ nav {
   position: fixed !important;
   width: 100%;
   padding: 0 20px;
-  padding-top: 53px;
-  -webkit-transition: all .3s;
-  /* Safari */
-  -moz-transition: all .3s;
-  /*Firefox*/
-  -ms-transition: all .3s;
-  /*IE10+*/
-  -o-transition: all .3s;
-  /*Opera*/
-  transition: all .3s; }
+  padding-top: 53px; }
   nav .droneOperators {
     position: absolute;
     background-color: #D4D6CD;
@@ -563,16 +554,7 @@ nav {
         height: auto;
         width: 100%;
         clear: both;
-        background-color: #FFF;
-        -webkit-transition: all .3s;
-        /* Safari */
-        -moz-transition: all .3s;
-        /*Firefox*/
-        -ms-transition: all .3s;
-        /*IE10+*/
-        -o-transition: all .3s;
-        /*Opera*/
-        transition: all .3s; }
+        background-color: #FFF; }
         nav ul li:active {
           background-color: #FFF; }
           nav ul li:active a {
@@ -586,15 +568,6 @@ nav {
 .changeHeader {
   background: #FFF;
   padding-top: 0;
-  -webkit-transition: all .3s;
-  /* Safari */
-  -moz-transition: all .3s;
-  /*Firefox*/
-  -ms-transition: all .3s;
-  /*IE10+*/
-  -o-transition: all .3s;
-  /*Opera*/
-  transition: all .3s;
   -webkit-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.75); }
@@ -720,7 +693,8 @@ nav {
     position: relative; }
     .wineflight #actionalble_data div h2 {
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 25px; }
       @media only screen and (max-device-width: 768px) {
         .wineflight #actionalble_data div h2 {
           font-size: 45px; } }
@@ -809,14 +783,12 @@ nav {
       .wineflight #best-wine .left ul {
         text-align: left;
         list-style: none;
-        overflow: hidden;
         padding: 0; }
         .wineflight #best-wine .left ul li {
           font-size: 30px;
           padding-left: 75px;
           position: relative;
-          margin-bottom: 10px;
-          min-height: 75px; }
+          margin-bottom: 55px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-wine .left ul li {
               font-size: 20px;
@@ -825,22 +797,14 @@ nav {
             .wineflight #best-wine .left ul li {
               font-size: 45px; } }
           .wineflight #best-wine .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 0;
+            transform: translateY(-50%);
             width: 70px;
             height: 70px;
             background: #FFF;
-            border: solid 3px #A3CB00;
+            border: solid 1px #A3CB00;
             border-radius: 50%; }
             @media only screen and (min-device-width: 1024px) {
               .wineflight #best-wine .left ul li .img {
@@ -900,14 +864,12 @@ nav {
       .wineflight #best-practice .left ul {
         text-align: left;
         list-style: none;
-        overflow: hidden;
         padding: 0; }
         .wineflight #best-practice .left ul li {
           font-size: 30px;
           padding-left: 75px;
           position: relative;
-          margin-bottom: 10px;
-          min-height: 75px; }
+          margin-bottom: 55px; }
           @media only screen and (min-device-width: 1024px) {
             .wineflight #best-practice .left ul li {
               font-size: 20px;
@@ -916,22 +878,14 @@ nav {
             .wineflight #best-practice .left ul li {
               font-size: 45px; } }
           .wineflight #best-practice .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 0;
+            transform: translateY(-50%);
             width: 70px;
             height: 70px;
             background: #FFF;
-            border: solid 3px #A3CB00;
+            border: solid 1px #A3CB00;
             border-radius: 50%; }
             @media only screen and (min-device-width: 1024px) {
               .wineflight #best-practice .left ul li .img {
@@ -1611,15 +1565,6 @@ nav {
               font-size: 20px;
               padding-left: 60px; } }
           .instafarm #best-wine .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
             top: 0;
             left: 0;
@@ -1694,15 +1639,6 @@ nav {
               font-size: 20px;
               padding-left: 60px; } }
           .instafarm #best-practice .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
             top: 0;
             left: 0;
@@ -2192,15 +2128,6 @@ nav {
             .ourProducts #best-wine .left ul li {
               font-size: 45px; } }
           .ourProducts #best-wine .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
             top: 0;
             left: 0;
@@ -2275,15 +2202,6 @@ nav {
             .ourProducts #best-practice .left ul li {
               font-size: 45px; } }
           .ourProducts #best-practice .left ul li .img {
-            -webkit-transition: all .3s;
-            /* Safari */
-            -moz-transition: all .3s;
-            /*Firefox*/
-            -ms-transition: all .3s;
-            /*IE10+*/
-            -o-transition: all .3s;
-            /*Opera*/
-            transition: all .3s;
             position: absolute;
             top: 0;
             left: 0;
@@ -2492,6 +2410,13 @@ nav {
         padding-top: 235px !important; } }
     .operators .jumbotron .container {
       color: #FFF; }
+      @media only screen and (max-device-width: 1024px) {
+        .operators .jumbotron .container .sub-container {
+          position: absolute;
+          width: 70%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); } }
       .operators .jumbotron .container .down {
         width: 60px;
         bottom: 100px;

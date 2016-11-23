@@ -24,6 +24,16 @@
       .container{
         color:#FFF;
 
+        @media only screen and (max-device-width: 1024px) {
+          .sub-container{
+            position: absolute;
+            width:70%;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+
         .down{
           width:60px;
           bottom: 100px;
