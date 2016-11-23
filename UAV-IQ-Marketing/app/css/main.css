@@ -1180,7 +1180,8 @@ nav {
     margin-top: 30px;
     position: relative; }
     .datacollection #actionalble_data div h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: 25px; }
       @media only screen and (max-device-width: 768px) {
         .datacollection #actionalble_data div h2 {
           font-size: 45px; } }
@@ -2018,6 +2019,9 @@ nav {
           padding: 0px 230px; } }
   .ourProducts #actionalble_data .interest {
     text-align: center; }
+    @media only screen and (max-device-width: 768px) {
+      .ourProducts #actionalble_data .interest h4 span {
+        font-size: 45px; } }
     .ourProducts #actionalble_data .interest button {
       background-color: #A3CB00;
       font-size: 15px;
@@ -2027,8 +2031,10 @@ nav {
       color: #FFF; }
       @media only screen and (max-device-width: 768px) {
         .ourProducts #actionalble_data .interest button {
+          margin-left: 0;
+          margin-top: 30px;
           font-size: 45px;
-          width: 100%; } }
+          width: 85%; } }
   .ourProducts #work {
     background-image: url("../img/Pattern_Specialized projects.png");
     background-attachment: fixed;
@@ -2488,8 +2494,13 @@ nav {
       color: #FFF; }
       .operators .jumbotron .container .down {
         width: 60px;
-        margin: 0 auto;
-        margin-top: 70px; }
+        bottom: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); }
+        @media only screen and (min-device-width: 1024px) {
+          .operators .jumbotron .container .down {
+            width: 30px; } }
         .operators .jumbotron .container .down img {
           width: 100%; }
       @media only screen and (min-device-width: 1024px) {
@@ -2550,7 +2561,8 @@ nav {
     margin-top: 30px;
     position: relative; }
     .operators #actionalble_data div h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: 25px; }
       @media only screen and (max-device-width: 768px) {
         .operators #actionalble_data div h2 {
           font-weight: bold;
