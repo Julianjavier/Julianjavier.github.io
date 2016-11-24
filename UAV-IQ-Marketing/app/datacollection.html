@@ -12,11 +12,11 @@
     <nav class="navbar navbar-static-top navbar-dark bg-inverse">
       <div class="droneOperators"><p><span class="trn">Are you a drone operator or a farmer flying your own drone?</span> <button class="trn" type="button" name="button">GET STARTED NOW</button></p></div>
       <a class="navbar-brand" href="index.html"><img src="img/logos/uav-iq-precision-agriculture-logo-horizontal_white.png" alt="" /></a>
-      <ul class="nav navbar-nav">
+      <ul id="parent-list" class="nav navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="our_pruducts.html"><span class="trn">Products</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item stacked-nav">
           <a class="nav-link" href="#"><span class="trn">Enterprise Software</span></a>
           <ul>
            <li><a class="nav-link trn" href="wineflight.html">Wine Flight</a></li>
@@ -35,6 +35,20 @@
         <li class="nav-item active">
           <a class="nav-link trn" href="index.html">Contact Us</a>
         </li>
+
+        <li class="nav-item active">
+          <a class="nav-link trn" href="index.html">Contact Us</a>
+        </li>
+
+        <li class="nav-item stacked-nav language">
+          <a class="nav-link"><span>English</span></a>
+          <ul>
+           <li><a data-language="en" class="nav-link">English</a></li>
+           <li><a data-language="sp" class="nav-link">Español</a></li>
+          </ul>
+
+          <i class="fa fa-caret-down"></i>
+        </li>
       </ul>
 
       <div class="stack">
@@ -44,36 +58,38 @@
 
     <div class="jumbotron" style="background-image: url('img/TV-Colchagua.jpg');">
       <div class="container">
-        <h1 class="display-3">On-Demand Aerial Scouting</h1>
-        <p>Let drones and professional grade sensors help you detect what your eyes can’t</p>
-        <p class="button">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Book a flight now</a>
-        </p>
+        <div class="sub-container">
+          <h1 class="display-3 trn">On-Demand Aerial Scouting</h1>
+          <p>Let drones and professional grade sensors help you detect what your eyes can’t</p>
+          <p class="button">
+            <a class="btn btn-primary btn-lg trn" href="#" role="button">Book a flight now</a>
+          </p>
+        </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div id="actionalble_data" class="row">
-        <h1 class="section-header">How it Works</h1>
+        <h1 class="section-header trn">How it Works</h1>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data collection_How it works 1.png" alt=""/>
-          <h2>Use our simple web-based tools to define the area(s) you want scouted</h2>
+          <h2 class="trn">Use our simple web-based tools to define the area(s) you want scouted</h2>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data collection_How it works 2.png" alt=""/>
-          <h2>Licensed drone operators scout your field without disturbing your operations</h2>
+          <h2 class="trn">Licensed drone operators scout your field without disturbing your operations</h2>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data collection_How it works 3.png" alt=""/>
-          <h2>We deliver your data to your team in our mobile App</h2>
+          <h2 class="trn">We deliver your data to your team in our mobile App</h2>
         </div>
 
         <div class="col-sm-12 col-md-12">
           <p class="button">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Book a flight now</a>
+            <a class="btn btn-primary btn-lg trn" href="#" role="button">Book a flight now</a>
           </p>
         </div>
       </div>
@@ -81,21 +97,21 @@
 
     <div class="container-fluid">
       <div class="work row">
-        <h1 class="section-header">Why Drones ?</h1>
+        <h1 class="section-header trn">Why Drones ?</h1>
         <div class="col-sm-12 col-md-4">
           <img src="img/light.png" alt=""/>
-          <h2>Schedule field surveys where and when you need it - as often as you need it</h2>
+          <h2 class="trn">Schedule field surveys where and when you need it - as often as you need it</h2>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/lens.png" alt=""/>
-          <h2>Resolution as high as 2 cm / pixel</h2>
-          <p>(10x better than manned aviation)</p>
+          <h2 class="trn">Resolution as high as 2 cm / pixel</h2>
+          <p class="trn">(10x better than manned aviation)</p>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/24.png" alt=""/>
-          <h2>Rapid processing and delivery of results</h2>
+          <h2 class="trn">Rapid processing and delivery of results</h2>
         </div>
       </div>
 
@@ -103,36 +119,19 @@
       <div class="work row">
         <div class="col-sm-12 col-md-4">
           <img src="img/icon sunset.png" alt=""/>
-          <h2>Flights can be flown at optimal times of day to avoid problematic sun angles</h2>
+          <h2 class="trn">Flights can be flown at optimal times of day to avoid problematic sun angles</h2>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/icon drone cloud.png" alt=""/>
-          <h2>Fly under cloud decks to collect data on days when manned aircraft or satellites can't</h2>
+          <h2 class="trn">Fly under cloud decks to collect data on days when manned aircraft or satellites can't</h2>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/rising-graph.png" alt=""/>
-          <h2>Drone-collected data can be utilized to build 3-D models for topographic study</h2>
+          <h2 class="trn">Drone-collected data can be utilized to build 3-D models for topographic study</h2>
         </div>
       </div>
-
-      <!-- <div class="work row">
-        <div class="col-sm-12 col-md-4">
-          <img src="img/icon sunset.png" alt=""/>
-          <h2>Flights can be flown at optimal times of day to avoid problematic sun angles</h2>
-        </div>
-
-        <div class="col-sm-12 col-md-4">
-          <img src="img/icon drone cloud.png" alt=""/>
-          <h2>Fly under cloud decks to collect data on days when manned aircraft or satellites can't</h2>
-        </div>
-
-        <div class="col-sm-12 col-md-4">
-          <img src="img/rising-graph.png" alt=""/>
-          <h2>Drone-collected data can be utilized to build 3-D models for topographic study</h2>
-        </div>
-      </div> -->
     </div>
 
     <div class="container-fluid">
@@ -140,74 +139,76 @@
         <h1 class="section-header">We are operating with our own certified pilots and trusted partners worldwide</h1>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>UAV-IQ</h2>
-          <p>California - USA</p>
+          <h2 class="trn">UAV-IQ</h2>
+          <p class="trn">California - USA</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Aerotech UAV</h2>
-          <p>Southern-Australia</p>
+          <h2 class="trn">Aerotech UAV</h2>
+          <p class="trn">Southern-Australia</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Atechsys</h2>
-          <p>France</p>
+          <h2 class="trn">Atechsys</h2>
+          <p class="trn">France</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Vantage Vertical</h2>
-          <p>East Coast - USA</p>
+          <h2 class="trn">Vantage Vertical</h2>
+          <p class="trn">East Coast - USA</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Aviasur</h2>
-          <p>Chile</p>
+          <h2 class="trn">Aviasur</h2>
+          <p class="trn">Chile</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Winemaker</h2>
-          <p>PUERTO RICO</p>
+          <h2 class="trn">Winemaker</h2>
+          <p class="trn">PUERTO RICO</p>
         </div>
 
 
         <div  class="col-sm-12">
-          <p>Want to know if we already cover you area?</p>
+          <p class="trn">Want to know if we already cover you area?</p>
           <p class="button">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Book a flight now</a>
+            <a class="btn btn-primary btn-lg trn" href="#" role="button">Book a flight now</a>
           </p>
-          <p>Are you a drone pilot?<a href="#">Learn how we can help you serve your clients better</a></p>
+          <p><span class="trn">Are you a drone pilot?</span><a class="trn" href="#">Learn how we can help you serve your clients better</a></p>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div id="contact-us" class="row">
-        <h1>Get in touch with us</h1>
+        <h1 class="trn">Get in touch with us</h1>
         <form class="" action="index.html" method="post">
           <div class="col-sm-6">
-            <input type="text" name="name" value="" placeholder="First Name">
+            <label class="trn" for="">First Name</label>
+            <input type="text" name="name" value="" placeholder="">
           </div>
           <div  class="col-sm-6">
-            <input type="text" name="name" value="" placeholder="Last Name">
+            <label class="trn" for="">Last Name</label>
+            <input type="text" name="name" value="" placeholder="">
           </div>
 
           <div class="col-sm-6">
-            <label for="">E-Mail</label>
+            <label class="trn" for="">E-Mail</label>
             <input type="text" name="name" value="">
           </div>
           <div  class="col-sm-6">
-            <label for="">Location</label>
+            <label class="trn" for="">Location</label>
             <input type="text" name="name" value="">
           </div>
 
           <div  class="col-sm-12">
-            <label for="">Message</label>
+            <label class="trn" for="">Message</label>
             <textarea name="message"></textarea>
           </div>
 
           <div class="col-sm-12">
             <div class="g-recaptcha" data-sitekey="6Lfw2CcTAAAAAMUgBk7J4Qg3si_bz6NWFuQJigbN"></div>
-            <button type="button" name="button">SEND</button>
+            <button class="trn" type="button" name="button">SEND</button>
           </div>
         </form>
       </div>

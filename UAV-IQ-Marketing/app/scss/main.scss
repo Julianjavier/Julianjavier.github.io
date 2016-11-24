@@ -688,6 +688,7 @@ button{
     .nav{
       border:none;
       .nav-item{
+        position: relative;
         padding-top: 30px;
         padding-bottom: 30px;
 
@@ -707,6 +708,14 @@ button{
 
         &:nth-child(2){
           a{
+            color:#A3CB00;
+            background-color:#FFF;
+          }
+        }
+
+        &:last-child{
+          a{
+            padding: 15px 35px 15px 15px;
             color:#A3CB00;
             background-color:#FFF;
           }
@@ -762,16 +771,17 @@ button{
 
         .nav-active{
           z-index: 99;
+          @media only screen and (max-device-width: 1024px) {
+            li{
+              padding:30px 40px;
 
-          li{
-            padding:30px 40px;
-
-            &:hover{
-              a{
-                color: #A3CB00 !important;
-                background-color: #FFF;
+              &:hover{
+                a{
+                  color: #A3CB00 !important;
+                  background-color: #FFF;
+                }
               }
-            }
+            }  
           }
         }
 
@@ -783,6 +793,15 @@ button{
               border: none;
             }
           }
+        }
+
+        i{
+          color: #A3CB00;
+          font-size: 20px;
+          position: absolute;
+          top:50%;
+          transform: translateY(-50%);
+          right:10px;
         }
       }
 

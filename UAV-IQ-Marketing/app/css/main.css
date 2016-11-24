@@ -427,6 +427,7 @@ nav {
   nav .nav {
     border: none; }
     nav .nav .nav-item {
+      position: relative;
       padding-top: 30px;
       padding-bottom: 30px; }
       @media screen and (max-device-width: 1024px) {
@@ -440,6 +441,10 @@ nav {
           color: #A3CB00;
           background-color: #FFF; }
       nav .nav .nav-item:nth-child(2) a {
+        color: #A3CB00;
+        background-color: #FFF; }
+      nav .nav .nav-item:last-child a {
+        padding: 15px 35px 15px 15px;
         color: #A3CB00;
         background-color: #FFF; }
       nav .nav .nav-item ul {
@@ -476,16 +481,24 @@ nav {
             background-color: #A3CB00; }
       nav .nav .nav-item .nav-active {
         z-index: 99; }
-        nav .nav .nav-item .nav-active li {
-          padding: 30px 40px; }
-          nav .nav .nav-item .nav-active li:hover a {
-            color: #A3CB00 !important;
-            background-color: #FFF; }
+        @media only screen and (max-device-width: 1024px) {
+          nav .nav .nav-item .nav-active li {
+            padding: 30px 40px; }
+            nav .nav .nav-item .nav-active li:hover a {
+              color: #A3CB00 !important;
+              background-color: #FFF; } }
       @media screen and (min-width: 768px) {
         nav .nav .nav-item:hover ul {
           height: auto;
           width: 100%;
           border: none; } }
+      nav .nav .nav-item i {
+        color: #A3CB00;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px; }
     @media only screen and (max-device-width: 1024px) {
       nav .nav {
         background-color: #fff;
@@ -1070,6 +1083,13 @@ nav {
       @media only screen and (max-device-width: 768px) {
         .datacollection .jumbotron .container {
           width: 880px; } }
+      @media only screen and (max-device-width: 1024px) {
+        .datacollection .jumbotron .container .sub-container {
+          position: absolute;
+          width: 85%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); } }
       .datacollection .jumbotron .container h1 {
         font-size: 65px;
         text-align: center;
@@ -1835,6 +1855,13 @@ nav {
             position: absolute;
             top: 30%;
             transform: translateY(30%); } }
+        @media only screen and (max-device-width: 1024px) {
+          .ourProducts .jumbotron .container .subcontainer {
+            position: absolute;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%); } }
       .ourProducts .jumbotron .container .image-container {
         width: 100%; }
         .ourProducts .jumbotron .container .image-container img {

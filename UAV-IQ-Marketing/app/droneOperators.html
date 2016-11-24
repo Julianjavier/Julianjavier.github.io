@@ -12,11 +12,11 @@
     <nav class="navbar navbar-static-top navbar-dark bg-inverse">
       <div class="droneOperators"><p><span class="trn">Are you a drone operator or a farmer flying your own drone?</span> <button class="trn" type="button" name="button">GET STARTED NOW</button></p></div>
       <a class="navbar-brand" href="index.html"><img src="img/logos/uav-iq-precision-agriculture-logo-horizontal_white.png" alt="" /></a>
-      <ul class="nav navbar-nav">
+      <ul id="parent-list" class="nav navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="our_pruducts.html"><span class="trn">Products</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item stacked-nav">
           <a class="nav-link" href="#"><span class="trn">Enterprise Software</span></a>
           <ul>
            <li><a class="nav-link trn" href="wineflight.html">Wine Flight</a></li>
@@ -35,6 +35,20 @@
         <li class="nav-item active">
           <a class="nav-link trn" href="index.html">Contact Us</a>
         </li>
+
+        <li class="nav-item active">
+          <a class="nav-link trn" href="index.html">Contact Us</a>
+        </li>
+
+        <li class="nav-item stacked-nav language">
+          <a class="nav-link"><span>English</span></a>
+          <ul>
+           <li><a data-language="en" class="nav-link">English</a></li>
+           <li><a data-language="sp" class="nav-link">Español</a></li>
+          </ul>
+
+          <i class="fa fa-caret-down"></i>
+        </li>
       </ul>
 
       <div class="stack">
@@ -46,9 +60,9 @@
 
       <div class="container">
         <div class="sub-container">
-          <h1 class="display-3">Post-Flight Cloud Data Processing. No Further Investment Required</h1>
+          <h1 class="display-3 trn">Post-Flight Cloud Data Processing. No Further Investment Required</h1>
           <p class="button">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started Now</a>
+            <a class="btn btn-primary btn-lg trn" href="#" role="button">Get Started Now</a>
           </p>
         </div>
 
@@ -60,38 +74,31 @@
 
     <div class="container-fluid">
       <div id="actionalble_data" class="row">
-        <h1 class="section-header">We help drone service providers around the world grow their businesses by providing no cost processing and ensuring their clients have the tools required to fully adopt remote sensing technology</h1>
+        <h1 class="section-header trn">We help drone service providers around the world grow their businesses by providing no cost processing and ensuring their clients have the tools required to fully adopt remote sensing technology</h1>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data collection_How it works 1.png" alt=""/>
-          <h2>Upload your Data</h2>
-          <p>
-            We provide easy to use tools that upload imagery directly to our servers
-          </p>
+          <h2 class="trn">Upload your Data</h2>
+          <p class="trn">We provide easy to use tools that upload imagery directly to our servers</p>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data processing_Number 2.png" alt=""/>
-          <h2>Cloud Processing and Storage</h2>
-          <p>
-            We process imagery into comprehensive intuitive visual presentations or crop health
-We'll also provide a storage solution so customers can compare current to past results
-          </p>
+          <h2 class="trn">Cloud Processing and Storage</h2>
+          <p class="trn">We process imagery into comprehensive intuitive visual presentations or crop health We'll also provide a storage solution so customers can compare current to past results</p>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <img src="img/Data collection_How it works 3.png" alt=""/>
-          <h2>Delivery to Best in Class Agriculture Decision Making Tools</h2>
-          <p>
-            We built the tools your clients need to make the most of their data
-          </p>
+          <h2 class="trn">Delivery to Best in Class Agriculture Decision Making Tools</h2>
+          <p class="trn">We built the tools your clients need to make the most of their data</p>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div id="drone-form" class="row">
-        <h1 class="section-header">Take Your Precision Agriculture to the Next Level</h1>
+        <h1 class="section-header trn">Take Your Precision Agriculture to the Next Level</h1>
         <form action="index.html" method="post">
           <div class="col-sm-6 col-md-2">
             <input type="text" name="Name" value="" placeholder="Name:">
@@ -106,7 +113,7 @@ We'll also provide a storage solution so customers can compare current to past r
             <input type="text" name="Work Email" value="" placeholder="Work Email:">
           </div>
           <div class="col-sm-12 col-md-4">
-            <button type="submit" name="button">Get Started Now</button>
+            <button type="submit" name="button" class="trn">Get Started Now</button>
           </div>
         </form>
       </div>
@@ -119,9 +126,7 @@ We'll also provide a storage solution so customers can compare current to past r
             <img src="img/Bitmap 4-norm.png" alt="" />
           </div>
           <div class="col-sm-11">
-            <p>
-              Focus on customer acquisition and flight operations - we'll make sure your clients are satisfied
-            </p>
+            <p class="trn">Focus on customer acquisition and flight operations - we'll make sure your clients are satisfied</p>
           </div>
         </div>
 
@@ -130,9 +135,7 @@ We'll also provide a storage solution so customers can compare current to past r
             <img src="img/Bitmap 4-norm.png" alt="" />
           </div>
           <div class="col-sm-11">
-            <p>
-              Help your clients get the most of the data you collect.
-            </p>
+            <p class="trn">Help your clients get the most of the data you collect.</p>
           </div>
         </div>
 
@@ -141,95 +144,95 @@ We'll also provide a storage solution so customers can compare current to past r
             <img src="img/Bitmap 4-norm.png" alt="" />
           </div>
           <div class="col-sm-11">
-            <p>
-              We won’t eat your margin & we don’t increase your risk of getting started with overhead
-            </p>
+            <p class="trn">We won’t eat your margin & we don’t increase your risk of getting started with overhead</p>
           </div>
         </div>
 
         <div class="col-sm-12">
-          <h3>NDVI, Additional Crop Indices, Digital Surface Models and Advanced Analysis such as Hydrology Mapping… Learn more about the imagery products we can deliver to your clients:</h3>
+          <h3 class="trn">NDVI, Additional Crop Indices, Digital Surface Models and Advanced Analysis such as Hydrology Mapping… Learn more about the imagery products we can deliver to your clients:</h3>
         </div>
 
         <div class="col-sm-12">
-          <a href="#"><button type="submit" name="button">Get Started Now</button></a>
+          <a href="#"><button type="submit" name="button" class="trn">Get Started Now</button></a>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div id="advanteges" class="row">
-        <h1 class="section-header">We are operating with our own certified pilots and trusted partners worldwide</h1>
+        <h1 class="section-header trn">We are operating with our own certified pilots and trusted partners worldwide</h1>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>UAV-IQ</h2>
-          <p>California - USA</p>
+          <h2 class="trn">UAV-IQ</h2>
+          <p class="trn">California - USA</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Aerotech UAV</h2>
-          <p>Southern-Australia</p>
+          <h2 class="trn">Aerotech UAV</h2>
+          <p class="trn">Southern-Australia</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Atechsys</h2>
-          <p>France</p>
+          <h2 class="trn">Atechsys</h2>
+          <p class="trn">France</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Vantage Vertical</h2>
-          <p>East Coast - USA</p>
+          <h2 class="trn">Vantage Vertical</h2>
+          <p class="trn">East Coast - USA</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Aviasur</h2>
-          <p>Chile</p>
+          <h2 class="trn">Aviasur</h2>
+          <p class="trn">Chile</p>
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
-          <h2>Winemaker</h2>
-          <p>PUERTO RICO</p>
+          <h2 class="trn">Winemaker</h2>
+          <p class="trn">PUERTO RICO</p>
         </div>
 
 
         <div  class="col-sm-12">
-          <p>Want to know if we already cover you area?</p>
+          <p class="trn">Want to know if we already cover you area?</p>
           <p class="button">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Book a flight now</a>
+            <a class="btn btn-primary btn-lg trn" href="#" role="button">Book a flight now</a>
           </p>
-          <p>Are you a drone pilot?<a href="#">Learn how we can help you serve your clients better</a></p>
+          <p><span class="trn">Are you a drone pilot?</span><a href="#" class="trn">Learn how we can help you serve your clients better</a></p>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div id="contact-us" class="row">
-        <h1>Get in touch with us</h1>
+        <h1 class="trn">Get in touch with us</h1>
         <form class="" action="index.html" method="post">
           <div class="col-sm-6">
-            <input type="text" name="name" value="" placeholder="First Name">
+            <label class="trn" for="">First Name</label>
+            <input type="text" name="name" value="" placeholder="">
           </div>
           <div  class="col-sm-6">
-            <input type="text" name="name" value="" placeholder="Last Name">
+            <label class="trn" for="">Last Name</label>
+            <input type="text" name="name" value="" placeholder="">
           </div>
 
           <div class="col-sm-6">
-            <label for="">E-Mail</label>
+            <label class="trn" for="">E-Mail</label>
             <input type="text" name="name" value="">
           </div>
           <div  class="col-sm-6">
-            <label for="">Location</label>
+            <label class="trn" for="">Location</label>
             <input type="text" name="name" value="">
           </div>
 
           <div  class="col-sm-12">
-            <label for="">Message</label>
+            <label class="trn" for="">Message</label>
             <textarea name="message"></textarea>
           </div>
 
           <div class="col-sm-12">
             <div class="g-recaptcha" data-sitekey="6Lfw2CcTAAAAAMUgBk7J4Qg3si_bz6NWFuQJigbN"></div>
-            <button type="button" name="button">Send</button>
+            <button class="trn" type="button" name="button">SEND</button>
           </div>
         </form>
       </div>
