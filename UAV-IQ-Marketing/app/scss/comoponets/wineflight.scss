@@ -664,4 +664,25 @@
       }
     }
   }
+
+  #video-container{
+    div{
+      width:45%;
+      position: relative;
+      min-height:360px;
+      margin: 0 auto;
+
+      iframe{
+        width: 100%;
+      }
+
+      @media only screen and (max-device-width: 1024px) {
+        width: 85%;
+
+        iframe{
+          width: 100%;
+        }
+      }
+    }
+  }
 }

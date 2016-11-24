@@ -971,6 +971,11 @@ $(document).ready(function(){
         "Get in touch with us":{
           en:"Get in touch with us",
           sp:"Póngase en contacto con nosotros"
+        },
+
+        "Are you a drone operator or a farmer flying your own drone?":{
+          en:"Are you a drone operator or a farmer flying your own drone?",
+          sp:"¿Es un operador de aviones no tripulados o un granjero que vuela su propio avión?"
         }
     }
 

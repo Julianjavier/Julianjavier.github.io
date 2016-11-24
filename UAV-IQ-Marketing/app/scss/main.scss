@@ -700,6 +700,7 @@ button{
         a{
           color:#FFF;
           border-radius:5px;
+
           &:hover{
             color:#A3CB00;
             background-color:#FFF;
@@ -781,7 +782,7 @@ button{
                   background-color: #FFF;
                 }
               }
-            }  
+            }
           }
         }
 
@@ -802,6 +803,12 @@ button{
           top:50%;
           transform: translateY(-50%);
           right:10px;
+
+          @media only screen and (max-device-width: 1024px) {
+            right:50px;
+            right:20px;
+            font-size: 70px;
+          }
         }
       }
 
@@ -817,6 +824,11 @@ button{
           clear: both;
           width: 100%;
           border-bottom: 2px solid #A3CB00;
+
+          .first{
+            text-transform: uppercase;
+          }
+
           a{
             color:#000;
             font-size:17px;
