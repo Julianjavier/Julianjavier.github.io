@@ -1,0 +1,15 @@
+.highlight {
+  position: relative; }
+  .highlight:after {
+    background-image: url("../img/Red-Cross-Mark-PNG-Picture.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: ""; }
+    .highlight:after img {
+      height: 100%; }
