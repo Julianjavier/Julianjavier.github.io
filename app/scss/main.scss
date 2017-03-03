@@ -1,21 +1,27 @@
 .highlight{
-  // background-color:#f66;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:25px;
+  color:#F4511E;
+}
 
-  &:after{
-    background-image: url("../img/Red-Cross-Mark-PNG-Picture.png");
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size:contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    content:"";
+.label, td{
+  &:first-child{
+    text-align: left;
+  }
+  text-align: right;
+  font-weight: 600;
+  font-size: 14px;
+}
 
-    img{
-      height: 100%;
-    }
+.label{
+  img{
+    display: none;
+    width: 20px;
+    margin:0px 10px;
+  }
+  
+  .showImage{
+    display: inline;
   }
 }
