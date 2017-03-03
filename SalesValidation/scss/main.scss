@@ -1,0 +1,27 @@
+.highlight{
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:25px;
+  color:#F4511E;
+}
+
+.label, td{
+  &:first-child{
+    text-align: left;
+  }
+  text-align: right;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.label{
+  img{
+    display: none;
+    width: 20px;
+    margin:0px 10px;
+  }
+  
+  .showImage{
+    display: inline;
+  }
+}
