@@ -54,28 +54,28 @@ $(document).ready(function() {
 				title: "SKU / Name",
 				data: "Product_Company_Number",
 				render : function ( data, type, full ) {
-        	return "<span class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='img/War-Cross-Mark-PNG-Picture.png'></span>";
+        	return "<span class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='./app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
       {
 				title: "MIN",
 				data: "Min_Price",
 				render : function ( data, type, full ) {
-					return "<span class='label label-flat text-primary-600'> <img src='img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
+					return "<span class='label label-flat text-primary-600'> <img src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
 				}
 			},
       {
 				title: "MAX",
 				data:"Max_Price",
 				render : function ( data, type, full ) {
-					return "<span class='label label-flat text-primary-600'> <img src='img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
+					return "<span class='label label-flat text-primary-600'> <img src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
 				}
 			},
 			{
 				title: "Promo Price Goal",
 				data:"Promo_Price_Goal",
 				render : function ( data, type, full ) {
-					return "<span class='label label-flat text-primary-600'><img src='img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
+					return "<span class='label label-flat text-primary-600'><img src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
 				}
 			}
     ],
