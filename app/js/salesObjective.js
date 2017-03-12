@@ -226,20 +226,20 @@ $(document).ready(function() {
 			// ------------------------------
 
 			// Background path
-			svgappend('path')
+			svg.append('path')
 					.attr('class', 'd3-progress-background')
 					.attr('d', arc.endAngle(twoPi))
 					.style('fill', '#eee');
 
 			// Foreground path
-			var foreground = svgappend('path')
+			var foreground = svg.append('path')
 					.attr('class', 'd3-progress-foreground')
 					.attr('filter', 'url(#blur)')
 					.style('fill', color)
 					.style('stroke', color);
 
 			// Front path
-			var front = svgappend('path')
+			var front = svg.append('path')
 					.attr('class', 'd3-progress-front')
 					.style('fill', color)
 					.style('fill-opacity', 1);
@@ -251,24 +251,24 @@ $(document).ready(function() {
 
 			// Percentage text value
 			var numberText = d3.select(element)
-					append('h2')
+					.append('h2')
 							.attr('class', 'mt-15 mb-5')
 
 			// Icon
 			d3.select(element)
-					append("i")
+					.append("i")
 							.attr("class", iconClass + " counter-icon")
 							.attr('style', 'top: ' + ((boxSize - iconSize) / 2) + 'px;' + 'font-size: ' + iconSize + 'px;' + 'margin-left: -'+ ((boxSize - iconSize) / 2) +'px;');
 
 
 			// Title
 			d3.select(element)
-					append('div')
+					.append('div')
 							.text(textTitle);
 
 			// Subtitle
 			d3.select(element)
-					append('div')
+					.append('div')
 							.attr('class', 'text-size-small text-muted')
 							.text(textAverage);
 
