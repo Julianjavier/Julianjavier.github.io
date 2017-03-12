@@ -196,7 +196,7 @@ $(document).ready(function() {
 			// ------------------------------
 
 			// Add SVG element
-			var container = d3Containerappend('svg');
+			var container = d3Container.append('svg');
 
 			// Add SVG group
 			var svg = container
