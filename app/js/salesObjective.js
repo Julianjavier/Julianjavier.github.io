@@ -43,13 +43,13 @@ $(document).ready(function() {
 			// ------------------------------
 
 			// Add SVG element
-			var container = d3Container.append('svg');
+			var container = d3Containerappend('svg');
 
 			// Add SVG group
 			var svg = container
 					.attr('width', boxSize)
 					.attr('height', boxSize)
-					.append('g')
+					append('g')
 							.attr('transform', 'translate(' + (boxSize / 2) + ',' + (boxSize / 2) + ')');
 
 
@@ -73,20 +73,20 @@ $(document).ready(function() {
 			// ------------------------------
 
 			// Background path
-			svg.append('path')
+			svgappend('path')
 					.attr('class', 'd3-progress-background')
 					.attr('d', arc.endAngle(twoPi))
 					.style('fill', '#eee');
 
 			// Foreground path
-			var foreground = svg.append('path')
+			var foreground = svgappend('path')
 					.attr('class', 'd3-progress-foreground')
 					.attr('filter', 'url(#blur)')
 					.style('fill', color)
 					.style('stroke', color);
 
 			// Front path
-			var front = svg.append('path')
+			var front = svgappend('path')
 					.attr('class', 'd3-progress-front')
 					.style('fill', color)
 					.style('fill-opacity', 1);
@@ -98,24 +98,24 @@ $(document).ready(function() {
 
 			// Percentage text value
 			var numberText = d3.select(element)
-					.append('h2')
+					append('h2')
 							.attr('class', 'mt-15 mb-5')
 
 			// Icon
 			d3.select(element)
-					.append("i")
+					append("i")
 							.attr("class", iconClass + " counter-icon")
 							.attr('style', 'top: ' + ((boxSize - iconSize) / 2) + 'px;' + 'font-size: ' + iconSize + 'px;' + 'margin-left: -'+ ((boxSize - iconSize) / 2) +'px;');
 
 
 			// Title
 			d3.select(element)
-					.append('div')
+					append('div')
 							.text(textTitle);
 
 			// Subtitle
 			d3.select(element)
-					.append('div')
+					append('div')
 							.attr('class', 'text-size-small text-muted')
 							.text(textAverage);
 
@@ -216,35 +216,35 @@ $(document).ready(function() {
 				title: "Clients",
 				data: "clients",
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='.app/img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
 				title: "Venta Año Pasado Current Month",
 				data: "Venta Año Pasado Current Month",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
 				}
 			},
 			{
 				title: "Current-1",
 				data:"Current-1",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
 				}
 			},
 			{
 				title: "Current-2",
 				data:"Current-2",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
 				}
 			},
 			{
 				title: "Current-3",
 				data:"Current-3",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
 				}
 			}
 		],
