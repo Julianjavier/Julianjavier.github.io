@@ -202,7 +202,7 @@ $(document).ready(function() {
 			var svg = container
 					.attr('width', boxSize)
 					.attr('height', boxSize)
-					append('g')
+					.append('g')
 							.attr('transform', 'translate(' + (boxSize / 2) + ',' + (boxSize / 2) + ')');
 
 
