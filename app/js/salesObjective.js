@@ -216,35 +216,35 @@ $(document).ready(function() {
 				title: "Clients",
 				data: "clients",
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='.app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
 				title: "Venta Año Pasado Current Month",
 				data: "Venta Año Pasado Current Month",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
 				}
 			},
 			{
 				title: "Current-1",
 				data:"Current-1",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
 				}
 			},
 			{
 				title: "Current-2",
 				data:"Current-2",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
 				}
 			},
 			{
 				title: "Current-3",
 				data:"Current-3",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='.app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
 				}
 			}
 		],
