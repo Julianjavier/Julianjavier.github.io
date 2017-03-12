@@ -11,10 +11,43 @@
   .label:first-child, td:first-child {
     text-align: left; }
 
-.label img {
-  display: none;
-  width: 20px;
-  margin: 0px 10px; }
+.label {
+  border-width: 2px;
+  border-radius: 0;
+  position: relative; }
+  .label img {
+    display: inline;
+    height: 18px;
+    margin: 0px 5px;
+    position: absolute;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* IE 5-7 */
+    filter: alpha(opacity=0);
+    /* Netscape */
+    -moz-opacity: 0;
+    /* Safari 1.x */
+    -khtml-opacity: 0;
+    /* Good browsers */
+    opacity: 0; }
+  .label .showImage {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 1;
+    /* Safari 1.x */
+    -khtml-opacity: 1;
+    /* Good browsers */
+    opacity: 1; }
 
-.label .showImage {
-  display: inline; }
+.salesPlans {
+  min-height: 153.984px; }
+  .salesPlans h4 {
+    margin: 0;
+    text-align: center; }
+  .salesPlans h3 {
+    margin: 15px 0 0 0;
+    text-align: center;
+    font-weight: bold; }
