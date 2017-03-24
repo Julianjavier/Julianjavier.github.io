@@ -57,7 +57,7 @@ $(document).ready(function() {
 				data: "Product_Company_Number",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='app/img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='./app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
@@ -65,7 +65,7 @@ $(document).ready(function() {
 				data: "Min_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
 				}
 			},
 			{
@@ -73,7 +73,7 @@ $(document).ready(function() {
 				data:"Max_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
 				}
 			},
 			{
@@ -81,7 +81,7 @@ $(document).ready(function() {
 				data:"Promo_Price_Goal",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
 				}
 			}
 		],
@@ -122,7 +122,7 @@ $(document).ready(function() {
 				data: "Product_Company_Number",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='app/img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='./app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
@@ -130,7 +130,7 @@ $(document).ready(function() {
 				data: "Min_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
 				}
 			},
 			{
@@ -138,7 +138,7 @@ $(document).ready(function() {
 				data:"Max_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
 				}
 			},
 			{
@@ -146,7 +146,7 @@ $(document).ready(function() {
 				data:"Promo_Price_Goal",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
 				}
 			}
 		],
@@ -187,7 +187,7 @@ $(document).ready(function() {
 				data: "Product_Company_Number",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' style='padding-right:20px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='app/img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' style='padding-right:20px;' class='label label-flat text-primary-600'>"+full['Product_Company_Number']+" || "+full['Description']+" <img src='./app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
@@ -195,7 +195,7 @@ $(document).ready(function() {
 				data: "Min_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Min_Price']+"</span>";
 				}
 			},
 			{
@@ -203,7 +203,7 @@ $(document).ready(function() {
 				data:"Max_Price",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+"$"+full['Max_Price']+"</span>";
 				}
 			},
 			{
@@ -211,7 +211,7 @@ $(document).ready(function() {
 				data:"Promo_Price_Goal",
 
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Promo_Price_Goal']+"</span>";
 				}
 			}
 		],

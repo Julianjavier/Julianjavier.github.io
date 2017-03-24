@@ -9,6 +9,7 @@ var basicTable = [
 var totalHits = 0;
 
 $(document).ready(function() {
+
 	function setNewTotalHits(){
 		var salesPlan = parseFloat($("#salesPlan").html()),
 				promoBeer = parseFloat($("#promoBeer").html()),
@@ -81,35 +82,35 @@ $(document).ready(function() {
 				title: "Clients",
 				data: "clients",
 				render : function ( data, type, full ) {
-					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='app/img/War-Cross-Mark-PNG-Picture.png'></span>";
+					return "<span style='padding-right:25px;' class='label label-flat text-primary-600'>"+full['clients']+" <img src='./app/img/War-Cross-Mark-PNG-Picture.png'></span>";
 				}
 			},
 			{
 				title: "Venta Año Pasado Current Month",
 				data: "Venta Año Pasado Current Month",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Venta Año Pasado Current Month']+"</span>";
 				}
 			},
 			{
 				title: "Current-1",
 				data:"Current-1",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'> <img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-1']+"</span>";
 				}
 			},
 			{
 				title: "Current-2",
 				data:"Current-2",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-2']+"</span>";
 				}
 			},
 			{
 				title: "Current-3",
 				data:"Current-3",
 				render : function ( data, type, full ) {
-					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
+					return "<span style='padding-left:25px;' class='label label-flat text-primary-600'><img style='left:0;' src='./app/img/War-Cross-Mark-PNG-Picture.png'>"+full['Current-3']+"</span>";
 				}
 			}
 		],
@@ -161,12 +162,11 @@ $(document).ready(function() {
 			$($.fn.dataTable.tables( true ) ).DataTable().columns.adjust().draw();
 	} );
 
-
 	// Animated progress chart
 	// ------------------------------
 
 	// Initialize charts
-	progressCounter('#hours-available-progress', 17, 2, "#9CCC65", 0.93, "icon-coin-dollar text-green-400", 'SALES', '')
+	progressCounter('#hours-available-progress', 20, 2, "#9CCC65", 0.93, "icon-coin-dollar text-green-400", 'SALES', '')
 
 	// Chart setup
 	function progressCounter(element, radius, border, color, end, iconClass, textTitle, textAverage){

@@ -73,6 +73,49 @@
   }
 }
 
+#equipment{
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .equipmentCol{
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+
+    .equipmentHeader{
+      background-color:#28343a;
+      color:#FFF;
+      h2{
+        text-align: center;
+        font-size:15px;
+      }
+    }
+    .equipmentcell{
+      position: relative;
+      width:100%;
+      img{
+        width: 100%;
+      }
+    }
+    .selected{
+      &::after{
+        background-image: url("../img/War-Cross-Mark-PNG-Picture.png");
+        background-size: 100% 100%;
+        display: inline-block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content:"";
+      }
+    }
+  }
+}
 
 // table.dataTable,
 // table.dataTable th,
