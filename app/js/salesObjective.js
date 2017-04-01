@@ -211,6 +211,7 @@ $(document).ready(function() {
 			// ------------------------------
 
 			// Arc
+			console.log(d3);
 			var arc = d3.svg.arc()
 					.startAngle(0)
 					.innerRadius(radius)

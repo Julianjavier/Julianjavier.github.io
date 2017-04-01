@@ -1,39 +1,35 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var inject = require('gulp-inject');
 var browserSync = require('browser-sync').create();
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
+var inject = require('gulp-inject');
+var connect = require('gulp-connect');
+var modRewrite  = require('connect-modrewrite');
+var awspublish = require('gulp-awspublish');
 
 var paths = {
-    // sass: ['./scss/**/*.scss'],
     javascript: [
-        'app/**/*.js'
+        'app/js/**/*.js',
+        'app/js/*.js',
     ],
     css: [
-        'app/**/*.css'
+      'app/css/*.css',
     ]
 };
 
-gulp.task('build', function(){
-    return gulp.src('app/*.html')
-        .pipe(inject(
-            gulp.src(paths.javascript,
-                {read: false}), {relative: true}
-              ))
-        .pipe(gulp.dest('app'))
-        .pipe(inject(
-            gulp.src(paths.css,
-            {read: false}), {relative: true}
-          ))
-        .pipe(gulp.dest('app'));
+gulp.task('inject', function(){
+  return gulp.src('app/index.html')
+    .pipe(inject(
+        gulp.src(paths.javascript,
+            {read: false}), {relative: true}))
+    .pipe(gulp.dest('app'))
+    .pipe(inject(
+        gulp.src(paths.css,
+        {read: false}), {relative: true}))
+    .pipe(gulp.dest('app'));
 });
 
 gulp.task('sass', function(){
-  return gulp.src('app/scss/main.scss')
+  return gulp.src('app/scss/**/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
@@ -41,26 +37,62 @@ gulp.task('sass', function(){
     }))
 });
 
+gulp.task('default', ['inject']);
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: ['./', './app']
+      baseDir: 'app',
+      middleware: [
+        modRewrite([
+          '^[^\\.]*$ /index.html [L]'
+        ])
+      ]
     },
+    notify: false,
+    open: false
   })
 });
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
-});
+// gulp.task('serve', function() {
+//   connect.server({
+//     root: 'app',
+//     port: 3000,
+//     host: '127.0.0.1',
+//     fallback: 'index.html',
+//     livereload: true
+//   });
+// });
 
-gulp.task('watch', ['browserSync', 'sass'] ,function(){
+gulp.task('watch', ['browserSync'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/**/*.js', browserSync.reload);
-  // Other watchers
+  gulp.watch('app/views/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
+
+var localConfig = {
+  buildSrc: './app/**/*',
+  getAwsConf: function (environment) {
+    var conf = require('./config/aws.js');
+    if (!conf[environment]) {
+      throw 'No aws conf for env: ' + environment;
+    }
+    if (!conf[environment + 'Headers']) {
+      throw 'No aws headers for env: ' + environment;
+    }
+    return { keys: conf[environment], headers: conf[environment + 'Headers'] };
+  }
+};
+
+gulp.task('s3:production', function() {
+  var awsConf = localConfig.getAwsConf('production');
+  var publisher = awspublish.create(awsConf.keys);
+  return gulp.src(localConfig.buildSrc)
+    .pipe(awspublish.gzip({ ext: '' }))
+    .pipe(publisher.publish(awsConf.headers))
+    .pipe(publisher.cache())
+    .pipe(publisher.sync())
+    .pipe(awspublish.reporter());
 });

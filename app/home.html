@@ -7,7 +7,7 @@
 
     <!-- <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <!-- Global stylesheets -->
   	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -26,8 +26,6 @@
   	<!-- /core JS files -->
 
   	<!-- Theme JS files -->
-    <script type="text/javascript" src="./app/assets/js/plugins/visualization/d3/d3.min.js"></script>
-    <script type="text/javascript" src="./app/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
   	<script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/datatables.min.js"></script>
     <script type="text/javascript" src="./app/assets/js/plugins/forms/selects/select2.min.js"></script>
     <!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/select.min.js"></script> -->
@@ -113,6 +111,18 @@
         					<!-- Basic datatable -->
                   <div class="panel panel-flat">
 
+                    <div class="panel-heading">
+        							<h5 class="panel-title">Product Validation: Pueblo</h5>
+                      <div class="calculations">
+                        <h5>You have <span id="selected">40</span> out <span id="total">50</span> compleated</h5>
+                        <div id="myTest" style="width:60px; height:60px; position: absolute; right: 0px; top: 0;">
+
+                        </div>
+                      </div>
+                      <hr>
+                      <input id="inputBrand" type="text" class="form-control" style="width: 350px; float:left; margin-right:20px;" placeholder="Brand:">
+                      <input id="inputEquipment" type="text" class="form-control" style="width: 350px;" placeholder="Equipment Type:">
+                    </div>
 
                     <div class="panel-body">
                       <div class="tabbable">

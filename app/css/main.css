@@ -4,6 +4,21 @@
   background-size: 25px;
   color: #F4511E; }
 
+.panel-heading {
+  position: relative; }
+  .panel-heading .calculations {
+    height: 60px;
+    width: 305px;
+    position: absolute;
+    display: inline-block;
+    top: 3px;
+    right: 20px; }
+    .panel-heading .calculations h5 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0; }
+
 .label, td {
   text-align: right;
   font-weight: 600;
@@ -54,13 +69,15 @@
 
 #equipment {
   width: auto;
+  max-height: 440px;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: scroll;
   white-space: nowrap; }
   #equipment .equipmentCol {
     width: 130px;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    margin: 0 10px; }
     #equipment .equipmentCol .equipmentHeader {
       background-color: #28343a;
       color: #FFF; }
@@ -69,9 +86,15 @@
         font-size: 15px; }
     #equipment .equipmentCol .equipmentcell {
       position: relative;
-      width: 100%; }
+      width: 100%;
+      height: 130px; }
       #equipment .equipmentCol .equipmentcell img {
-        width: 100%; }
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
     #equipment .equipmentCol .selected::after {
       background-image: url("../img/War-Cross-Mark-PNG-Picture.png");
       background-size: 100% 100%;
