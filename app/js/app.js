@@ -112,7 +112,6 @@ $(document).ready(function() {
 		// end of var
 	}
 
-
 	function getCalulation() {
 		var total = $('.dataTables_scrollBody .dataTable tbody tr').length;
 		var selected = $('.dataTables_scrollBody .dataTable tbody tr:not(.productSelected)').length;

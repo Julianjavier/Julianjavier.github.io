@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html ng-app="PropellApp">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title></title>
+
+    <!-- <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Global stylesheets -->
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+  	<link href="./app/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+  	<link href="./app/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  	<link href="./app/assets/css/core.css" rel="stylesheet" type="text/css">
+  	<link href="./app/assets/css/components.css" rel="stylesheet" type="text/css">
+  	<link href="./app/assets/css/colors.css" rel="stylesheet" type="text/css">
+  	<!-- /global stylesheets -->
+
+  	<!-- Core JS files -->
+  	<script type="text/javascript" src="./app/assets/js/plugins/loaders/pace.min.js"></script>
+  	<script type="text/javascript" src="./app/assets/js/core/libraries/jquery.min.js"></script>
+  	<script type="text/javascript" src="./app/assets/js/core/libraries/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="./app/assets/js/plugins/loaders/blockui.min.js"></script>
+  	<!-- /core JS files -->
+
+  	<!-- Theme JS files -->
+  	<script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/select.min.js"></script> -->
+  	<!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script> -->
+
+  	<!-- /theme JS files -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./app/css/main.css">
+    <!-- endinject -->
+
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+
+        <ul class="nav navbar-nav pull-right visible-xs-block">
+          <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+          <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-collapse collapse" id="navbar-mobile">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/app/home.html">Sales Validation</a>
+          </li>
+
+          <li>
+            <a href="/app/profilePage.html">Profile Page</a>
+          </li>
+
+          <li>
+            <a href="/app/equipmentValidation.html">Equipment Objective</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown dropdown-user">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <img src="assets/images/placeholder.jpg" alt="">
+              <span>Victoria</span>
+              <i class="caret"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+              <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+              <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+              <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-container" style="min-height:226px">
+
+
+        <div class="page-container">
+
+        		<!-- Page content -->
+        		<div class="page-content">
+
+
+        			<!-- Main content -->
+        			<div class="content-wrapper">
+
+
+        				<!-- Page header -->
+        				<div class="page-header">
+
+        				</div>
+        				<!-- /page header -->
+
+
+        				<!-- Content area -->
+                <div class="content">
+
+                  <div class="row">
+                    <div class="col-sm-2 col-md-4">
+                      <div class="panel panel-primary">
+                        <div class="valuesStack">
+                            <div id="totalStores" class="col-sm-12 col-md-3">
+                              <h5>Total Stores</h5>
+                              <span>3</span>
+                            </div>
+                            <div id="picosDone" class="col-sm-12 col-md-3">
+                              <h5>Picos Done</h5>
+                              <span>0</span>
+                            </div>
+                            <div id="picosTodo" class="col-sm-12 col-md-3">
+                              <h5>Picos To Do</h5>
+                              <span>3</span>
+                            </div>
+                            <div id="picos" class="col-sm-12 col-md-3">
+                              <h5>Picos</h5>
+                              <span>
+                                <div id="initGuage" style="width:60px; height:60px; margin: 0px auto; padding:0;">
+                                </div>
+                              </span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-10 col-md-8">
+                      <!-- Basic datatable -->
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">
+                          <h5 class="panel-title">Your Stores</h5>
+                        </div>
+                        <div class="panel-body">
+                          <table class="table tableBasic datatable-basic">
+                            <thead>
+                              <tr>
+                                <th>Last Visited</th>
+                                <th>Client</th>
+                                <th>PICOS Classification</th>
+                                <th>Assortment & Price SKU's</th>
+                                <th>Hotspots to Active</th>
+                                <th>Equipment to place</th>
+                                <th>To PICOS</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr class="error" data-id="0">
+                                <td>2017-01-06</td>
+                                <td>125654 - Pueblo</td>
+                                <td>Gold</td>
+                                <td class="danger">15</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                  <input type="checkbox" class="tableCheckBox control-primary">
+                                </td>
+                              </tr>
+                              <tr data-id="0">
+                                <td>2017-01-06</td>
+                                <td>125654 - Pueblo</td>
+                                <td>Gold</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                  <input type="checkbox" class="tableCheckBox control-primary" disabled="disabled">
+                                </td>
+                              </tr>
+
+                              <tr data-id="0">
+                                <td>2017-01-06</td>
+                                <td>125654 - Pueblo</td>
+                                <td>Gold</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                  <input type="checkbox" class="tableCheckBox control-primary" disabled="disabled">
+                                </td>
+                              </tr>
+
+                              <tr class="error" data-id="0">
+                                <td>2017-01-06</td>
+                                <td>125654 - Pueblo</td>
+                                <td>Gold</td>
+                                <td class="danger">15</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                  <input type="checkbox" class="tableCheckBox control-primary">
+                                </td>
+                              </tr>
+
+                              <tr class="error" data-id="0" >
+                                <td>2017-01-06</td>
+                                <td>125654 - Pueblo</td>
+                                <td>Gold</td>
+                                <td class="danger">15</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                  <input type="checkbox" class="tableCheckBox control-primary">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="col-sm-12">
+                            <div class="resultStack">
+                              <div id="totalStores" class="col-sm-2">
+                                <h5>Total Stores</h5>
+                                <span>0</span>
+                              </div>
+                              <div id="picosDone" class="col-sm-2">
+                                <h5>Picos Done</h5>
+                                <span>0</span>
+                              </div>
+                              <div id="picosTodo" class="col-sm-2">
+                                <h5>Picos To Do</h5>
+                                <span>0</span>
+                              </div>
+                              <div id="estimate" class="col-sm-2">
+                                <h5>Estimated PICOS</h5>
+                                <span>0</span>
+                              </div>
+                              <div id="diffrence" class="col-sm-2">
+                                <h5>Diffrence</h5>
+                                <span>0</span>
+                              </div>
+                              <div id="picos" class="col-sm-2">
+                                <h5>Picos</h5>
+                                <span>
+                                  <div id="myTest" style="width:60px; height:60px; margin: 0px auto; padding:0;">
+                                  </div>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /basic datatable -->
+                    </div>
+                  </div>
+        				</div>
+        				<!-- /content area -->
+
+        			</div>
+        			<!-- /main content -->
+
+        		</div>
+        		<!-- /page content -->
+
+        	</div>
+
+
+    	</div>
+  </body>
+  <!-- inject:js -->
+  <script src="./app/js/picos.js"></script>
+  <!-- endinject -->
+</html>
