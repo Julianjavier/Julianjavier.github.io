@@ -83,6 +83,13 @@
   .label:first-child, td:first-child {
     text-align: left; }
 
+#picosTable .label, #picosTable td {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px; }
+  #picosTable .label:first-child, #picosTable td:first-child {
+    text-align: left; }
+
 .label {
   border-width: 2px;
   border-radius: 0;
