@@ -213,12 +213,15 @@ $(document).ready(function() {
       success: function(data) {
         console.log(data);
         if(data.status == 'success'){
-					$(dom).addClass('highlight');
-					$(dom.getElementsByTagName("span")[0]).toggleClass("border-warning text-warning-600 selected");
-					$(dom.getElementsByTagName("img")[0]).toggleClass("showImage");
-					if ($(row).children().children().hasClass("selected") == true) {
+					if (data.sudo == "something"){
+						$(dom).addClass('highlight');
+						$(dom.getElementsByTagName("span")[0]).addClass("border-warning text-warning-600 selected");
+						$(dom.getElementsByTagName("img")[0]).addClass("showImage");
 						$(row).addClass("productSelected");
-					} else if ($(row).children().children().hasClass("selected") == false) {
+					} else if (data.sudo == "something") {
+						$(dom).removeClass('highlight');
+						$(dom.getElementsByTagName("span")[0]).removeClass("border-warning text-warning-600 selected");
+						$(dom.getElementsByTagName("img")[0]).removeClass("showImage");
 						$(row).removeClass("productSelected");
 					}
 					fitGauge.update('#myTest', getCalulation())

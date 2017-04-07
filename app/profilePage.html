@@ -114,48 +114,58 @@
 
                   <div class="row">
                     <div class="col-md-6">
-                      <!-- Basic datatable -->
                       <div class="panel panel-primary">
                         <div class="panel-heading">
                           <h5 class="panel-title">Hola Mellisa Barral</h5>
                         </div>
+
+                        <!-- CONSIDER THIS YOUR PROFILE SECTION -->
                         <div class="panel-body">
                           <div class="imageContainer">
                             <img src="./app/img/clients-mendez-company.jpg" alt="">
                             <div class="storeTypesProfile">
-                              <h6>Your store types:</h6>
+                              <h3>Your store types:</h3>
                               <p>Cash & Carry, C-Store, Military, Modern Trade, Pharmacy, Traditional Off</p>
                             </div>
                           </div>
                         </div>
+
                       </div>
-                      <!-- /basic datatable -->
                     </div>
-                    <div class="col-md-6">
-                      <!-- Basic datatable -->
+                    <div class="col-md-6 actionsCol">
+                      <form action="#">
+                        <button type="submit" class="btn btn-primary" href="#">Planning Overview <i class="icon-arrow-right14 position-right"></i></button>
+                      </form>
+
                       <div class="panel panel-primary">
                         <div class="panel-heading">
                           <h5 class="panel-title">Your Stores</h5>
                         </div>
-                        <div class="store">
-                          <div class="companyLogo col-sm-2 col-md-2">
-                            <img src="http://www.pueblo.net/sites/pueblo.net/files/logo_pueblo_rojo_0.png" alt="">
-                          </div>
-                          <div class="compannyNumberName col-sm-10 col-md-10">
-                            <h2>120398 || Pueblo</h2>
-                          </div>
+
+      									<input id="storeString" type="text" class="form-control" placeholder="Find your store here:">
+                        <!-- THESE ARE YOUR STORES TO LOOP OVER-->
+                        <div class="store" data-string="120398 || Pueblo">
+                          <a href="#">
+                            <div class="companyLogo col-sm-2 col-md-2">
+                              <img src="http://www.pueblo.net/sites/pueblo.net/files/logo_pueblo_rojo_0.png" alt="">
+                            </div>
+                            <div class="compannyNumberName col-sm-10 col-md-10">
+                              <h2>120398 || Pueblo</h2>
+                            </div>
+                          </a>
                         </div>
 
-                        <div class="store">
-                          <div class="companyLogo col-sm-2 col-md-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/7-eleven-brand.svg/2000px-7-eleven-brand.svg.png" alt="">
-                          </div>
-                          <div class="compannyNumberName col-sm-10 col-md-10">
-                            <h2>120398 || 7Eleven</h2>
-                          </div>
+                        <div class="store" data-string="152396 || 7Eleven">
+                          <a href="#">
+                            <div class="companyLogo col-sm-2 col-md-2">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/7-eleven-brand.svg/2000px-7-eleven-brand.svg.png" alt="">
+                            </div>
+                            <div class="compannyNumberName col-sm-10 col-md-10">
+                              <h2>152396 || 7Eleven</h2>
+                            </div>
+                          </a>
                         </div>
                       </div>
-                      <!-- /basic datatable -->
                     </div>
                   </div>
         				</div>
@@ -173,6 +183,6 @@
     	</div>
   </body>
   <!-- inject:js -->
-  <script src="./app/js/app.js"></script>
+  <script src="./app/js/profilePage.js"></script>
   <!-- endinject -->
 </html>

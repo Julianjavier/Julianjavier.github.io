@@ -1,4 +1,23 @@
 $(document).ready(function() {
+	(function(old) {
+		$.fn.attr = function() {
+			if(arguments.length === 0) {
+				if(this.length === 0) {
+					return null;
+				}
+
+				var obj = {};
+				$.each(this[0].attributes, function() {
+					if(this.specified) {
+						obj[this.name] = this.value;
+					}
+				});
+				return obj;
+			}
+
+			return old.apply(this, arguments);
+		};
+	})($.fn.attr);
 
 	var fitGauge = {
 	  init: function(element, value) {
@@ -120,32 +139,95 @@ $(document).ready(function() {
 
 	var equimentList = document.getElementsByClassName('equipmentcell');
 	var equimentListArray = Array.prototype.slice.call(equimentList);
-	// var string = "foo",
-  //   substring = "oo";
-	// console.log(string.indexOf(substring) !== -1);
 
-	$( "#inputBrand" ).keyup(function() {
-		var value = $(this).val();
-    var exp = new RegExp('^' + value, 'i');
+	$(".inputText").keyup(function(){
+		if ($("#inputBrand").val() != "" && $("#inputEquipment").val() != "") {
+			// console.log($("#inputBrand").val());
+			// console.log($("#inputEquipment").val());
+				$('#equipment .equipmentCol .equipmentcell').each(function(){
+					var typeValue = $("#inputEquipment").val();
+					var barandValue = $("#inputBrand").val();
+					var typeExp = new RegExp('^' + typeValue, 'i');
+					var barandExp = new RegExp('^' + barandValue, 'i');
 
-		$('#equipment .equipmentCol .equipmentcell').each(function() {
-	    var isMatch = exp.test(this.dataset.brand);
-	    $(this).toggle(isMatch);
-    });
-	});
+					var typeMatch = typeExp.test(this.dataset.type);
+					var barandMatch = barandExp.test(this.dataset.brand);
 
-	$( "#inputEquipment" ).keyup(function() {
-		var value = $(this).val();
-		var exp = new RegExp('^' + value, 'i');
-
-		$('#equipment .equipmentCol .equipmentcell').each(function() {
-			var isMatch = exp.test(this.dataset.type);
-			$(this).toggle(isMatch);
-		});
-	});
+					if (barandMatch==true && typeMatch==true) {
+						$(this).toggle(true);
+					} else {
+						$(this).toggle(false);
+					}
+				});
+		} else if($("#inputBrand").val() != ""){
+			$('#equipment .equipmentCol .equipmentcell').each(function(){
+				var barandValue = $("#inputBrand").val();
+				var barandExp = new RegExp('^' + barandValue, 'i');
+				var barandMatch = barandExp.test(this.dataset.brand);
+				if (barandMatch==true) {
+					$(this).toggle(true);
+				} else {
+					$(this).toggle(false);
+				}
+			});
+		} else if($("#inputEquipment").val() != ""){
+			$('#equipment .equipmentCol .equipmentcell').each(function(){
+				var typeValue = $("#inputEquipment").val();
+				var typeExp = new RegExp('^' + typeValue, 'i');
+				var typeMatch = typeExp.test(this.dataset.type);
+				if (typeMatch==true) {
+					$(this).toggle(true);
+				} else {
+					$(this).toggle(false);
+				}
+			});
+		} else if($("#inputBrand").val() == "" && $("#inputEquipment").val() == ""){
+			$('#equipment .equipmentCol .equipmentcell').each(function(){
+				$(this).toggle(true);
+			});
+		}
+	})
 
 	$(".equipmentcell").click(function () {
+		var postData;
+		postData = {"equipment":$(this).attr(), "hotspot":$(this).parent().attr()}
+		console.log(postData);
 		$(this).toggleClass("selected");
+
+		$.ajax({
+			url: 'scripts/php/addProductToDistribution.php',
+			type: 'POST',
+			dataType: 'json',
+			data: postData,
+			success: function(data) {
+				console.log(data);
+				if(data.status == 'success'){
+					tableResults(element);
+					if (data.sudo == "something"){
+						$(this).addClass("selected");
+					} else if (data.sudo == "something") {
+						$(this).removeClass("selected");
+					}
+				}else if(data.status == 'error'){
+						alert("Error on query! Sorry about that.");
+				}
+			},
+			error:function(x,e) {
+					if (x.status==0) {
+							alert('You are offline!!\n Please Check Your Network.');
+					} else if(x.status==404) {
+							alert('Requested URL not found.');
+					} else if(x.status==500) {
+							alert('Internel Server Error.');
+					} else if(e=='parsererror') {
+							alert('Error.\nParsing JSON Request failed.');
+					} else if(e=='timeout'){
+							alert('Request Time out.');
+					} else {
+							alert('Unknow Error.\n'+x.responseText);
+					}
+			}
+		});
 		fitGauge.update('#myTest', getCalulation())
 	})
 });
