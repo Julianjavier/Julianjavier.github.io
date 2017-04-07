@@ -65,7 +65,7 @@
 .resultStack div {
   text-align: center; }
   .resultStack div span {
-    font-size: 20px; }
+    font-size: 30px; }
 
 .valuesStack {
   overflow: hidden; }
@@ -83,10 +83,13 @@
   .label:first-child, td:first-child {
     text-align: left; }
 
+#picosTable thead th {
+  font-size: 18px !important; }
+
 #picosTable .label, #picosTable td {
   text-align: center;
   font-weight: 600;
-  font-size: 14px; }
+  font-size: 18px; }
   #picosTable .label:first-child, #picosTable td:first-child {
     text-align: left; }
 

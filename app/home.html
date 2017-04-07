@@ -10,29 +10,29 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <!-- Global stylesheets -->
-  	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-  	<link href="./app/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
-  	<link href="./app/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-  	<link href="./app/assets/css/core.css" rel="stylesheet" type="text/css">
-  	<link href="./app/assets/css/components.css" rel="stylesheet" type="text/css">
-  	<link href="./app/assets/css/colors.css" rel="stylesheet" type="text/css">
-  	<!-- /global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="./app/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="./app/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./app/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="./app/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="./app/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
 
-  	<!-- Core JS files -->
-  	<script type="text/javascript" src="./app/assets/js/plugins/loaders/pace.min.js"></script>
-  	<script type="text/javascript" src="./app/assets/js/core/libraries/jquery.min.js"></script>
-  	<script type="text/javascript" src="./app/assets/js/core/libraries/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="./app/assets/js/plugins/loaders/blockui.min.js"></script>
-  	<!-- /core JS files -->
+    <!-- Core JS files -->
+    <script type="text/javascript" src="./app/assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
 
-  	<!-- Theme JS files -->
-  	<script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/datatables.min.js"></script>
     <script type="text/javascript" src="./app/assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="./app/assets/js/plugins/forms/styling/uniform.min.js"></script>
     <!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/select.min.js"></script> -->
-    <!-- <script type="text/javascript" src="./app/assets/js/core/app.js"></script> -->
-  	<!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script> -->
+    <!-- <script type="text/javascript" src="./app/assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script> -->
 
-  	<!-- /theme JS files -->
+    <!-- /theme JS files -->
 
     <!-- inject:css -->
     <link rel="stylesheet" href="./app/css/main.css">
@@ -124,8 +124,6 @@
                         </div>
                       </div>
                       <hr>
-                      <input id="inputBrand" type="text" class="form-control" style="width: 350px; float:left; margin-right:20px;" placeholder="Brand:">
-                      <input id="inputEquipment" type="text" class="form-control" style="width: 350px;" placeholder="Equipment Type:">
                     </div>
 
                     <div class="panel-body">
@@ -136,22 +134,137 @@
                           <li class=""><a href="#tableWines"  data-table="tableWines" data-toggle="tab" aria-expanded="true">Wines</a></li>
                         </ul>
 
+                        <!-- THESE ARE YOUR TABS FOR THE TABLE -->
                         <div class="tab-content">
                           <div class="tab-pane active" id="tableBeer">
                             <table  class="table tableBeer datatable-basic">
+                              <thead>
+                                <tr>
+                                  <th>SKU / Name</th>
+                                  <th>MIN</th>
+                                  <th>MAX</th>
+                                  <th>Promocional Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr data-id="0">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">400141 || Heineken Green 6 pack 12. oz. <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$7</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$8</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">2 X $4.00</span>
+                                  </td>
+                                </tr>
 
+                                <tr data-id="1">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">500140 || HEINEKEN LIGHT 12OZ SS <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2.85</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">3 X $4.00</span>
+                                  </td>
+                                </tr>
+                              </tbody>
                             </table>
                           </div>
 
                           <div class="tab-pane" id="tableSpirits">
                             <table  class="table tableSpirits datatable-basic">
+                              <thead>
+                                <tr>
+                                  <th>SKU / Name</th>
+                                  <th>MIN</th>
+                                  <th>MAX</th>
+                                  <th>Promocional Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr data-id="0">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">400141 || Heineken Green 6 pack 12. oz. <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$7</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$8</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">2 X $4.00</span>
+                                  </td>
+                                </tr>
 
+                                <tr data-id="1">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">500140 || HEINEKEN LIGHT 12OZ SS <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2.85</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">3 X $4.00</span>
+                                  </td>
+                                </tr>
+                              </tbody>
                             </table>
                           </div>
 
                           <div class="tab-pane" id="tableWines">
                             <table  class="table tableWines datatable-basic">
+                              <thead>
+                                <tr>
+                                  <th>SKU / Name</th>
+                                  <th>MIN</th>
+                                  <th>MAX</th>
+                                  <th>Promocional Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr data-id="0">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">400141 || Heineken Green 6 pack 12. oz. <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$7</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$8</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">2 X $4.00</span>
+                                  </td>
+                                </tr>
 
+                                <tr data-id="1">
+                                  <td>
+                                    <span style="padding-right:25px;" class="label label-flat text-primary-600">500140 || HEINEKEN LIGHT 12OZ SS <img src="./app/img/War-Cross-Mark-PNG-Picture.png"></span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"> <img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">$2.85</span>
+                                  </td>
+                                  <td>
+                                    <span style="padding-left:25px;" class="label label-flat text-primary-600"><img style="left:0;" src="./app/img/War-Cross-Mark-PNG-Picture.png">3 X $4.00</span>
+                                  </td>
+                                </tr>
+                              </tbody>
                             </table>
                           </div>
                         </div>
