@@ -51,23 +51,6 @@
       </div>
 
       <div class="navbar-collapse collapse" id="navbar-mobile">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/app/home.html">Sales Validation</a>
-          </li>
-
-          <li>
-            <a href="/app/profilePage.html">Profile Page</a>
-          </li>
-
-          <li>
-            <a href="/app/equipmentValidation.html">Equipment Objective</a>
-          </li>
-
-          <li>
-            <a href="/app/planificasionPicos.html">Planificasion Picos</a>
-          </li>
-        </ul>
 
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown dropdown-user">
@@ -78,11 +61,6 @@
             </a>
 
             <ul class="dropdown-menu dropdown-menu-right">
-              <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-              <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
-              <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
               <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
             </ul>
           </li>
@@ -90,7 +68,15 @@
       </div>
     </div>
     <div class="page-container" style="min-height:226px">
-
+      <div class="breadcrumb-line" style="margin-bottom: 0; border-bottom: 0; box-shadow: none;">
+        <ul class="breadcrumb myNav">
+          <li><i class="icon-home2 position-left"></i><a href="/app/profilePage.html">Profile Page</a></li>
+          <li><a href="/app/home.html">Sales Validation</a></li>
+          <li><a href="/app/equipmentValidation.html">Equipment Objective</a></li>
+          <li><a href="/app/planificasionPicos.html">Planificasion Picos</a></li>
+        </ul>
+        <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+      </div>
 
         <div class="page-container">
 
@@ -137,7 +123,9 @@
                         <button type="submit" class="btn btn-primary" href="#">Planning Overview <i class="icon-arrow-right14 position-right"></i></button>
                       </form>
 
-                      <div class="panel panel-primary">
+                      <button id="storeValidationsButton"type="button" class="btn btn-primary" href="#">Store Validation<i class="icon-arrow-right14 position-right"></i></button>
+
+                      <div id="storeValidations" class="panel panel-primary obscure">
                         <div class="panel-heading">
                           <h5 class="panel-title">Your Stores</h5>
                         </div>

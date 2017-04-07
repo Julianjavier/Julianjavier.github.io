@@ -6,11 +6,25 @@ td  {
   font-size: 20px !important;
 }
 
+
+.obscure{
+  overflow: hidden;
+  height: 0;
+  display: none;
+}
+
 .highlight{
   background-repeat: no-repeat;
   background-position: left;
   background-size:25px;
   color:#F4511E;
+}
+
+.myNav{
+  font-size:20px;
+  i{
+    font-size:15px !important;
+  }
 }
 
 .panel-heading{
@@ -143,7 +157,7 @@ td  {
   }
   text-align: right;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 #picosTable{
@@ -163,7 +177,7 @@ td  {
   position: relative;
   img{
     display: inline;
-    height: 18px;
+    height: 30px;
     margin:0px 5px;
     position: absolute;
 

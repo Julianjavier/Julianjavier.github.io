@@ -192,42 +192,42 @@ $(document).ready(function() {
 		var postData;
 		postData = {"equipment":$(this).attr(), "hotspot":$(this).parent().attr()}
 		console.log(postData);
-		$(this).toggleClass("selected");
+		$(this).toggleClass("selected");//this will be comented out
 
-		$.ajax({
-			url: 'scripts/php/addProductToDistribution.php',
-			type: 'POST',
-			dataType: 'json',
-			data: postData,
-			success: function(data) {
-				console.log(data);
-				if(data.status == 'success'){
-					tableResults(element);
-					if (data.sudo == "something"){
-						$(this).addClass("selected");
-					} else if (data.sudo == "something") {
-						$(this).removeClass("selected");
-					}
-				}else if(data.status == 'error'){
-						alert("Error on query! Sorry about that.");
-				}
-			},
-			error:function(x,e) {
-					if (x.status==0) {
-							alert('You are offline!!\n Please Check Your Network.');
-					} else if(x.status==404) {
-							alert('Requested URL not found.');
-					} else if(x.status==500) {
-							alert('Internel Server Error.');
-					} else if(e=='parsererror') {
-							alert('Error.\nParsing JSON Request failed.');
-					} else if(e=='timeout'){
-							alert('Request Time out.');
-					} else {
-							alert('Unknow Error.\n'+x.responseText);
-					}
-			}
-		});
+		// $.ajax({
+		// 	url: 'scripts/php/addProductToDistribution.php',
+		// 	type: 'POST',
+		// 	dataType: 'json',
+		// 	data: postData,
+		// 	success: function(data) {
+		// 		console.log(data);
+		// 		if(data.status == 'success'){
+		// 			tableResults(element);
+		// 			if (data.sudo == "something"){
+		// 				$(this).addClass("selected");
+		// 			} else if (data.sudo == "something") {
+		// 				$(this).removeClass("selected");
+		// 			}
+		// 		}else if(data.status == 'error'){
+		// 				alert("Error on query! Sorry about that.");
+		// 		}
+		// 	},
+		// 	error:function(x,e) {
+		// 			if (x.status==0) {
+		// 					alert('You are offline!!\n Please Check Your Network.');
+		// 			} else if(x.status==404) {
+		// 					alert('Requested URL not found.');
+		// 			} else if(x.status==500) {
+		// 					alert('Internel Server Error.');
+		// 			} else if(e=='parsererror') {
+		// 					alert('Error.\nParsing JSON Request failed.');
+		// 			} else if(e=='timeout'){
+		// 					alert('Request Time out.');
+		// 			} else {
+		// 					alert('Unknow Error.\n'+x.responseText);
+		// 			}
+		// 	}
+		// });
 		fitGauge.update('#myTest', getCalulation())
 	})
 });

@@ -225,35 +225,35 @@ $(document).ready(function() {
     var tr = $(element).parent().parent().parent().attr();
     postData = {"product":tr, "status":td}
     ////////////////////// THIS IS OUR AJAX THE DATA BEING PASSED IN IS FROM THE postData VARIABLE//////////////////////
-    $.ajax({
-      url: 'scripts/php/addProductToDistribution.php',
-      type: 'POST',
-      dataType: 'json',
-      data: postData,
-      success: function(data) {
-        console.log(data);
-        if(data.status == 'success'){
-          tableResults(element);
-        }else if(data.status == 'error'){
-            alert("Error on query! Sorry about that.");
-        }
-      },
-      error:function(x,e) {
-          if (x.status==0) {
-              alert('You are offline!!\n Please Check Your Network.');
-          } else if(x.status==404) {
-              alert('Requested URL not found.');
-          } else if(x.status==500) {
-              alert('Internel Server Error.');
-          } else if(e=='parsererror') {
-              alert('Error.\nParsing JSON Request failed.');
-          } else if(e=='timeout'){
-              alert('Request Time out.');
-          } else {
-              alert('Unknow Error.\n'+x.responseText);
-          }
-      }
-    });
+    // $.ajax({
+    //   url: 'scripts/php/addProductToDistribution.php',
+    //   type: 'POST',
+    //   dataType: 'json',
+    //   data: postData,
+    //   success: function(data) {
+    //     console.log(data);
+    //     if(data.status == 'success'){
+    //       tableResults(element);
+    //     }else if(data.status == 'error'){
+    //         alert("Error on query! Sorry about that.");
+    //     }
+    //   },
+    //   error:function(x,e) {
+    //       if (x.status==0) {
+    //           alert('You are offline!!\n Please Check Your Network.');
+    //       } else if(x.status==404) {
+    //           alert('Requested URL not found.');
+    //       } else if(x.status==500) {
+    //           alert('Internel Server Error.');
+    //       } else if(e=='parsererror') {
+    //           alert('Error.\nParsing JSON Request failed.');
+    //       } else if(e=='timeout'){
+    //           alert('Request Time out.');
+    //       } else {
+    //           alert('Unknow Error.\n'+x.responseText);
+    //       }
+    //   }
+    // });
   });
   ////////////////////// THIS IS FOR HANDELING CLICK EVENTS ON THE TBLE CELLS //////////////////////
 

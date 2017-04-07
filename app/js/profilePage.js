@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  $("#storeValidationsButton").click(function(e){
+    $("#storeValidationsButton").toggleClass("obscure");
+    $("#storeValidations").toggleClass("obscure");
+  });
+
 	var storeList = document.getElementsByClassName('equipmentcell');
 	var storeListArray = Array.prototype.slice.call(storeList);
 
