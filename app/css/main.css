@@ -4,6 +4,15 @@ th {
 td {
   font-size: 20px !important; }
 
+.dataTables_scroll
+.dataTables_scrollBody th,
+.dataTables_scroll .dataTables_scrollBody td {
+  border: solid 1px #f5f5f5; }
+  .dataTables_scroll
+.dataTables_scrollBody th hr,
+  .dataTables_scroll .dataTables_scrollBody td hr {
+    margin: 5px 0; }
+
 .obscure {
   overflow: hidden;
   height: 0;
