@@ -315,8 +315,52 @@ $(document).ready(function() {
 		var dom = tableWines.cell( this ).node();
 		var row = tableWines.row($(this).parent()).node();
 		var postData = {"product":$(row).attr(), "column":$(dom).attr()}
-
-
+		$(dom).addClass('highlight');
+		$(dom.getElementsByTagName("span")[0]).toggleClass("border-warning text-warning-600 selected");
+		$(dom.getElementsByTagName("img")[0]).toggleClass("showImage");
+		if ($(row).children().children().hasClass("selected") == true) {
+			$(row).addClass("productSelected");
+		} else if ($(row).children().children().hasClass("selected") == false) {
+			$(row).removeClass("productSelected");
+		}
+		fitGauge.update('#myTest', getCalulation())
+		// $.ajax({
+		//   url: 'scripts/php/addProductToDistribution.php',
+		//   type: 'POST',
+		//   dataType: 'json',
+		//   data: postData,
+		//   success: function(data) {
+		//     console.log(data);
+		//     if(data.status == 'success'){
+		// 			$(dom).addClass('highlight');
+		// 			$(dom.getElementsByTagName("span")[0]).toggleClass("border-warning text-warning-600 selected");
+		// 			$(dom.getElementsByTagName("img")[0]).toggleClass("showImage");
+		// 			if ($(row).children().children().hasClass("selected") == true) {
+		// 				$(row).addClass("productSelected");
+		// 			} else if ($(row).children().children().hasClass("selected") == false) {
+		// 				$(row).removeClass("productSelected");
+		// 			}
+		// 			fitGauge.update('#myTest', getCalulation())
+		//     }else if(data.status == 'error'){
+		//         alert("Error on query! Sorry about that.");
+		//     }
+		//   },
+		//   error:function(x,e) {
+		//       if (x.status==0) {
+		//           alert('You are offline!!\n Please Check Your Network.');
+		//       } else if(x.status==404) {
+		//           alert('Requested URL not found.');
+		//       } else if(x.status==500) {
+		//           alert('Internel Server Error.');
+		//       } else if(e=='parsererror') {
+		//           alert('Error.\nParsing JSON Request failed.');
+		//       } else if(e=='timeout'){
+		//           alert('Request Time out.');
+		//       } else {
+		//           alert('Unknow Error.\n'+x.responseText);
+		//       }
+		//   }
+		// });
 	} );
 	////////////////////// THIS IS FOR HANDELING CLICK EVENTS ON THE TBLE CELLS //////////////////////
 
