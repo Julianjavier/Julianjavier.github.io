@@ -139,10 +139,19 @@ td  {
 }
 
 .resultStack{
+  overflow: hidden;
+  height: 130px;
+
   div{
+    height: 100%;
     text-align: center;
+    position: relative;
     span{
       font-size:30px;
+      position: absolute;
+      transform: translateX(-50%);
+      left:50%;
+      bottom:10px;
     }
   }
 }

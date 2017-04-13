@@ -95,10 +95,19 @@ td {
   display: inline-block;
   width: 100px; }
 
-.resultStack div {
-  text-align: center; }
-  .resultStack div span {
-    font-size: 30px; }
+.resultStack {
+  overflow: hidden;
+  height: 130px; }
+  .resultStack div {
+    height: 100%;
+    text-align: center;
+    position: relative; }
+    .resultStack div span {
+      font-size: 30px;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 10px; }
 
 .valuesStack {
   overflow: hidden; }

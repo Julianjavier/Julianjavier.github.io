@@ -12,7 +12,7 @@ $(document).ready(function() {
 		var value = $(this).val();
 
 		$('.store').each(function() {
-      if (~this.dataset.string.indexOf(value)) {
+      if (~this.dataset.string.toLowerCase().indexOf(value)) {
         console.log('its a show');
         $(this).show();
       } else {
