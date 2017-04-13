@@ -10,12 +10,17 @@ $(document).ready(function() {
 
 	$( "#storeString" ).keyup(function() {
 		var value = $(this).val();
-    var exp = new RegExp('^' + value, 'i');
 
 		$('.store').each(function() {
-	    var isMatch = exp.test(this.dataset.string);
-      console.log(isMatch);
-	    $(this).toggle(isMatch);
+      if (~this.dataset.string.indexOf(value)) {
+        console.log('its a show');
+        $(this).show();
+      } else {
+        console.log('its a hide');
+        $(this).hide();
+      }
+	    // var isMatch = exp.test(this.dataset.string);
+      // console.log(isMatch);
     });
 	});
 });
